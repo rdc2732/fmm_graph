@@ -4,7 +4,7 @@ Installation,Engine Type,Turbo Fan,turboFan,n/a,Selection,1,1
 Installation,Engine Count,Single Engine,singleEngine,n/a,Selection,1,1
 Installation,Engine Count,Dual Engines,dualEngine,n/a,Selection,1,1
 Installation,ECU Enclosure Type,Air Cooled,airCooled,n/a,Selection,1,1
-Installation,ECU Enclosure Type,Fuel Cooled,fuelCooled,turboFan,Selection,1,1
+Installation,ECU Enclosure Type,Fuel Cooled,fuelCooled,n/a,Selection,1,1
 Installation,Engine ID,Right Engine ID Valid Configuration,rightEngID,dualEngine,Option,0,1
 Turbo Prop,Synchrophasing,TurboProp Syncrophasing,propSyncrophase,turboProp;dualEngine,Option,0,1
 Turbo Prop,Condition Lever,Condition Lever Installed,conditionLever,turboProp,Selection,1,1
@@ -45,8 +45,8 @@ Fuel Cooled ECU,Degrade Mode Type,Degrade Mode FC Platform,degradeModeB,fuelCool
 Fuel Cooled ECU,Warm Boot,Fuel Cooled Warm Boot,warmBootB,fuelCooled;turboFan,Selection,1,1
 Fuel Cooled ECU,ECU BIT,Fuel Cooled ECU BIT,ecuBitB,fuelCooled;turboFan,Selection,1,1
 Fuel Cooled ECU,Control Mode,Fuel Ratio Schedule,controlModeWFP3,turboFan;fuelCooled,Selection,1,1
-Fuel Cooled ECU,MIEC Mode Fuel Flow Calculation,No Minimum Airflow Idle Present,"miecModeDefIdleCalc",miecMode,Selection,1,1
-Fuel Cooled ECU,MIEC Mode Fuel Flow Calculation,Minimum Airflow Idle Present,"miecModeMinAirIdleCalc",miecMode;minAirflowIdle;,Selection,1,1
+Fuel Cooled ECU,MIEC Mode Fuel Flow Calculation,No Minimum Airflow Idle Present,miecModeDefIdleCalc,miecMode,Selection,1,1
+Fuel Cooled ECU,MIEC Mode Fuel Flow Calculation,Minimum Airflow Idle Present,miecModeMinAirIdleCalc,miecMode;minAirflowIdle;,Selection,1,1
 Fuel Cooled ECU,Steady State Fuel Flow Calculation,Steady State Ops,steadyStateOps,controlModeWFP3,Selection,1,1
 Fuel Cooled ECU,Closed Loop Steady State Control Schedule Selection,Steady State Control Schedule Selection,steadyStateOpsControlSched,controlModeWFP3,Selection,1,1
 Fuel Cooled ECU,N1 Speed Governor,N1 Speed Governor,n1SpeedGovernor,controlModeWFP3,Selection,1,1
@@ -331,7 +331,7 @@ Engine Speed,Dual Engine,N1 Sync,n1Sync,xEngDataLink;sfrCFR,Option,0,1
 Engine Speed,Dual Engine,N2 Sync,n2Sync,xEngDataLink;sfrCFR,Option,0,1
 Engine Speed,Lower Right Hand Corner Derate,Lower Right Hand Corner Derate,superSonicBarnstormingProtection,fuelCooled,Selection,1,1
 Engine Speed,Lower Right Hand Corner Derate,No Lower Right Hand Corner Derate,nominalMaxPwrWFP3,fuelCooled,Selection,1,1
-Engine Speed,Minimum Airflow Idle,Minimum Airflow Idle Selected,"minAirflowIdle",fuelCooled,Selection,1,1
+Engine Speed,Minimum Airflow Idle,Minimum Airflow Idle Selected,minAirflowIdle,fuelCooled,Selection,1,1
 Engine Speed,Minimum Airflow Idle,No Minimum Airflow Idle,finalIdleSelectionWFP3,fuelCooled,Selection,1,1
 Engine Speed,MIEC Mode Fuel Flow,MIEC Mode Fuel Flow Overrides N1C Setpoint,miecMode,fuelCooled,Option,0,1
 Engine Speed,N2 RPM,N2 RPM is rate limited and filtered,n2RPMRateLimitFilter,n/a,Selection,1,1
