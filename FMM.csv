@@ -1,4 +1,14 @@
 FM Selection GUI tab,Function,Selectable Options,FM Selection,FM Selection Dependencies,Rule Type,Selection Min,Selection Max
+Aircraft Interfaces,Anti-Ice Command Switch,Anti-Ice Command SW Installed,aiCmdSW,A/C Interfaces - n/a,Option,0,1
+Aircraft Interfaces,Flight Idle Switch,Flight Idle SW Installed,flightIdleSW,A/C Interfaces - n/a,Option,0,1
+Aircraft Interfaces,Ground Idle Switch,Ground Idle SW Installed,groundIdleSW,A/C Interfaces - n/a,Option,0,1
+Aircraft Interfaces,Ignition Switch,Ignition SW Installed,ignitionSW,A/C Interfaces - n/a,Option,0,1
+Aircraft Interfaces,Engine Wiring Configuration,Independent Engine Wiring,indepEngineWiring,A/C Interfaces - n/a,Selection,1,1
+Aircraft Interfaces,Mach Hold,Mach Hold Mode Enabled,machHold,A/C Interfaces - n/a,Option,0,1
+Aircraft Interfaces,Maintenance Enabled Switch,Maintenance Enabled SW Installed,maintEnableSW,A/C Interfaces - n/a,Option,0,1
+Aircraft Interfaces,Reverse Request Switch,Reverse Request SW Installed,revRqstSW,A/C Interfaces - n/a,Option,0,1
+Aircraft Interfaces,Shutdown Switch,Shutdown SW Installed,shutdownSW,A/C Interfaces - n/a,Option,0,1
+Aircraft Interfaces,Weight-on-wheels Switch,WOW SW Installed,wowSW,A/C Interfaces - n/a,Option,0,1
 Aircraft Interfaces,Anti-Ice Command Switch,Independent Engine Wiring A/I Command,aiCmdSingleEngineWiring,aiCmdSW;indepEngineWiring,Selection,1,1
 Aircraft Interfaces,Anti-Ice Command Switch,Shared Engine Wiring A/I Command,aiCmdDualEngineWiring,aiCmdSW;sharedEngineWiring,Selection,1,1
 Electrical Power,Engine ID,11 Discrete Inputs,11EID,airCooled,Selection,1,1
@@ -67,6 +77,10 @@ Drivers/Torque Motors,Dual Non-Shared Torque Motor,Dual Non-Shared Torque Motor,
 Drivers/Torque Motors,CGV TM Local Channel Only Command Tracking,CGV TM Local Channel Only Command Tracking,cgvTMLocalChannelOnlyCommandTracking,cgvTMLocalChannelOnly;cgvTMCommandTracking,Selection,1,1
 Channel Health,Channel Health Execution,Channel Health Execution Version A,channelHealthCalcA,channelHealthCalc01a;channelHealthCalc02a;channelHealthCalc03a;channelHealthCalc04a;channelHealthCalc05a;channelHealthCalc06a;channelHealthCalc07a;channelHealthCalc08a;channelHealthCalc09a;channelHealthCalc10a,Selection,1,1
 Channel Health,Channel Health Execution,Channel Health Execution Version B,channelHealthCalcB,channelHealthCalc01b;channelHealthCalc02b;channelHealthCalc03b;channelHealthCalc04b;channelHealthCalc05b;channelHealthCalc06b;channelHealthCalc07b;channelHealthCalc08b;channelHealthCalc09b;channelHealthCalc10b,Selection,1,1
+Communications,Avionics Data Bus,ARINC-429,Arinc,Communications - n/a,Selection,1,1
+Communications,GSE Interface,Has Ethernet transmit capability,gseEthernet,Communications - n/a,Selection,1,1
+Communications,GSE Interface,RS-422 Only,gseRS422Only,Communications - n/a,Selection,1,1
+Communications,Avionics Data Bus,MIL-STD-1553,Mil1553,Communications - n/a,Selection,1,1
 Fuel Cooled ECU,Minimum Fuel Flow Software Command,Minimum Fuel Flow Software Command,minFuelFlowCmd,controlModeWFP3,Selection,1,1
 Fuel Cooled ECU,N1 Speed Governor,N1 Speed Governor,n1SpeedGovernor,controlModeWFP3,Selection,1,1
 Fuel Cooled ECU,N1 Governor above EGT Limit Risk Reduction,N1 Setpoint Limiter,opLimitersEgtLimit,controlModeWFP3,Selection,1,1
@@ -198,17 +212,60 @@ Communications,M1553 Cross Communication Data ECU to BC Pane 2,WFCMD Validity RT
 Communications,M1553 Cross Communication Data ECU to ECU Pane 6,WFCMD Validity RT to RT,wfcmdValEcuToEcuM1553,dataSetCrossCommM1553,Selection,0,1000
 Communications,M1553 Cross Communication Data ECU to BC Pane 1,Fuel Flow Feedback Validity RT to BC,wffbValEcuToBcM1553,dataSetCrossCommM1553,Selection,0,1000
 Communications,M1553 Cross Communication Data ECU to ECU Pane 5,Fuel Flow Feedback Validity RT to RT,wffbValEcuToEcuM1553,dataSetCrossCommM1553,Selection,0,1000
+Drivers/Torque Motors,MMV,MMV conversions,mmvConversions,Drivers & T/M - n/a,Option,0,1
+Drivers/Torque Motors,Command Tracking,MV TM Command Tracking,mvTMCommandTracking,Drivers & T/M - n/a,Option,0,10
+Drivers/Torque Motors,Metering Valve Torque Motor,Single Non-Shared Metering Valve Torque Motor,mvTMCrossChannelBorrowing,Drivers & T/M - n/a,Selection,1,1
+Drivers/Torque Motors,Metering Valve Torque Motor,Dual Non-Shared Metering Valve Torque Motor,mvTMLocalChannelOnly,Drivers & T/M - n/a,Selection,1,1
+Drivers/Torque Motors,Overspeed Solenoid,Overspeed Coil Installed,overspeedCoil,Drivers & T/M - n/a,Selection,1,1
+Drivers/Torque Motors,Overspeed Solenoid,Overspeed Solenoid Installed,overspeedSolenoid,Drivers & T/M - n/a,Selection,1,1
 Installation,Engine ID,Right Engine ID Valid Configuration,rightEngID,dualEngine,Option,0,1
 Reliability,Dual Engine,Dual Engine,sfrDualEng,dualEngine,Selection,1,1
 Aircraft Interfaces,Engine Wiring Configuration,Shared Engine Wiring,sharedEngineWiring,dualEngine,Selection,1,1
 Communications,Cross Engine Data Link,Cross Engine Data Link,xEngDataLink,dualEngine,Option,0,1
 Engine Power,Dual Engine,Dual Engine for Commercial,sfrDualEngCFR,dualEngine;sfrCFR,Selection,1,1
 Reliability,Thrust Reverse,Thrust Reverse/Dual Engine,sfrTrDualEng,dualEngine;sfrThrustRev,Selection,1,1
+Electrical Power,Aircraft Power,Dual Aircraft Power Source,dualACPwr,Elec Power - n/a,Selection,1,1
+Electrical Power,PMA Power,PMA Power Source,pmaPower,Elec Power - n/a,Option,0,1
+Electrical Power,Aircraft Power,Single Aircraft Power Source,singleACPwr,Elec Power - n/a,Selection,1,1
 Monitoring,Oil Filter Bypass Connection,Single Channel Input,singleChannelInputOilFiltByp,engDis1ChanInputElectInt,Selection,1,1
 Monitoring,Fuel Filter Bypass Connection,Single Channel Input,singleChannelInputWfFiltByp,engDis1ChanInputElectInt,Selection,1,1
 Monitoring,Oil Filter Bypass Connection,Shared Channel,oilFiltBypSharedElectInt,engDisSharedElectInt,Selection,1,1
 Monitoring,Fuel Filter Bypass Connection,Shared Channel,wfFiltBypSharedElectInt,engDisSharedElectInt,Selection,1,1
+Engine Power,Throttle Control,Autothrottle Installed,autoThrottle,Engine Power - n/a,Option,0,1
+Engine Power,ECO Mode,ECO Mode,ecoMode,Engine Power - n/a,Option,0,1
+Engine Power,Engine Idle Switch,Engine Idle Switch installed,engineIdleDiscrete,Engine Power - n/a,Option,0,1
+Engine Power,PLA Difference Fault Signal Selection,PLA Difference Fault choose High between LC & XC PLA,plaDiffChooseHigh,Engine Power - n/a,Selection,1,1
+Engine Power,PLA Difference Fault Signal Selection,PLA Difference Fault Fail to Idle,plaDiffFailedIdle,Engine Power - n/a,Selection,1,1
+Engine Power,Final PLA Adjustment,Final PLA,plaFinalAdjusted,Engine Power - n/a,Selection,1,1
+Engine Power,Final PLA,PLA is not rate limited or filtered,plaNoRateLimitFilter,Engine Power - n/a,Selection,1,1
+Engine Power,PLA Selection,PLA selection standard ,plaPrimSelectStandard,Engine Power - n/a,Selection,1,1
+Engine Power,Final PLA,PLA is rate limited and filtered,plaRateLimitFilter,Engine Power - n/a,Selection,1,1
+Engine Power,PLA Takeoff Limitation,Engine Power Rating Limited by Altitude,plaTakeoffLimitation,Engine Power - n/a,Selection,1,1
+Engine Power,PLA Takeoff Limitation,Engine Power Rating not Limited by Altitude,plaTakeoffUnrestricted,Engine Power - n/a,Selection,1,1
+Engine Power,PLA Input,PLA via Arinc,thrustViaArinc,Engine Power - n/a,Selection,1,1
+Engine Power,PLA Input,PLA via Analog,thrustViaDiscrete,Engine Power - n/a,Selection,1,1
+Engine Shutdown,Indpendent shutdown,Run Cutoff solenoid for independent fuel shutoff,runCutoffSolenoid,Engine Shutdown - n/a,Option,0,1
+Engine Speed,N1,Has N1,n1Common,Engine Speed - n/a,Selection,0,1
+Engine Speed,Speed,N1,n1speed,Engine Speed - n/a,Selection,1,2
+Engine Speed,N2 Derivative,N2 percent rate of change,n2DotPercent,Engine Speed - n/a,Selection,1,1
+Engine Speed,N2 Derivative,N2 RPM rate of change,n2DotRPM,Engine Speed - n/a,Selection,1,1
+Engine Speed,N2 RPM,N2 RPM is rate limited and filtered,n2RPMRateLimitFilter,Engine Speed - n/a,Selection,1,1
+Engine Speed,Secondary N2,Has Secondary N2,n2SecondarySource,Engine Speed - n/a,Selection,1,1
+Engine Speed,Secondary N2,No Secondary N2,n2SingleSource,Engine Speed - n/a,Selection,1,1
+Engine Speed,Speed,N2 Twin Spool,n2Twin,Engine Speed - n/a,Selection,1,2
+Engine Speed,Overspeed Monitoring,Monitors N2 Monopole and PMA,overspeedPMA,Engine Speed - n/a,Selection,1,1
+Engine Speed,Overspeed Monitoring,Monitors N2 Monopole with reset,overspeedReset,Engine Speed - n/a,Selection,1,1
+Engine Start,Start Abort,Start Abort Determined by Software,startAbort,Engine Start - n/a,Option,0,1
+Engine Start,Start Command,Start Command Initiated by PLA,startCmdPLA,Engine Start - n/a,Selection,1,1
+Engine Start,Start Command,Start Command SW Installed,startCmdSW,Engine Start - n/a,Selection,1,1
+Engine Start,Start Mode,Shutdown Command indicates no start allowed,startModeShutdnCmd,Engine Start - n/a,Selection,1,1
 Engine Power,PLA Selection,PLA selection can be overridden by the Idle Discrete Switch,plaPrimSelectIdleSW,engineIdleDiscrete,Selection,1,1
+Environmental,Audio Frequency Conducted Susceptibility,DO-160 Audio Frequency Conducted Susceptibility Requirements,do160AFCS,Environmental - n/a,Selection,1,1
+Environmental,Radio Frequency Conducted Emissions,DO-160 Radio Frequency Conducted Emissions Requirements,do160RFCE,Environmental - n/a,Selection,1,1
+Environmental,Radio Frequency Conducted Susceptibility,DO-160 Radio Frequency Conducted Susceptibility Requirements,do160RFCS,Environmental - n/a,Selection,1,1
+Environmental,Audio Frequency Conducted Susceptibility,MIL-STD-461 Audio Frequency Conducted Susceptibility Requirements,mil461AFCS,Environmental - n/a,Selection,1,1
+Environmental,Radio Frequency Conducted Emissions,MIL-STD-461 Radio Frequency Conducted Emissions Requirements,mil461RFCE,Environmental - n/a,Selection,1,1
+Environmental,Radio Frequency Conducted Susceptibility,MIL-STD-461 Radio Frequency Conducted Susceptibility Requirements,mil461RFCS,Environmental - n/a,Selection,1,1
 Drivers/Torque Motors,High Side Drivers Installed,High Side Drivers Installed,highSideDriver,featherCoil,Selection,1,1
 Drivers/Torque Motors,Driver and Torque Motor Signal Selection,Output Driver Selection for Dual Channel,ODSDualChannel,featherCoil,Selection,1,1
 Monitoring,Filter Inlet Static Pressure Type,Filter using Self-Adjusting Time Constant Filter,psSelfAdjustingFiltered,filterSelfAdjusting;psFiltered;,Selection,1,1
@@ -272,12 +329,12 @@ Drivers/Torque Motors,Driver and Torque Motor Signal Selection,Output Driver Sel
 Aircraft Interfaces,Ignition Switch,Independent Engine Wiring Ign,ignitSingleEngineWiring,ignitionSW;indepEngineWiring;,Selection,1,1
 Aircraft Interfaces,Ignition Switch,Shared Engine Wiring Ign,ignitDualEngineWiring,ignitionSW;sharedEngineWiring,Selection,1,1
 Drivers/Torque Motors,High Side and Low Side (combined) Drivers,High Side and Low Side (combined) Drivers,hslsDriver,ignRelay,Selection,1,1
-Installation,ECU Enclosure Type,Air Cooled,airCooled,Installation,Selection,1,1
-Installation,Engine Count,Dual Engines,dualEngine,Installation,Selection,1,1
-Installation,ECU Enclosure Type,Fuel Cooled,fuelCooled,Installation,Selection,1,1
-Installation,Engine Count,Single Engine,singleEngine,Installation,Selection,1,1
-Installation,Engine Type,Turbo Fan,turboFan,Installation,Selection,1,1
-Installation,Engine Type,Turbo Prop,turboProp,Installation,Selection,1,1
+Installation,ECU Enclosure Type,Air Cooled,airCooled,Installation - Air Cooled,Selection,1,1
+Installation,Engine Count,Dual Engines,dualEngine,Installation - Dual Engine,Selection,1,1
+Installation,ECU Enclosure Type,Fuel Cooled,fuelCooled,Installation - Fuel Cooled,Selection,1,1
+Installation,Engine Count,Single Engine,singleEngine,Installation - Single Engine,Selection,1,1
+Installation,Engine Type,Turbo Fan,turboFan,Installation - Turbo Fan,Selection,1,1
+Installation,Engine Type,Turbo Prop,turboProp,Installation - Turbo Prop,Selection,1,1
 Drivers/Torque Motors,High Side and Low Side (combined) Drivers,High Side and Low Side (combined) Drivers,hslsDriver,loadInhibit,Selection,1,1
 Drivers/Torque Motors,Low Side Drivers Installed,Low Side Drivers installed,lowSideDriver,lowSideDriverConditionallyPowered,Selection,1,1
 Communications,MIL-STD-1553 Input Message,Input Message 2,m1553NumRxSubaddress2,m1553NumRxSubaddress1,Selection,0,10
@@ -287,6 +344,7 @@ Aircraft Interfaces,Mach Hold,Independent Engine Wiring Mach Hold,machHoldSingle
 Aircraft Interfaces,Mach Hold,Shared Engine Wiring Mach Hold,machHoldDualEngineWiring,machHold;sharedEngineWiring,Selection,1,1
 Aircraft Interfaces,Maintenance Enabled Switch,Independent Engine Wiring Maint,maintSingleEngineWiring,maintEnableSW;indepEngineWiring;,Selection,1,1
 Aircraft Interfaces,Maintenance Enabled Switch,Shared Engine Wiring Maint,maintDualEngineWiring,maintEnableSW;sharedEngineWiring,Selection,1,1
+Maintenance,Motoring,Engine Motoring Software Indication,engMotor,Maintenance - n/a,Option,0,1
 Fuel Cooled ECU,MIEC Mode Fuel Flow Calculation,No Minimum Airflow Idle Present,miecModeDefIdleCalc,miecMode,Selection,1,1
 Fuel Cooled ECU,MIEC Mode Fuel Flow Calculation,Minimum Airflow Idle Present,miecModeMinAirIdleCalc,miecMode;minAirflowIdle;,Selection,1,1
 Communications,M1553 Data BC to ECU Pane 2,True Angle of Attack Validity,aoaValBcToEcuM1553,Mil1553,Selection,0,1000
@@ -381,71 +439,6 @@ Communications,M1553 Data BC to ECU Pane 3,UTC Time Validity,utcTimeValBcToEcuM1
 Communications,M1553 Data ECU to BC Pane 11,Fuel Flow Feedback RT to BC,wffbEcuToBcM1553,Mil1553,Selection,0,1000
 Communications,M1553 Data BC to ECU Pane 1,Weight on Wheels,wowBcToEcuM1553,Mil1553,Selection,0,1000
 Drivers/Torque Motors,High Side and Low Side (combined) Drivers,High Side and Low Side (combined) Drivers,hslsDriver,modeTransfer,Selection,1,1
-Drivers/Torque Motors,Low Side Drivers (Conditionally Powered) Installed,Low Side Drivers (Conditionally Powered) Installed,lowSideDriverConditionallyPowered,motiveFlowLockoutCoil,Selection,1,1
-Drivers/Torque Motors,Driver and Torque Motor Signal Selection,Output Driver Selection for Dual Channel,ODSDualChannel,motiveFlowLockoutCoil,Selection,1,1
-Drivers/Torque Motors,Torque Motor Command Tracking Dual Non Shared,Torque Motor Command Tracking Dual Non Shared,tmDualNonSharedCommandTracking,mvTMCommandTracking,Selection,1,1
-Drivers/Torque Motors,Driver and Torque Motor Signal Selection,Output Driver Selection for Dual Channel,ODSDualChannel,mvTMCrossChannelBorrowing,Selection,1,1
-Drivers/Torque Motors,Single Non-Shared Torque Motor,Single Non-Shared Torque Motor,tmSingleNonShared,mvTMCrossChannelBorrowing,Selection,1,1
-Drivers/Torque Motors,Dual Non-Shared Torque Motor,Dual Non-Shared Torque Motor,tmDualNonShared,mvTMLocalChannelOnly,Selection,1,1
-Drivers/Torque Motors,Dual Non-Shared Metering Valve Torque Motor Command Tracking,Dual Non-Shared Metering Valve Torque Motor Command Tracking,mvTMLocalChannelOnlyCommandTracking,mvTMLocalChannelOnly;mvTMCommandTracking,Selection,1,1
-Aircraft Interfaces,Anti-Ice Command Switch,Anti-Ice Command SW Installed,aiCmdSW,A/C Interfaces - n/a,Option,0,1
-Aircraft Interfaces,Flight Idle Switch,Flight Idle SW Installed,flightIdleSW,A/C Interfaces - n/a,Option,0,1
-Aircraft Interfaces,Ground Idle Switch,Ground Idle SW Installed,groundIdleSW,A/C Interfaces - n/a,Option,0,1
-Aircraft Interfaces,Ignition Switch,Ignition SW Installed,ignitionSW,A/C Interfaces - n/a,Option,0,1
-Aircraft Interfaces,Engine Wiring Configuration,Independent Engine Wiring,indepEngineWiring,A/C Interfaces - n/a,Selection,1,1
-Aircraft Interfaces,Mach Hold,Mach Hold Mode Enabled,machHold,A/C Interfaces - n/a,Option,0,1
-Aircraft Interfaces,Maintenance Enabled Switch,Maintenance Enabled SW Installed,maintEnableSW,A/C Interfaces - n/a,Option,0,1
-Aircraft Interfaces,Reverse Request Switch,Reverse Request SW Installed,revRqstSW,A/C Interfaces - n/a,Option,0,1
-Aircraft Interfaces,Shutdown Switch,Shutdown SW Installed,shutdownSW,A/C Interfaces - n/a,Option,0,1
-Aircraft Interfaces,Weight-on-wheels Switch,WOW SW Installed,wowSW,A/C Interfaces - n/a,Option,0,1
-Communications,Avionics Data Bus,ARINC-429,Arinc,Communications - n/a,Selection,1,1
-Communications,GSE Interface,Has Ethernet transmit capability,gseEthernet,Communications - n/a,Selection,1,1
-Communications,GSE Interface,RS-422 Only,gseRS422Only,Communications - n/a,Selection,1,1
-Communications,Avionics Data Bus,MIL-STD-1553,Mil1553,Communications - n/a,Selection,1,1
-Drivers/Torque Motors,MMV,MMV conversions,mmvConversions,Drivers & T/M - n/a,Option,0,1
-Drivers/Torque Motors,Command Tracking,MV TM Command Tracking,mvTMCommandTracking,Drivers & T/M - n/a,Option,0,10
-Drivers/Torque Motors,Metering Valve Torque Motor,Single Non-Shared Metering Valve Torque Motor,mvTMCrossChannelBorrowing,Drivers & T/M - n/a,Selection,1,1
-Drivers/Torque Motors,Metering Valve Torque Motor,Dual Non-Shared Metering Valve Torque Motor,mvTMLocalChannelOnly,Drivers & T/M - n/a,Selection,1,1
-Drivers/Torque Motors,Overspeed Solenoid,Overspeed Coil Installed,overspeedCoil,Drivers & T/M - n/a,Selection,1,1
-Drivers/Torque Motors,Overspeed Solenoid,Overspeed Solenoid Installed,overspeedSolenoid,Drivers & T/M - n/a,Selection,1,1
-Electrical Power,Aircraft Power,Dual Aircraft Power Source,dualACPwr,Elec Power - n/a,Selection,1,1
-Electrical Power,PMA Power,PMA Power Source,pmaPower,Elec Power - n/a,Option,0,1
-Electrical Power,Aircraft Power,Single Aircraft Power Source,singleACPwr,Elec Power - n/a,Selection,1,1
-Engine Power,Throttle Control,Autothrottle Installed,autoThrottle,Engine Power - n/a,Option,0,1
-Engine Power,ECO Mode,ECO Mode,ecoMode,Engine Power - n/a,Option,0,1
-Engine Power,Engine Idle Switch,Engine Idle Switch installed,engineIdleDiscrete,Engine Power - n/a,Option,0,1
-Engine Power,PLA Difference Fault Signal Selection,PLA Difference Fault choose High between LC & XC PLA,plaDiffChooseHigh,Engine Power - n/a,Selection,1,1
-Engine Power,PLA Difference Fault Signal Selection,PLA Difference Fault Fail to Idle,plaDiffFailedIdle,Engine Power - n/a,Selection,1,1
-Engine Power,Final PLA Adjustment,Final PLA,plaFinalAdjusted,Engine Power - n/a,Selection,1,1
-Engine Power,Final PLA,PLA is not rate limited or filtered,plaNoRateLimitFilter,Engine Power - n/a,Selection,1,1
-Engine Power,PLA Selection,PLA selection standard ,plaPrimSelectStandard,Engine Power - n/a,Selection,1,1
-Engine Power,Final PLA,PLA is rate limited and filtered,plaRateLimitFilter,Engine Power - n/a,Selection,1,1
-Engine Power,PLA Takeoff Limitation,Engine Power Rating Limited by Altitude,plaTakeoffLimitation,Engine Power - n/a,Selection,1,1
-Engine Power,PLA Takeoff Limitation,Engine Power Rating not Limited by Altitude,plaTakeoffUnrestricted,Engine Power - n/a,Selection,1,1
-Engine Power,PLA Input,PLA via Arinc,thrustViaArinc,Engine Power - n/a,Selection,1,1
-Engine Power,PLA Input,PLA via Analog,thrustViaDiscrete,Engine Power - n/a,Selection,1,1
-Engine Shutdown,Indpendent shutdown,Run Cutoff solenoid for independent fuel shutoff,runCutoffSolenoid,Engine Shutdown - n/a,Option,0,1
-Engine Speed,N1,Has N1,n1Common,Engine Speed - n/a,Selection,0,1
-Engine Speed,Speed,N1,n1speed,Engine Speed - n/a,Selection,1,2
-Engine Speed,N2 Derivative,N2 percent rate of change,n2DotPercent,Engine Speed - n/a,Selection,1,1
-Engine Speed,N2 Derivative,N2 RPM rate of change,n2DotRPM,Engine Speed - n/a,Selection,1,1
-Engine Speed,N2 RPM,N2 RPM is rate limited and filtered,n2RPMRateLimitFilter,Engine Speed - n/a,Selection,1,1
-Engine Speed,Secondary N2,Has Secondary N2,n2SecondarySource,Engine Speed - n/a,Selection,1,1
-Engine Speed,Secondary N2,No Secondary N2,n2SingleSource,Engine Speed - n/a,Selection,1,1
-Engine Speed,Speed,N2 Twin Spool,n2Twin,Engine Speed - n/a,Selection,1,2
-Engine Speed,Overspeed Monitoring,Monitors N2 Monopole and PMA,overspeedPMA,Engine Speed - n/a,Selection,1,1
-Engine Speed,Overspeed Monitoring,Monitors N2 Monopole with reset,overspeedReset,Engine Speed - n/a,Selection,1,1
-Engine Start,Start Abort,Start Abort Determined by Software,startAbort,Engine Start - n/a,Option,0,1
-Engine Start,Start Command,Start Command Initiated by PLA,startCmdPLA,Engine Start - n/a,Selection,1,1
-Engine Start,Start Command,Start Command SW Installed,startCmdSW,Engine Start - n/a,Selection,1,1
-Engine Start,Start Mode,Shutdown Command indicates no start allowed,startModeShutdnCmd,Engine Start - n/a,Selection,1,1
-Environmental,Audio Frequency Conducted Susceptibility,DO-160 Audio Frequency Conducted Susceptibility Requirements,do160AFCS,Environmental - n/a,Selection,1,1
-Environmental,Radio Frequency Conducted Emissions,DO-160 Radio Frequency Conducted Emissions Requirements,do160RFCE,Environmental - n/a,Selection,1,1
-Environmental,Radio Frequency Conducted Susceptibility,DO-160 Radio Frequency Conducted Susceptibility Requirements,do160RFCS,Environmental - n/a,Selection,1,1
-Environmental,Audio Frequency Conducted Susceptibility,MIL-STD-461 Audio Frequency Conducted Susceptibility Requirements,mil461AFCS,Environmental - n/a,Selection,1,1
-Environmental,Radio Frequency Conducted Emissions,MIL-STD-461 Radio Frequency Conducted Emissions Requirements,mil461RFCE,Environmental - n/a,Selection,1,1
-Environmental,Radio Frequency Conducted Susceptibility,MIL-STD-461 Radio Frequency Conducted Susceptibility Requirements,mil461RFCS,Environmental - n/a,Selection,1,1
-Maintenance,Motoring,Engine Motoring Software Indication,engMotor,Maintenance - n/a,Option,0,1
 Monitoring,Chip Detector Connection,Shared Channel,chipDetectDualChSharedInput,Monitoring - n/a,Selection,1,1
 Monitoring,Chip Detector Connection,Single Channel Input,chipDetectSingleChInput,Monitoring - n/a,Selection,1,1
 Monitoring,Filter Type Available,Low-Pass Filter,filterLowPass,Monitoring - n/a,Selection,0,2
@@ -456,10 +449,13 @@ Monitoring,Inlet Static Pressure Location,Inlet Static Pressure is measured inte
 Monitoring,EGT Derivative,Deadzone filtered derivative,t5DotDeadzoneFilter,Monitoring - n/a,Selection,1,1
 Monitoring,TT2 Heater,TT2 Heater,tt2Heater,Monitoring - n/a,Option,0,1
 Monitoring,Vibration Output for GSE,Vibration Output for GSE interface installed,vibrationOutput,Monitoring - n/a,Option,0,1
-Reliability,Compliance,Code of Federal Regulations Compliant,sfrCFR,Reliability - n/a,Option,0,1
-Reliability,Compliance,MIL-STD-882 Compliant,sfrM882,Reliability - n/a,Option,0,1
-Turbo Fan,Engine Speed Analog Output,N1 Speed Analog Output,n1SpeedOutput,Turbo Fan - n/a,Option,0,1
-Turbo Prop,Engine Speed Analog Output,N2 Speed Analog Output,n2SpeedOutput,Turbo Prop - n/a,Option,0,1
+Drivers/Torque Motors,Low Side Drivers (Conditionally Powered) Installed,Low Side Drivers (Conditionally Powered) Installed,lowSideDriverConditionallyPowered,motiveFlowLockoutCoil,Selection,1,1
+Drivers/Torque Motors,Driver and Torque Motor Signal Selection,Output Driver Selection for Dual Channel,ODSDualChannel,motiveFlowLockoutCoil,Selection,1,1
+Drivers/Torque Motors,Torque Motor Command Tracking Dual Non Shared,Torque Motor Command Tracking Dual Non Shared,tmDualNonSharedCommandTracking,mvTMCommandTracking,Selection,1,1
+Drivers/Torque Motors,Driver and Torque Motor Signal Selection,Output Driver Selection for Dual Channel,ODSDualChannel,mvTMCrossChannelBorrowing,Selection,1,1
+Drivers/Torque Motors,Single Non-Shared Torque Motor,Single Non-Shared Torque Motor,tmSingleNonShared,mvTMCrossChannelBorrowing,Selection,1,1
+Drivers/Torque Motors,Dual Non-Shared Torque Motor,Dual Non-Shared Torque Motor,tmDualNonShared,mvTMLocalChannelOnly,Selection,1,1
+Drivers/Torque Motors,Dual Non-Shared Metering Valve Torque Motor Command Tracking,Dual Non-Shared Metering Valve Torque Motor Command Tracking,mvTMLocalChannelOnlyCommandTracking,mvTMLocalChannelOnly;mvTMCommandTracking,Selection,1,1
 Engine Speed,N1 Derivative,N1 percent rate of change,n1DotPercent,n1Common,Selection,1,1
 Engine Speed,N1 Derivative,N1 RPM rate of change,n1DotRPM,n1Common,Selection,1,1
 Engine Speed,N1 RPM,N1 RPM is rate limited and filtered,n1RPMRateLimitFilter,n1Common,Selection,1,1
@@ -481,6 +477,8 @@ Drivers/Torque Motors,Driver and Torque Motor Signal Selection,Output Driver Sel
 Drivers/Torque Motors,Single Non-Shared Torque Motor,Single Non-Shared Torque Motor,tmSingleNonShared,propPitchController,Selection,1,1
 Monitoring,Filter Type Available,Self-Adjusting Time Constant Filter for analog inputs,filterSelfAdjusting,psFiltered,Selection,1,1
 Monitoring,Filter Type Available,Self-Adjusting Time Constant Filter for analog inputs,filterSelfAdjusting,psUnfiltered,Selection,1,1
+Reliability,Compliance,Code of Federal Regulations Compliant,sfrCFR,Reliability - n/a,Option,0,1
+Reliability,Compliance,MIL-STD-882 Compliant,sfrM882,Reliability - n/a,Option,0,1
 Reliability,Thrust Reverse,Thrust Reverse,sfrThrustRev,revRqstSW,Selection,1,1
 Aircraft Interfaces,Reverse Request Switch,Independent Engine Wiring RR,revRqstSingleEngineWiring,revRqstSW;indepEngineWiring;,Selection,1,1
 Aircraft Interfaces,Reverse Request Switch,Shared Engine Wiring RR,revRqstDualEngineWiring,revRqstSW;sharedEngineWiring,Selection,1,1
@@ -501,6 +499,8 @@ Drivers/Torque Motors,Low Side Drivers (Conditionally Powered) Installed,Low Sid
 Drivers/Torque Motors,Driver and Torque Motor Signal Selection,Output Driver Selection for Dual Channel,ODSDualChannel,supplyDeOilCoil,Selection,1,1
 Drivers/Torque Motors,Torque Motor Command Tracking BIT,Torque Motor Command Tracking BIT,commandTracking,tmDualNonSharedCommandTracking,Selection,1,1
 Monitoring,Airflow Calculation,Corrected Airflow Calculation,airflowCalcCorrected,tt2Heater,Selection,1,1
+Turbo Fan,Engine Speed Analog Output,N1 Speed Analog Output,n1SpeedOutput,Turbo Fan - n/a,Option,0,1
+Turbo Prop,Engine Speed Analog Output,N2 Speed Analog Output,n2SpeedOutput,Turbo Prop - n/a,Option,0,1
 Turbo Fan,Compressor Guide Vanes (CGV) LVDT,CGV LVDT,cgvLVDT,turboFan,Selection,1,1
 Drivers/Torque Motors,Torque Motors,Compressor Guide Vane Torque Motor,cgvTM,turboFan,Option,0,10
 Monitoring,Exhaust Gas Temperature,EGT 3 Thermocouple,egt3TC,turboFan,Selection,1,1

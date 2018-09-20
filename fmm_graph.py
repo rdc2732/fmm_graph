@@ -72,18 +72,28 @@ def find_path(graph, start, end, path=[]):
                 return newpath
     return None
 
+
 def find_all_paths(graph, start, path=[], level=0):
-    path = path + [start]
     if not start in graph:
         return []
-    paths = []
-    print(graph[start])
+    path = path + [start]
+    paths = [path]
     for node in graph[start]:
-        if node not in path:
-            newpaths = find_all_paths(graph, node, path, level)
-            for newpath in newpaths:
-                paths.append(newpath)
-    return [path]
+        level += 1
+        paths = paths + find_all_paths(graph, node, path, level)
+    return(paths)
+
+    # if not start in graph:
+    #     return []
+    # path = path + [start]
+    # paths = []
+    # for node in graph[start]:
+    #     if node not in path:
+    #         level += 1
+    #         newpaths = find_all_paths(graph, node, path, level)
+    #         for newpath in newpaths:
+    #             paths.append(newpath)
+    # return [paths]
 
 
 
@@ -110,34 +120,34 @@ with open(csvfile) as csv_file:
 con.commit()
 
 ##############################################
-sql_query = \
-    """select
-        k1.keyword as Dependency,
-        k2.keyword as Dependent
-    from
-        Keywords as k1,
-        Keywords as k2,
-        KeyDepends as d
-    where
-        k1.key_id = d.depon and
-        k2.key_id = d.depto
-    order by
-        k1.key_id, k2.key_id
-    ;"""
-
-
-cur.execute(sql_query)
-
-# Make graphiz dot file from data
-myFile = open(dotfile, 'w')
-myFile.write('digraph FMM {\n')
-myFile.write('node [style=filled];\n')
-
-for row in cur:
-    myFile.write(f'  \"{row[0]}\" -> \"{row[1]}\" ;\n')
-
-myFile.write("}\n")
-myFile.close()
+# sql_query = \
+#     """select
+#         k1.keyword as Dependency,
+#         k2.keyword as Dependent
+#     from
+#         Keywords as k1,
+#         Keywords as k2,
+#         KeyDepends as d
+#     where
+#         k1.key_id = d.depon and
+#         k2.key_id = d.depto
+#     order by
+#         k1.key_id, k2.key_id
+#     ;"""
+#
+#
+# cur.execute(sql_query)
+#
+# # Make graphiz dot file from data
+# myFile = open(dotfile, 'w')
+# myFile.write('digraph FMM {\n')
+# myFile.write('node [style=filled];\n')
+#
+# for row in cur:
+#     myFile.write(f'  \"{row[0]}\" -> \"{row[1]}\" ;\n')
+#
+# myFile.write("}\n")
+# myFile.close()
 
 
 # ##############################################
@@ -209,7 +219,6 @@ sql_query3 = \
         depon
     ;"""
 
-
 # Build out graph based on list of keys
 for key in keyWords.keys():
     graph[key] = []
@@ -217,12 +226,86 @@ for key in keyWords.keys():
     for result in cur.fetchall():
         graph[key].append(result[0])
 
-# print(graph)
+
+sql_query4 = \
+    """
+        select key_id from keywords where key_id not in (select depto from keydepends);
+    """
+
+cur.execute(sql_query4)
+top_nodes = []
+gfz_file_number = 0;
+
+for result in cur.fetchall():
+    top_nodes.append(result[0])
+
+for node in top_nodes:
+    gfz_file_number += 1
+    node_pairs = []
+
+    dotfile = "FMM_" + str(gfz_file_number) + ".gfz"
+    graph_title = '"' + keyWords[node] + '"'
+
+    pathlist = find_all_paths(graph, node)
+
+    for path in pathlist:
+        for n in range(len(path) - 1):
+            node_pair = (path[n], path[n+1])
+            if node_pair not in node_pairs:
+                node_pairs.append(node_pair)
+
+    # Make graphiz dot file from data
+    myFile = open(dotfile, 'w')
+    myFile.write('digraph ' + graph_title + ' {\n')
+    myFile.write('node [style=filled];\n')
+    myFile.write('rankdir = LR;\n')
+
+
+    for node_pair in node_pairs:
+        depon = keyWords[node_pair[0]]
+        depto = keyWords[node_pair[1]]
+        myFile.write(f'  \"{depon}\" -> \"{depto}\" ;\n')
+
+    myFile.write("}\n")
+    myFile.close()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# for node in graph.keys():
+#     for path in find_all_paths(graph, node):
+#         print(node, len(path))
 
 
 # print("execute find path:", find_path(graph, 2, 402))
 
-print(find_all_paths(graph, 316))
+# pathlist = find_all_paths(graph, 316)
+#
+# for p in pathlist:
+#     print(p)
 
 # for key in graph.keys():
 #     print(key, keyWords[key], graph[key])
