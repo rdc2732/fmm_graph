@@ -2,4 +2,5 @@
 *.pdf
 *.gfz
 local_settings.py
+bookmark.txt
 

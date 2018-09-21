@@ -21,6 +21,7 @@ import re
 import csv
 import glob
 import sqlite3
+import subprocess
 
 # Define files
 sqldbfile = 'FMM.db'
@@ -59,45 +60,19 @@ def addDependency(parent_id, child_id):
     return
 
 
-def find_path(graph, start, end, path=[]):
-    path = path + [start]
-    if start == end:
-        return path
-    if not start in graph:
-        return None
-    for node in graph[start]:
-        if node not in path:
-            newpath = find_path(graph, node, end, path)
-            if newpath:
-                return newpath
-    return None
-
-
-def find_all_paths(graph, start, path=[], level=0):
+def find_all_paths(graph, start, path=[], level=0, skip = 0):
     if not start in graph:
         return []
     path = path + [start]
     paths = [path]
     for node in graph[start]:
         level += 1
-        paths = paths + find_all_paths(graph, node, path, level)
+        if node != skip:
+            paths = paths + find_all_paths(graph, node, path, level)
+        else:
+            print('skipping node:', skip)
+            paths = paths + [[start, node]]
     return(paths)
-
-    # if not start in graph:
-    #     return []
-    # path = path + [start]
-    # paths = []
-    # for node in graph[start]:
-    #     if node not in path:
-    #         level += 1
-    #         newpaths = find_all_paths(graph, node, path, level)
-    #         for newpath in newpaths:
-    #             paths.append(newpath)
-    # return [paths]
-
-
-
-
 
 
 # CSV records; rec[0] = FM Keyword; rec[1] = list of FM Dependencies
@@ -116,79 +91,10 @@ with open(csvfile) as csv_file:
         line_count += 1
     print(f'Processed {line_count} lines.')
 
-# Commit and close database
+# Commit database
 con.commit()
 
-##############################################
-# sql_query = \
-#     """select
-#         k1.keyword as Dependency,
-#         k2.keyword as Dependent
-#     from
-#         Keywords as k1,
-#         Keywords as k2,
-#         KeyDepends as d
-#     where
-#         k1.key_id = d.depon and
-#         k2.key_id = d.depto
-#     order by
-#         k1.key_id, k2.key_id
-#     ;"""
-#
-#
-# cur.execute(sql_query)
-#
-# # Make graphiz dot file from data
-# myFile = open(dotfile, 'w')
-# myFile.write('digraph FMM {\n')
-# myFile.write('node [style=filled];\n')
-#
-# for row in cur:
-#     myFile.write(f'  \"{row[0]}\" -> \"{row[1]}\" ;\n')
-#
-# myFile.write("}\n")
-# myFile.close()
 
-
-# ##############################################
-# sql_query = \
-#     """select
-#         k1.keyword as Dependency,
-#         k2.keyword as Dependent
-#     from
-#         Keywords as k1,
-#         Keywords as k2,
-#         KeyDepends as d
-#     where
-#         k1.key_id = d.depon and
-#         k2.key_id = d.depto
-#     order by
-#         k1.key_id, k2.key_id
-#     ;"""
-#
-#
-# cur.execute(sql_query)
-#
-# # Make graphiz dot file from data
-# myFile = open(dotfile2, 'w')
-# myFile.write('digraph FMM2 {\n')
-# myFile.write('node [style=filled];\n')
-#
-# for row in cur:
-#     myFile.write(f'  \"{row[1]}\" -> \"{row[0]}\" ;\n')
-#
-# myFile.write("}\n")
-# myFile.close()
-
-# Get list of all top level nodes
-# select * from keywords where key_id not in (select depto from keydepends);
-
-
-
-# Build directed graph data structure from data.
-# The graph will be defined as a dictionary of lists.
-#   - the key to each key/value pair will be a node
-#   - the value will be a list of directly connected nodes
 graph = {}
 keyWords = {}
 
@@ -229,7 +135,7 @@ for key in keyWords.keys():
 
 sql_query4 = \
     """
-        select key_id from keywords where key_id not in (select depto from keydepends);
+        select key_id from keywords where key_id not in (select depto from keydepends) order by keyword;
     """
 
 cur.execute(sql_query4)
@@ -239,14 +145,21 @@ gfz_file_number = 0;
 for result in cur.fetchall():
     top_nodes.append(result[0])
 
+pdflist = []
+bookmarks = 'bookmark.txt'
+bookmarkFile = open(bookmarks, 'w')
+
 for node in top_nodes:
     gfz_file_number += 1
     node_pairs = []
 
     dotfile = "FMM_" + str(gfz_file_number) + ".gfz"
-    graph_title = '"' + keyWords[node] + '"'
+    pdffile = "FMM_" + str(gfz_file_number) + ".pdf"
 
-    pathlist = find_all_paths(graph, node)
+    node_name = keyWords[node]
+    graph_title = '"' + node_name + '"'
+
+    pathlist = find_all_paths(graph, node, [], 0, 113)
 
     for path in pathlist:
         for n in range(len(path) - 1):
@@ -258,8 +171,10 @@ for node in top_nodes:
     myFile = open(dotfile, 'w')
     myFile.write('digraph ' + graph_title + ' {\n')
     myFile.write('node [style=filled];\n')
+    myFile.write('size = "8,10";\n')
     myFile.write('rankdir = LR;\n')
-
+    myFile.write('labelloc = "t";\n')
+    myFile.write(f'label = {graph_title};\n')
 
     for node_pair in node_pairs:
         depon = keyWords[node_pair[0]]
@@ -269,70 +184,29 @@ for node in top_nodes:
     myFile.write("}\n")
     myFile.close()
 
+    # Convert this newly minted gfz file to pdf
+    subprocess.run(f'dot -Tpdf {dotfile} -o {pdffile}')
+    pdflist.append(pdffile)
 
+    # Make pdf table of contents file dot file from data
+    bookmarkFile.write('BookmarkBegin\n')
+    bookmarkFile.write(f'BookmarkTitle: {node_name}\n')
+    bookmarkFile.write('BookmarkLevel: 1\n')
+    bookmarkFile.write(f'BookmarkPageNumber: {gfz_file_number}\n')
 
+bookmarkFile.close()
+pdffiles = ' '.join(pdflist)
 
+subprocess.run(f'pdftk {pdffiles} cat output fmm_total.pdf')
+subprocess.run(f'pdftk fmm_total.pdf update_info {bookmarks} output fmm_total_final.pdf')
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# for node in graph.keys():
-#     for path in find_all_paths(graph, node):
-#         print(node, len(path))
-
-
-# print("execute find path:", find_path(graph, 2, 402))
-
-# pathlist = find_all_paths(graph, 316)
-#
-# for p in pathlist:
-#     print(p)
-
-# for key in graph.keys():
-#     print(key, keyWords[key], graph[key])
-
-
-# cur.execute(sql_query2)
-# for row in cur:
-#     graph[row[0]] = []
-#
-#
-# sql_query4 = \
-#     """select
-#         t1.keyword as dependency,
-#         t2.keyword as dependent
-#     from
-#         keywords as t1,
-#         keywords as t2,
-#         keydepends as t3
-#     where
-#         t1.key_id = t3.depon and
-#         t2.key_id = depto
-#     order by
-#         dependency, dependent
-#     ;"""
-#
-#
-#
-#
-
+# Close database
 con.close()
+
+# error check does not quite work to see if subnodes are subnodes of other nodes
+# for node in top_nodes:
+#     print("node = ", keyWords[node])
+#     for subnode in graph[node]:
+#         print("\tsubnode = ", keyWords[subnode])
+
+
