@@ -71,7 +71,10 @@ def find_all_paths(graph, start, path=[], level=0, skip = 0):
             paths = paths + find_all_paths(graph, node, path, level)
         else:
             print('skipping node:', skip)
-            paths = paths + [[start, node]]
+            # Add a new keyWord to show items skipped
+            skipped_name = keyWords[node] + " skipped..."
+            keyWords[999] = skipped_name
+            paths = paths + [[start, node],[node, 999]]
     return(paths)
 
 
