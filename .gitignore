@@ -1,6 +1,8 @@
 *.pyc
 *.pdf
 *.gfz
+.idea
+.idea/*.*
 local_settings.py
 bookmark.txt
 
