@@ -1,536 +1,558 @@
-FM Selection GUI tab,Function,Selectable Options,FM Selection,FM Selection Dependencies,Rule Type,Selection Min,Selection Max,,
-Aircraft Interfaces,Anti-Ice Command Switch,Anti-Ice Command SW Installed,aiCmdSW,n/a - A/C Interfaces,Option,0,1,,
-Aircraft Interfaces,Flight Idle Switch,Flight Idle SW Installed,flightIdleSW,n/a - A/C Interfaces,Option,0,1,,
-Aircraft Interfaces,Ground Idle Switch,Ground Idle SW Installed,groundIdleSW,n/a - A/C Interfaces,Option,0,1,,
-Aircraft Interfaces,Ignition Switch,Ignition SW Installed,ignitionSW,n/a - A/C Interfaces,Option,0,1,,
-Aircraft Interfaces,Engine Wiring Configuration,Independent Engine Wiring,indepEngineWiring,n/a - A/C Interfaces,Selection,1,1,,
-Aircraft Interfaces,Mach Hold,Mach Hold Mode Enabled,machHold,n/a - A/C Interfaces,Option,0,1,,
-Aircraft Interfaces,Maintenance Enabled Switch,Maintenance Enabled SW Installed,maintEnableSW,n/a - A/C Interfaces,Option,0,1,,
-Aircraft Interfaces,Reverse Request Switch,Reverse Request SW Installed,revRqstSW,n/a - A/C Interfaces,Option,0,1,,
-Aircraft Interfaces,Shutdown Switch,Shutdown SW Installed,shutdownSW,n/a - A/C Interfaces,Option,0,1,,
-Aircraft Interfaces,Weight-on-wheels Switch,WOW SW Installed,wowSW,n/a - A/C Interfaces,Option,0,1,,
-Aircraft Interfaces,Anti-Ice Command Switch,Independent Engine Wiring A/I Command,aiCmdSingleEngineWiring,aiCmdSW;indepEngineWiring,Selection,1,1,,
-Aircraft Interfaces,Anti-Ice Command Switch,Shared Engine Wiring A/I Command,aiCmdDualEngineWiring,aiCmdSW;sharedEngineWiring,Selection,1,1,,
-Electrical Power,Engine ID,11 Discrete Inputs,11EID,airCooled,Selection,1,1,,
-Drivers/Torque Motors,Low Side Drivers,Anti-Ice Coil Installed,antiIceCoil,airCooled,Option,0,10,,
-Air Cooled ECU,Muted Recovery Degraded Mode ,Has muted recovery for degraded mode,ccdlDegradeLatch,airCooled,Selection,1,1,,
-Communications,GSE Interface,Upload Request open/closed discrete,closedContactUploadRequest,airCooled,Selection,0,1,,
-Electrical Power,Electrical Grounding,Common-Ground System,commonGnd,airCooled,Selection,1,1,,
-Air Cooled ECU,Engine Discrete Electrical Interface,Shared Channel,engDisSharedElectInt,airCooled,Selection,1,1,,
-Air Cooled ECU,Fuel Temperature Sensor,Installed,fuelTempSensorAvail,airCooled,Selection,1,1,,
-Drivers/Torque Motors,High Side Drivers,Igniter A and B High Side Driver Installed,HSIgniter,airCooled,Option,0,10,,
-Drivers/Torque Motors,Low Side Drivers,Motive Flow Lockout Coil Installed,motiveFlowLockoutCoil,airCooled,Option,0,10,,
-Drivers/Torque Motors,Metering Valve TM BIT MIO Signal Designation,MVTM MIO Signal Instance A,mvTMInputInstA,airCooled,Selection,1,1,,
-Monitoring,Oil Filter Bypass Indication,Open Circuit Indicates Bypass,oilFiltBypOpenIsBypass,airCooled,Selection,1,1,,
-Air Cooled ECU,Oil Temperature Sensor,Installed,oilTempSensorAvail,airCooled,Selection,1,1,,
-Monitoring,P3 Sensor Installation,External P3 sensors each plumbed to a single ECU Channel,p3ExternalSeparatePipes,airCooled,Selection,1,1,,
-Engine Power,Power Demand,Power Demand Reverse to MPR Selection,plaRevMpr,airCooled,Selection,1,1,,
-Air Cooled ECU,Manual Power Reserve,Manual Power Reserve Discrete (MPR) option,powerRatingMPRDiscrete,airCooled,Option,0,1,,
-Air Cooled ECU,Manual Power Reserve,Manual Power Reserve Throttle Lever (MPR) option,powerRatingMPRPushThrough,airCooled,Option,0,1,,
-Monitoring,Oil Pressure Sensor Type,Dual Transducer Pressure Sensor; Single Channel Inputs,pSnsrDualXDCRSingleChanIn,airCooled,Selection,1,1,,
-Monitoring,Static Pressure,Aircraft Weighted Signal Selection,psWeightedSel,airCooled,Selection,1,1,,
-Monitoring,TT2 Difference Check,RTD Difference Check,rtdDiffResetStopCheck,airCooled,Selection,1,1,,
-Drivers/Torque Motors,Low Side Drivers,Starter Relay Installed,starterRelay,airCooled,Option,0,10,,
-Monitoring,TT2 Signal Selection,Aircraft Weighted Signal Selection,tt2WeightedSel,airCooled,Selection,1,1,,
-Air Cooled ECU,Vibration Sensor,Installed,vibrationSense,airCooled,Option,0,1,,
-Monitoring,Fuel Filter Bypass Indication,Open Circuit Indicates Bypass,wfFiltBypOpenIsBypass,airCooled,Selection,1,1,,
-Drivers/Torque Motors,Drivers and Torque Motor Wiring,Drivers and Torque Motor Wiring for Air Cooled Application,DTMWiringAC,airCooled;antiIceCoil,Selection,1,1,,
-Drivers/Torque Motors,Drivers and Torque Motor Wiring,Drivers and Torque Motor Wiring for Air Cooled Application,DTMWiringAC,airCooled;featherCoil,Selection,1,1,,
-Drivers/Torque Motors,Drivers and Torque Motor Wiring,Drivers and Torque Motor Wiring for Air Cooled Application,DTMWiringAC,airCooled;HSIgniter,Selection,1,1,,
-Drivers/Torque Motors,Drivers and Torque Motor Wiring,Drivers and Torque Motor Wiring for Air Cooled Application,DTMWiringAC,airCooled;motiveFlowLockoutCoil,Selection,1,1,,
-Drivers/Torque Motors,Drivers and Torque Motor Wiring,Drivers and Torque Motor Wiring for Air Cooled Application,DTMWiringAC,airCooled;runCoil,Selection,1,1,,
-Drivers/Torque Motors,Drivers and Torque Motor Wiring,Drivers and Torque Motor Wiring for Air Cooled Application,DTMWiringAC,airCooled;scavengeDeOilCoil,Selection,1,1,,
-Aircraft Interfaces,Shutdown Command MIO Signal Designation,Shutdown CMD MIO Signal Instance A,shutdownCmdInstA,airCooled;shutdownSW,Selection,1,1,,
-Drivers/Torque Motors,Drivers and Torque Motor Wiring,Drivers and Torque Motor Wiring for Air Cooled Application,DTMWiringAC,airCooled;starterRelay,Selection,1,1,,
-Drivers/Torque Motors,Drivers and Torque Motor Wiring,Drivers and Torque Motor Wiring for Air Cooled Application,DTMWiringAC,airCooled;supplyDeOilCoil,Selection,1,1,,
-Air Cooled ECU,Arbitration Type,Arbitration AC Platform,arbitrationA,airCooled;turboProp,Selection,1,1,,
-Air Cooled ECU,Auto Reset Type,Auto Reset AC Platform,autoResetA,airCooled;turboProp,Selection,1,1,,
-Air Cooled ECU,Degrade Mode Type,Degrade Mode AC Platform,degradeModeA,airCooled;turboProp,Selection,1,1,,
-Air Cooled ECU,ECU BIT,Air Cooled ECU BIT,ecuBitA,airCooled;turboProp,Selection,1,1,,
-Air Cooled ECU,Master Kill Type,Master Kill AC Platform,masterKillA,airCooled;turboProp,Selection,1,1,,
-Air Cooled ECU,Warm Boot,Air Cooled Warm Boot,warmBootA,airCooled;turboProp,Selection,1,1,,
-Channel Health,Level 6 Channel Health Type,Level 6 Channel Health Version A,channelHealthCalc06a,airCooled;turboProp;aiCmdSW;antiIceCoil;Arinc;conditionLever;ecoMode;featherCoil;HSIgniter;ntsOilPressSensor;oilTempSensorAvail;overspeedCoil;pmaPower;runCoil;scavengeDeOilCoil;startCmdSW;starterRelay;supplyDeOilCoil;unfeatherPump,Selection,1,1,,
-Channel Health,Level 5 Channel Health Type,Level 5 Channel Health Version A,channelHealthCalc05a,airCooled;turboProp;antiIceCoil;betaPressSensor;chipDetectDualChSharedInput;ignitionSW;machHold;maintEnableSW;motiveFlowLockoutCoil;oilFiltBypOpenIsBypass;runCoil,Selection,1,1,,
-Channel Health,Level 1 Channel Health Type,Level 1 Channel Health Version A,channelHealthCalc01a,airCooled;turboProp;HSIgniter,Selection,1,1,,
-Channel Health,Level 4 Channel Health Type,Level 4 Channel Health Version A,channelHealthCalc04a,airCooled;turboProp;motiveFlowLockoutCoil;scavengeDeOilCoil;supplyDeOilCoil,Selection,1,1,,
-Channel Health,Level 2 Channel Health Type,Level 2 Channel Health Version A,channelHealthCalc02a,airCooled;turboProp;n2SecondarySource;HSIgniter,Selection,1,1,,
-Channel Health,Level 10 Channel Health Type,Level 10 Channel Health Version A,channelHealthCalc10a,airCooled;turboProp;n2SingleSource;scavengeDeOilCoil;supplyDeOilCoil;mvTMCrossChannelBorrowing,Selection,1,1,,
-Channel Health,Level 9 Channel Health Type,Level 9 Channel Health Version A,channelHealthCalc09a,airCooled;turboProp;propGovernor,Selection,1,1,,
-Channel Health,Level 7 Channel Health Type,Level 7 Channel Health Version A,channelHealthCalc07a,airCooled;turboProp;propGovernor;revRqstSW;wowSW,Selection,1,1,,
-Channel Health,Level 8 Channel Health Type,Level 8 Channel Health Version A,channelHealthCalc08a,airCooled;turboProp;propPitchController;torqueSensor,Selection,1,1,,
-Channel Health,Level 3 Channel Health Type,Level 3 Channel Health Version A,channelHealthCalc03a,airCooled;turboProp;vibrationSense;wfFiltBypOpenIsBypass,Selection,1,1,,
-Drivers/Torque Motors,Drivers and Torque Motor Wiring,Drivers and Torque Motor Wiring for Air Cooled Application,DTMWiringAC,airCooled;unfeatherPump,Selection,1,1,,
-Drivers/Torque Motors,Low Side Drivers Installed,Low Side Drivers installed,lowSideDriver,antiIceCoil,Selection,1,1,,
-Drivers/Torque Motors,Driver and Torque Motor Signal Selection,Output Driver Selection for Dual Channel,ODSDualChannel,antiIceCoil,Selection,1,1,,
-Communications,ARINC-429 Configuration,Dual ARINC-429,dualArinc,Arinc,Selection,1,1,,
-Communications,ARINC-429 Configuration,Quad ARINC-429,quadArinc,Arinc,Selection,1,1,,
-Drivers/Torque Motors,High Side and Low Side (combined) Drivers,High Side and Low Side (combined) Drivers,hslsDriver,atsPermit,Selection,1,1,,
-Engine Power,Final PLA Adjustment,Final PLA adjusted with Autothrottle trim,plaFinalAdjustedAutoThrottle,autoThrottle,Selection,1,1,,
-Fuel Cooled ECU,Total Bias Limit Calculation,CGV Control Total Bias Combined Calculation,cgvControlTotBiasCombined,cgvControlBiased,Selection,1,1,,
-Fuel Cooled ECU,Total Bias Limit Calculation,CGV Control Total Bias Default Calculation,cgvControlTotBiasDefault,cgvControlBiased,Selection,1,1,,
-Fuel Cooled ECU,Total Bias Limit Calculation,CGV Control Total Bias Greater Calculation,cgvControlTotBiasGreater,cgvControlBiased,Selection,1,1,,
-Drivers/Torque Motors,CGV,CGV Conversions,cgvConversions,cgvLVDT,Option,0,1,,
-Drivers/Torque Motors,Command Tracking,CGV TM Command Tracking,cgvTMCommandTracking,cgvTM,Option,0,10,,
-Drivers/Torque Motors,CGV TM Local Channel Only,CGV TM Local Channel Only,cgvTMLocalChannelOnly,cgvTM,Selection,1,1,,
-Drivers/Torque Motors,Torque Motor Command Tracking Dual Non Shared,Torque Motor Command Tracking Dual Non Shared,tmDualNonSharedCommandTracking,cgvTMCommandTracking,Selection,1,1,,
-Drivers/Torque Motors,Dual Non-Shared Torque Motor,Dual Non-Shared Torque Motor,tmDualNonShared,cgvTMLocalChannelOnly,Selection,1,1,,
-Drivers/Torque Motors,CGV TM Local Channel Only Command Tracking,CGV TM Local Channel Only Command Tracking,cgvTMLocalChannelOnlyCommandTracking,cgvTMLocalChannelOnly;cgvTMCommandTracking,Selection,1,1,,
-Channel Health,Channel Health Execution,Channel Health Execution Version A,channelHealthCalcA,channelHealthCalc01a;channelHealthCalc02a;channelHealthCalc03a;channelHealthCalc04a;channelHealthCalc05a;channelHealthCalc06a;channelHealthCalc07a;channelHealthCalc08a;channelHealthCalc09a;channelHealthCalc10a,Selection,1,1,,
-Channel Health,Channel Health Execution,Channel Health Execution Version B,channelHealthCalcB,channelHealthCalc01b;channelHealthCalc02b;channelHealthCalc03b;channelHealthCalc04b;channelHealthCalc05b;channelHealthCalc06b;channelHealthCalc07b;channelHealthCalc08b;channelHealthCalc09b;channelHealthCalc10b,Selection,1,1,,
-Communications,Avionics Data Bus,ARINC-429,Arinc,n/a - Communications,Selection,1,1,,
-Communications,GSE Interface,Has Ethernet transmit capability,gseEthernet,n/a - Communications,Selection,1,1,,
-Communications,GSE Interface,RS-422 Only,gseRS422Only,n/a - Communications,Selection,1,1,,
-Communications,Avionics Data Bus,MIL-STD-1553,Mil1553,n/a - Communications,Selection,1,1,,
-Fuel Cooled ECU,Minimum Fuel Flow Software Command,Minimum Fuel Flow Software Command,minFuelFlowCmd,controlModeWFP3,Selection,1,1,,
-Fuel Cooled ECU,N1 Speed Governor,N1 Speed Governor,n1SpeedGovernor,controlModeWFP3,Selection,1,1,,
-Fuel Cooled ECU,N1 Governor above EGT Limit Risk Reduction,N1 Setpoint Limiter,opLimitersEgtLimit,controlModeWFP3,Selection,1,1,,
-Fuel Cooled ECU,N1 Speed Limiter,N1 Speed Limiter,opLimitersN1spdLimit,controlModeWFP3,Selection,1,1,,
-Fuel Cooled ECU,N2 Speed Limiter,N2 Speed Limiter,opLimitersN2spdLimit,controlModeWFP3,Selection,1,1,,
-Fuel Cooled ECU,Steady State Fuel Flow Calculation,Steady State Ops,steadyStateOps,controlModeWFP3,Selection,1,1,,
-Fuel Cooled ECU,Closed Loop Steady State Control Schedule Selection,Steady State Control Schedule Selection,steadyStateOpsControlSched,controlModeWFP3,Selection,1,1,,
-Fuel Cooled ECU,Flameout Risk Reduction N1 Governor,Corrected Fuel Ratio Limiter for Flameout,transientOpsDecel,controlModeWFP3,Selection,1,1,,
-Fuel Cooled ECU,Fuel Command Transition,MIEC Mode Fuel Command Transfer,transientOpsMIEC,controlModeWFP3,Selection,1,1,,
-Fuel Cooled ECU,Surge Prevention N1 Governor,Corrected Fuel Ratio Limiter for Surge Prevention,transientOpsSurgePrevAccel,controlModeWFP3,Selection,1,1,,
-Fuel Cooled ECU,Transient Temperature Limit,Limit Transient Temps on N1 Speed Governor,transientOpsTempLimitAccel,controlModeWFP3,Selection,1,1,,
-Communications,M1553 Cross Communication Data BC to ECU Pane 2,Angle of Attack from BC,aoaBcToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,,
-Communications,M1553 Cross Communication Data ECU to BC Pane 3,ATS Fail RT to BC,atsFailEcuToBcM1553,dataSetCrossCommM1553,Selection,0,1000,,
-Communications,M1553 Cross Communication Data ECU to ECU Pane 11,ATS Fail RT to RT,atsFailEcuToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,,
-Communications,M1553 Cross Communication Data ECU to BC Pane 6,CGV Command RT to BC,cgvcmdEcuToBcM1553,dataSetCrossCommM1553,Selection,0,1000,,
-Communications,M1553 Cross Communication Data ECU to BC Pane 2,CGVCMD Validity RT to BC,cgvcmdValEcuToBcM1553,dataSetCrossCommM1553,Selection,0,1000,,
-Communications,M1553 Cross Communication Data ECU to ECU Pane 6,CGVCMD Validity RT to RT,cgvcmdValEcuToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,,
-Communications,M1553 Cross Communication Data ECU to BC Pane 7,CGV Feedback RT to BC,cgvfbEcuToBcM1553,dataSetCrossCommM1553,Selection,0,1000,,
-Communications,M1553 Cross Communication Data ECU to BC Pane 2,CGVFB Validity RT to BC,cgvfbValEcuToBcM1553,dataSetCrossCommM1553,Selection,0,1000,,
-Communications,M1553 Cross Communication Data ECU to ECU Pane 6,CGVFB Validity RT to RT,cgvfbValEcuToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,,
-Communications,M1553 Cross Communication Data ECU to ECU Pane 8,Chip Detector RT to RT,chipDetEcuToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,,
-Communications,M1553 Cross Communication Data ECU to BC Pane 6,PCU ATS Permit ON RT to BC,ecuAATSPermitOnEcuToBcM1553,dataSetCrossCommM1553,Selection,0,1000,,
-Communications,M1553 Cross Communication Data ECU to ECU Pane 15,PCU ATS Permit ON RT to RT,ecuAATSPermitOnEcuToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,,
-Communications,M1553 Cross Communication Data ECU to BC Pane 4,PCU Degraded RT to BC,ecuADegEcuToBcM1553,dataSetCrossCommM1553,Selection,0,1000,,
-Communications,M1553 Cross Communication Data ECU to ECU Pane 13,PCU Degraded RT to RT,ecuADegEcuToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,,
-Communications,M1553 Cross Communication Data ECU to BC Pane 4,PCU Fail RT to BC,ecuAFailEcuToBcM1553,dataSetCrossCommM1553,Selection,0,1000,,
-Communications,M1553 Cross Communication Data ECU to ECU Pane 13,PCU Fail RT to RT,ecuAFailEcuToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,,
-Communications,M1553 Cross Communication Data ECU to ECU Pane 14,PCU Ign ON RT to RT,ecuAIgnOnEcuToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,,
-Communications,M1553 Cross Communication Data ECU to BC Pane 4,PCU In Control RT to BC,ecuAInCtrlEcuToBcM1553,dataSetCrossCommM1553,Selection,0,1000,,
-Communications,M1553 Cross Communication Data ECU to ECU Pane 13,PCU In Control RT to RT,ecuAInCtrlEcuToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,,
-Communications,M1553 Cross Communication Data ECU to BC Pane 5,PCU Load Inhibit ON RT to BC,ecuALoadInhOnEcuToBcM1553,dataSetCrossCommM1553,Selection,0,1000,,
-Communications,M1553 Cross Communication Data ECU to ECU Pane 14,PCU Load Inhibit ON RT to RT,ecuALoadInhOnEcuToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,,
-Communications,M1553 Cross Communication Data ECU to BC Pane 4,PCU Operational RT to BC,ecuAOpEcuToBcM1553,dataSetCrossCommM1553,Selection,0,1000,,
-Communications,M1553 Cross Communication Data ECU to ECU Pane 13,PCU Operational RT to RT,ecuAOpEcuToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,,
-Communications,M1553 Cross Communication Data ECU to BC Pane 6,ACU ATS Permit ON RT to BC,ecuBATSPermitOnEcuToBcM1553,dataSetCrossCommM1553,Selection,0,1000,,
-Communications,M1553 Cross Communication Data ECU to ECU Pane 15,ACU ATS Permit ON RT to RT,ecuBATSPermitOnEcuToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,,
-Communications,M1553 Cross Communication Data ECU to BC Pane 5,ACU Degraded RT to BC,ecuBDegEcuToBcM1553,dataSetCrossCommM1553,Selection,0,1000,,
-Communications,M1553 Cross Communication Data ECU to ECU Pane 14,ACU Degraded RT to RT,ecuBDegEcuToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,,
-Communications,M1553 Cross Communication Data ECU to BC Pane 5,ACU Fail RT to BC,ecuBFailEcuToBcM1553,dataSetCrossCommM1553,Selection,0,1000,,
-Communications,M1553 Cross Communication Data ECU to ECU Pane 14,ACU Fail RT to RT,ecuBFailEcuToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,,
-Communications,M1553 Cross Communication Data ECU to ECU Pane 15,ACU Ign ON RT to RT,ecuBIgnOnEcuToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,,
-Communications,M1553 Cross Communication Data ECU to BC Pane 5,ACU In Control RT to BC,ecuBInCtrlEcuToBcM1553,dataSetCrossCommM1553,Selection,0,1000,,
-Communications,M1553 Cross Communication Data ECU to ECU Pane 13,ACU In Control RT to RT,ecuBInCtrlEcuToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,,
-Communications,M1553 Cross Communication Data ECU to BC Pane 6,ACU Load Inhibit ON RT to BC,ecuBLoadInhOnEcuToBcM1553,dataSetCrossCommM1553,Selection,0,1000,,
-Communications,M1553 Cross Communication Data ECU to ECU Pane 15,ACU Load Inhibit ON RT to RT,ecuBLoadInhOnEcuToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,,
-Communications,M1553 Cross Communication Data ECU to BC Pane 5,ACU Operational RT to BC,ecuBOpEcuToBcM1553,dataSetCrossCommM1553,Selection,0,1000,,
-Communications,M1553 Cross Communication Data ECU to ECU Pane 14,ACU Operational RT to RT,ecuBOpEcuToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,,
-Communications,M1553 Cross Communication Data ECU to BC Pane 1,ECU Counter RT to BC,ecuCounterEcuToBcM1553,dataSetCrossCommM1553,Selection,0,1000,,
-Communications,M1553 Cross Communication Data ECU to ECU Pane 4,ECU Counter RT to RT,ecuCounterEcuToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,,
-Communications,M1553 Cross Communication Data ECU to BC Pane 9,ECU Reserved FT Parameter RT to BC 10,ecuDaq10EcuToBcM1553,dataSetCrossCommM1553,Selection,0,1000,,
-Communications,M1553 Cross Communication Data ECU to BC Pane 9,ECU Reserved FT Parameter RT to BC 11,ecuDaq11EcuToBcM1553,dataSetCrossCommM1553,Selection,0,1000,,
-Communications,M1553 Cross Communication Data ECU to BC Pane 9,ECU Reserved FT Parameter RT to BC 12,ecuDaq12EcuToBcM1553,dataSetCrossCommM1553,Selection,0,1000,,
-Communications,M1553 Cross Communication Data ECU to BC Pane 9,ECU Reserved FT Parameter RT to BC 13,ecuDaq13EcuToBcM1553,dataSetCrossCommM1553,Selection,0,1000,,
-Communications,M1553 Cross Communication Data ECU to BC Pane 9,ECU Reserved FT Parameter RT to BC 14,ecuDaq14EcuToBcM1553,dataSetCrossCommM1553,Selection,0,1000,,
-Communications,M1553 Cross Communication Data ECU to BC Pane 7,ECU Reserved FT Parameter RT to BC 1,ecuDaq1EcuToBcM1553,dataSetCrossCommM1553,Selection,0,1000,,
-Communications,M1553 Cross Communication Data ECU to BC Pane 7,ECU Reserved FT Parameter RT to BC 2,ecuDaq2EcuToBcM1553,dataSetCrossCommM1553,Selection,0,1000,,
-Communications,M1553 Cross Communication Data ECU to BC Pane 7,ECU Reserved FT Parameter RT to BC 3,ecuDaq3EcuToBcM1553,dataSetCrossCommM1553,Selection,0,1000,,
-Communications,M1553 Cross Communication Data ECU to BC Pane 8,ECU Reserved FT Parameter RT to BC 4,ecuDaq4EcuToBcM1553,dataSetCrossCommM1553,Selection,0,1000,,
-Communications,M1553 Cross Communication Data ECU to BC Pane 8,ECU Reserved FT Parameter RT to BC 5,ecuDaq5EcuToBcM1553,dataSetCrossCommM1553,Selection,0,1000,,
-Communications,M1553 Cross Communication Data ECU to BC Pane 8,ECU Reserved FT Parameter RT to BC 6,ecuDaq6EcuToBcM1553,dataSetCrossCommM1553,Selection,0,1000,,
-Communications,M1553 Cross Communication Data ECU to BC Pane 8,ECU Reserved FT Parameter RT to BC 7,ecuDaq7EcuToBcM1553,dataSetCrossCommM1553,Selection,0,1000,,
-Communications,M1553 Cross Communication Data ECU to BC Pane 8,ECU Reserved FT Parameter RT to BC 8,ecuDaq8EcuToBcM1553,dataSetCrossCommM1553,Selection,0,1000,,
-Communications,M1553 Cross Communication Data ECU to BC Pane 9,ECU Reserved FT Parameter RT to BC 9,ecuDaq9EcuToBcM1553,dataSetCrossCommM1553,Selection,0,1000,,
-Communications,M1553 Cross Communication Data ECU to BC Pane 7,ECU Inlet Temperature Lane RT to BC,ecuT2rawEcuToBcM1553,dataSetCrossCommM1553,Selection,0,1000,,
-Communications,M1553 Cross Communication Data ECU to ECU Pane 7,Exhaust Gas Temperature RT to RT,egtEcuToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,,
-Communications,M1553 Cross Communication Data ECU to ECU Pane 5,EGT Limit Validity RT to RT,egtLimValEcuToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,,
-Communications,M1553 Cross Communication Data ECU to ECU Pane 4,EGT Validity RT to RT,egtValEcuToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,,
-Communications,M1553 Cross Communication Data ECU to ECU Pane 12,EMS Buffers Full RT to RT,emsBuffersFullEcuToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,,
-Communications,M1553 Cross Communication Data ECU to BC Pane 4,Engine Cutoff RT to BC,engCutoffEcuToBcM1553,dataSetCrossCommM1553,Selection,0,1000,,
-Communications,M1553 Cross Communication Data ECU to ECU Pane 11,Engine Cutoff RT to RT,engCutoffEcuToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,,
-Communications,M1553 Cross Communication Data ECU to ECU Pane 12,Engine Event Recorded RT to RT,engEventEcuToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,,
-Communications,M1553 Cross Communication Data ECU to ECU Pane 12,Engine Idle RT to RT,engIdleEcuToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,,
-Communications,M1553 Cross Communication Data ECU to ECU Pane 10,Engine ON RT to RT,engOnEcuToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,,
-Communications,M1553 Cross Communication Data ECU to ECU Pane 10,FADEC O/T RT to RT,fadecOTEcuToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,,
-Communications,M1553 Cross Communication Data ECU to BC Pane 2,FADEC OT Validity RT to BC,fadecOTValEcuToBcM1553,dataSetCrossCommM1553,Selection,0,1000,,
-Communications,M1553 Cross Communication Data ECU to ECU Pane 6,FADEC OT Validity RT to RT,fadecOTValEcuToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,,
-Communications,M1553 Cross Communication Data ECU to ECU Pane 10,Flameout RT to RT,flameoutEcuToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,,
-Communications,M1553 Cross Communication Data BC to ECU Pane 1,Generator Status,genStatusBcToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,,
-Communications,M1553 Cross Communication Data ECU to ECU Pane 10,IGN Fail RT to RT,ignFailEcuToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,,
-Communications,M1553 Cross Communication Data ECU to ECU Pane 9,Impending Fuel Bypass RT to RT,impFuelBypEcuToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,,
-Communications,M1553 Cross Communication Data ECU to ECU Pane 9,Impending Lube Bypass RT to RT,impLubeBypEcuToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,,
-Communications,M1553 Cross Communication Data BC to ECU Pane 1,Lateral Acceleration Validity,latAccelValBcToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,,
-Communications,M1553 Cross Communication Data ECU to ECU Pane 9,Low Lube Level Indication RT to RT,lubeLevelLowEcuToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,,
-Communications,M1553 Cross Communication Data BC to ECU Pane 2,Mach Number from BC,machBcToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,,
-Communications,M1553 Cross Communication Data ECU to BC Pane 3,MN Fail RT to BC,machFailEcuToBcM1553,dataSetCrossCommM1553,Selection,0,1000,,
-Communications,M1553 Cross Communication Data ECU to ECU Pane 11,MN Fail RT to RT,machFailEcuToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,,
-Communications,M1553 Cross Communication Data ECU to ECU Pane 8,Maintenance Indication RT to RT,maintIndEcuToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,,
-Communications,M1553 Cross Communication Data ECU to ECU Pane 11,Minimum Flow RT to RT,minFlowEcuToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,,
-Communications,M1553 Cross Communication Data ECU to ECU Pane 7,Low Pressure Rotor Speed RT to RT,N1EcuToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,,
-Communications,M1553 Cross Communication Data ECU to ECU Pane 4,N1 Validity RT to RT,n1ValEcuToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,,
-Communications,M1553 Cross Communication Data ECU to ECU Pane 7,High Pressure Rotor Speed RT to RT,N2EcuToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,,
-Communications,M1553 Cross Communication Data ECU to ECU Pane 4,N2 Validity RT to RT,n2ValEcuToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,,
-Communications,M1553 Cross Communication Data BC to ECU Pane 1,Normal Acceleration Validity,normAccelValBcToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,,
-Communications,M1553 Cross Communication Data ECU to ECU Pane 8,Overspeed Event RT to RT,osEventEcuToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,,
-Communications,M1553 Cross Communication Data ECU to ECU Pane 9,Overtemp Event RT to RT,otEventEcuToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,,
-Communications,M1553 Cross Communication Data ECU to BC Pane 3,Other Control Validity RT to BC,otherCtrlValidityEcuToBcM1553,dataSetCrossCommM1553,Selection,0,1000,,
-Communications,M1553 Cross Communication Data ECU to ECU Pane 10,Other Control Validity RT to RT,otherCtrlValidityEcuToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,,
-Communications,M1553 Cross Communication Data ECU to ECU Pane 12,Over G RT to RT,overGEcuToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,,
-Communications,M1553 Cross Communication Data ECU to ECU Pane 7,Compressor Exit Static Pressure RT to RT,p3EcuToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,,
-Communications,M1553 Cross Communication Data ECU to BC Pane 1,P3 Validity RT to BC,p3ValEcuToBcM1553,dataSetCrossCommM1553,Selection,0,1000,,
-Communications,M1553 Cross Communication Data ECU to ECU Pane 5,P3 Validity RT to RT,p3ValEcuToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,,
-Communications,M1553 Cross Communication Data BC to ECU Pane 3,Impact Pressure from BC,piBcToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,,
-Communications,M1553 Cross Communication Data BC to ECU Pane 2,Pitch Angle Validity,pitchValBcToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,,
-Communications,M1553 Cross Communication Data BC to ECU Pane 1,Selected Impact Pressure Validity,piValBcToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,,
-Communications,M1553 Cross Communication Data ECU to ECU Pane 7,Power Lever Angle RT to RT,plaEcuToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,,
-Communications,M1553 Cross Communication Data ECU to ECU Pane 12,PLA Fail RT to RT,plaFailEcuToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,,
-Communications,M1553 Cross Communication Data ECU to ECU Pane 4,PLA Validity RT to RT,plaValEcuToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,,
-Communications,M1553 Cross Communication Data ECU to ECU Pane 9,Low Oil Pressure RT to RT,pOilLowEcuToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,,
-Communications,M1553 Cross Communication Data ECU to BC Pane 2,Engine Oil Pressure Validity RT to BC,pOilValEcuToBcM1553,dataSetCrossCommM1553,Selection,0,1000,,
-Communications,M1553 Cross Communication Data ECU to ECU Pane 6,Engine Oil Pressure Validity RT to RT,pOilValEcuToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,,
-Communications,M1553 Cross Communication Data BC to ECU Pane 3,Static Pressure from BC,psBcToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,,
-Communications,M1553 Cross Communication Data ECU to BC Pane 3,Inlet Total Pressure RT to BC,pt2EcuToBcM1553,dataSetCrossCommM1553,Selection,0,1000,,
-Communications,M1553 Cross Communication Data ECU to ECU Pane 8,Inlet Total Pressure RT to RT,pt2EcuToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,,
-Communications,M1553 Cross Communication Data ECU to BC Pane 1,PT2 Validity RT to BC,pt2ValEcuToBcM1553,dataSetCrossCommM1553,Selection,0,1000,,
-Communications,M1553 Cross Communication Data ECU to ECU Pane 5,PT2 Validity RT to RT,pt2ValEcuToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,,
-Communications,M1553 Cross Communication Data BC to ECU Pane 2,Roll Angle Validity,rollValBcToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,,
-Communications,M1553 Cross Communication Data BC to ECU Pane 3,Seconds in Day from BC,secOfDayBcToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,,
-Communications,M1553 Cross Communication Data ECU to ECU Pane 11,Surge RT to RT,surgeEcuToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,,
-Communications,M1553 Cross Communication Data BC to ECU Pane 3,Total Air Temperature from BC,tatBcToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,,
-Communications,M1553 Cross Communication Data BC to ECU Pane 2,True Freestream Air Temperature from BC,tfatBcToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,,
-Communications,M1553 Cross Communication Data BC to ECU Pane 1,True Freestream Air Temperature Validity,tfatValBcToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,,
-Communications,M1553 Cross Communication Data ECU to BC Pane 3,Inlet Total Temperature RT to BC,tt2EcuToBcM1553,dataSetCrossCommM1553,Selection,0,1000,,
-Communications,M1553 Cross Communication Data ECU to ECU Pane 8,Inlet Total Temperature RT to RT,tt2EcuToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,,
-Communications,M1553 Cross Communication Data ECU to BC Pane 1,TT2 Validity RT to BC,tt2ValEcuToBcM1553,dataSetCrossCommM1553,Selection,0,1000,,
-Communications,M1553 Cross Communication Data ECU to ECU Pane 5,TT2 Validity RT to RT,tt2ValEcuToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,,
-Communications,M1553 Cross Communication Data BC to ECU Pane 3,Year from BC,twoDigitYearBcToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,,
-Communications,M1553 Cross Communication Data ECU to BC Pane 6,Fuel Flow Command RT to BC,wfcmdEcuToBcM1553,dataSetCrossCommM1553,Selection,0,1000,,
-Communications,M1553 Cross Communication Data ECU to BC Pane 2,WFCMD Validity RT to BC,wfcmdValEcuToBcM1553,dataSetCrossCommM1553,Selection,0,1000,,
-Communications,M1553 Cross Communication Data ECU to ECU Pane 6,WFCMD Validity RT to RT,wfcmdValEcuToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,,
-Communications,M1553 Cross Communication Data ECU to BC Pane 1,Fuel Flow Feedback Validity RT to BC,wffbValEcuToBcM1553,dataSetCrossCommM1553,Selection,0,1000,,
-Communications,M1553 Cross Communication Data ECU to ECU Pane 5,Fuel Flow Feedback Validity RT to RT,wffbValEcuToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,,
-Drivers/Torque Motors,MMV,MMV conversions,mmvConversions,n/a - Drivers & T/M,Option,0,1,,
-Drivers/Torque Motors,Command Tracking,MV TM Command Tracking,mvTMCommandTracking,n/a - Drivers & T/M,Option,0,10,,
-Drivers/Torque Motors,Metering Valve Torque Motor,Single Non-Shared Metering Valve Torque Motor,mvTMCrossChannelBorrowing,n/a - Drivers & T/M,Selection,1,1,,
-Drivers/Torque Motors,Metering Valve Torque Motor,Dual Non-Shared Metering Valve Torque Motor,mvTMLocalChannelOnly,n/a - Drivers & T/M,Selection,1,1,,
-Drivers/Torque Motors,Overspeed Solenoid,Overspeed Coil Installed,overspeedCoil,n/a - Drivers & T/M,Selection,1,1,,
-Drivers/Torque Motors,Overspeed Solenoid,Overspeed Solenoid Installed,overspeedSolenoid,n/a - Drivers & T/M,Selection,1,1,,
-Installation,Engine ID,Right Engine ID Valid Configuration,rightEngID,dualEngine,Option,0,1,,
-Reliability,Dual Engine,Dual Engine,sfrDualEng,dualEngine,Selection,1,1,,
-Aircraft Interfaces,Engine Wiring Configuration,Shared Engine Wiring,sharedEngineWiring,dualEngine,Selection,1,1,,
-Communications,Cross Engine Data Link,Cross Engine Data Link,xEngDataLink,dualEngine,Option,0,1,,
-Engine Power,Dual Engine,Dual Engine for Commercial,sfrDualEngCFR,dualEngine;sfrCFR,Selection,1,1,,
-Reliability,Thrust Reverse,Thrust Reverse/Dual Engine,sfrTrDualEng,dualEngine;sfrThrustRev,Selection,1,1,,
-Electrical Power,Aircraft Power,Dual Aircraft Power Source,dualACPwr,n/a - Elec Power,Selection,1,1,,
-Electrical Power,PMA Power,PMA Power Source,pmaPower,n/a - Elec Power,Option,0,1,,
-Electrical Power,Aircraft Power,Single Aircraft Power Source,singleACPwr,n/a - Elec Power,Selection,1,1,,
-Monitoring,Oil Filter Bypass Connection,Single Channel Input,singleChannelInputOilFiltByp,engDis1ChanInputElectInt,Selection,1,1,,
-Monitoring,Fuel Filter Bypass Connection,Single Channel Input,singleChannelInputWfFiltByp,engDis1ChanInputElectInt,Selection,1,1,,
-Monitoring,Oil Filter Bypass Connection,Shared Channel,oilFiltBypSharedElectInt,engDisSharedElectInt,Selection,1,1,,
-Monitoring,Fuel Filter Bypass Connection,Shared Channel,wfFiltBypSharedElectInt,engDisSharedElectInt,Selection,1,1,,
-Engine Power,Throttle Control,Autothrottle Installed,autoThrottle,n/a - Engine Power,Option,0,1,,
-Engine Power,ECO Mode,ECO Mode,ecoMode,n/a - Engine Power,Option,0,1,,
-Engine Power,Engine Idle Switch,Engine Idle Switch installed,engineIdleDiscrete,n/a - Engine Power,Option,0,1,,
-Engine Power,PLA Difference Fault Signal Selection,PLA Difference Fault choose High between LC & XC PLA,plaDiffChooseHigh,n/a - Engine Power,Selection,1,1,,
-Engine Power,PLA Difference Fault Signal Selection,PLA Difference Fault Fail to Idle,plaDiffFailedIdle,n/a - Engine Power,Selection,1,1,,
-Engine Power,Final PLA Adjustment,Final PLA,plaFinalAdjusted,n/a - Engine Power,Selection,1,1,,
-Engine Power,Final PLA,PLA is not rate limited or filtered,plaNoRateLimitFilter,n/a - Engine Power,Selection,1,1,,
-Engine Power,PLA Selection,PLA selection standard ,plaPrimSelectStandard,n/a - Engine Power,Selection,1,1,,
-Engine Power,Final PLA,PLA is rate limited and filtered,plaRateLimitFilter,n/a - Engine Power,Selection,1,1,,
-Engine Power,PLA Takeoff Limitation,Engine Power Rating Limited by Altitude,plaTakeoffLimitation,n/a - Engine Power,Selection,1,1,,
-Engine Power,PLA Takeoff Limitation,Engine Power Rating not Limited by Altitude,plaTakeoffUnrestricted,n/a - Engine Power,Selection,1,1,,
-Engine Power,PLA Input,PLA via Arinc,thrustViaArinc,n/a - Engine Power,Selection,1,1,,
-Engine Power,PLA Input,PLA via Analog,thrustViaDiscrete,n/a - Engine Power,Selection,1,1,,
-Engine Shutdown,Indpendent shutdown,Run Cutoff solenoid for independent fuel shutoff,runCutoffSolenoid,n/a - Engine Shutdown,Option,0,1,,
-Engine Speed,N1,Has N1,n1Common,n/a - Engine Speed,Selection,0,1,,
-Engine Speed,Speed,N1,n1speed,n/a - Engine Speed,Selection,1,2,,
-Engine Speed,N2 Derivative,N2 percent rate of change,n2DotPercent,n/a - Engine Speed,Selection,1,1,,
-Engine Speed,N2 Derivative,N2 RPM rate of change,n2DotRPM,n/a - Engine Speed,Selection,1,1,,
-Engine Speed,N2 RPM,N2 RPM is rate limited and filtered,n2RPMRateLimitFilter,n/a - Engine Speed,Selection,1,1,,
-Engine Speed,Secondary N2,Has Secondary N2,n2SecondarySource,n/a - Engine Speed,Selection,1,1,,
-Engine Speed,Secondary N2,No Secondary N2,n2SingleSource,n/a - Engine Speed,Selection,1,1,,
-Engine Speed,Speed,N2 Twin Spool,n2Twin,n/a - Engine Speed,Selection,1,2,,
-Engine Speed,Overspeed Monitoring,Monitors N2 Monopole and PMA,overspeedPMA,n/a - Engine Speed,Selection,1,1,,
-Engine Speed,Overspeed Monitoring,Monitors N2 Monopole with reset,overspeedReset,n/a - Engine Speed,Selection,1,1,,
-Engine Start,Start Abort,Start Abort Determined by Software,startAbort,n/a - Engine Start,Option,0,1,,
-Engine Start,Start Command,Start Command Initiated by PLA,startCmdPLA,n/a - Engine Start,Selection,1,1,,
-Engine Start,Start Command,Start Command SW Installed,startCmdSW,n/a - Engine Start,Selection,1,1,,
-Engine Start,Start Mode,Shutdown Command indicates no start allowed,startModeShutdnCmd,n/a - Engine Start,Selection,1,1,,
-Engine Power,PLA Selection,PLA selection can be overridden by the Idle Discrete Switch,plaPrimSelectIdleSW,engineIdleDiscrete,Selection,1,1,,
-Environmental,Audio Frequency Conducted Susceptibility,DO-160 Audio Frequency Conducted Susceptibility Requirements,do160AFCS,n/a - Environmental,Selection,1,1,,
-Environmental,Radio Frequency Conducted Emissions,DO-160 Radio Frequency Conducted Emissions Requirements,do160RFCE,n/a - Environmental,Selection,1,1,,
-Environmental,Radio Frequency Conducted Susceptibility,DO-160 Radio Frequency Conducted Susceptibility Requirements,do160RFCS,n/a - Environmental,Selection,1,1,,
-Environmental,Audio Frequency Conducted Susceptibility,MIL-STD-461 Audio Frequency Conducted Susceptibility Requirements,mil461AFCS,n/a - Environmental,Selection,1,1,,
-Environmental,Radio Frequency Conducted Emissions,MIL-STD-461 Radio Frequency Conducted Emissions Requirements,mil461RFCE,n/a - Environmental,Selection,1,1,,
-Environmental,Radio Frequency Conducted Susceptibility,MIL-STD-461 Radio Frequency Conducted Susceptibility Requirements,mil461RFCS,n/a - Environmental,Selection,1,1,,
-Drivers/Torque Motors,High Side Drivers Installed,High Side Drivers Installed,highSideDriver,featherCoil,Selection,1,1,,
-Drivers/Torque Motors,Driver and Torque Motor Signal Selection,Output Driver Selection for Dual Channel,ODSDualChannel,featherCoil,Selection,1,1,,
-Monitoring,Filter Inlet Static Pressure Type,Filter using Self-Adjusting Time Constant Filter,psSelfAdjustingFiltered,filterSelfAdjusting;psFiltered;,Selection,1,1,,
-Aircraft Interfaces,Flight Idle Switch,Independent Engine Wiring FI,flightIdleSingleEngineWiring,flightIdleSW;indepEngineWiring;,Selection,1,1,,
-Aircraft Interfaces,Flight Idle Switch,Shared Engine Wiring FI,flightIdleDualEngineWiring,flightIdleSW;sharedEngineWiring,Selection,1,1,,
-Electrical Power,Engine ID,4 Discrete Inputs,4EID,fuelCooled,Selection,1,1,,
-Drivers/Torque Motors,High Side and Low Side Drivers (combined),Air Turbine Starter Permit Relay Installed,atsPermit,fuelCooled,Option,0,10,,
-Fuel Cooled ECU,Reset Degraded Mode ,Has reset enable for degraded mode,ccdlDegradeBypass,fuelCooled,Selection,1,1,,
-Electrical Power,Generator,Dual Generators Installed,dualGenerators,fuelCooled,Selection,1,1,,
-Fuel Cooled ECU,Engine Discrete Electrical Interface,Single Channel Input,engDis1ChanInputElectInt,fuelCooled,Selection,1,1,,
-Fuel Cooled ECU,Engine Cutoff Indication,Engine Cutoff Indication Input,engineCutoffind,fuelCooled,Option,0,1,,
-Engine Speed,Minimum Airflow Idle,No Minimum Airflow Idle,finalIdleSelectionWFP3,fuelCooled,Selection,1,1,,
-Communications,GSE Interface,Upload Request open/ground discrete,groundedContactUploadRequest,fuelCooled,Selection,0,1,,
-Drivers/Torque Motors,High Side and Low Side Drivers (combined),Ignition Relay Installed,ignRelay,fuelCooled,Option,0,10,,
-Electrical Power,Electrical Grounding,Isolated-Ground System,isolatedGnd,fuelCooled,Selection,1,1,,
-Drivers/Torque Motors,High Side and Low Side Drivers (combined),Load Inhibit Relay Installed,loadInhibit,fuelCooled,Option,0,10,,
-Engine Speed,MIEC Mode Fuel Flow,MIEC Mode Fuel Flow Overrides N1C Setpoint,miecMode,fuelCooled,Option,0,1,,
-Engine Speed,Minimum Airflow Idle,Minimum Airflow Idle Selected,minAirflowIdle,fuelCooled,Selection,1,1,,
-Drivers/Torque Motors,High Side and Low Side Drivers (combined),Mode Transfer Solenoid Installed,modeTransfer,fuelCooled,Option,0,10,,
-Drivers/Torque Motors,Metering Valve TM BIT MIO Signal Designation,MVTM MIO Signal Instance B,mvTMInputInstB,fuelCooled,Selection,1,1,,
-Engine Speed,Lower Right Hand Corner Derate,No Lower Right Hand Corner Derate,nominalMaxPwrWFP3,fuelCooled,Selection,1,1,,
-Monitoring,Oil Filter Bypass Indication,Closed Circuit Indicates Bypass,oilFiltBypClsdIsBypass,fuelCooled,Selection,1,1,,
-Fuel Cooled ECU,Oil Temperature Sensor,Not Installed,oilTempSensorNotAvail,fuelCooled,Selection,1,1,,
-Monitoring,P3 Sensor Installation,ECU Internal P3 sensors each plumbed to a single ECU Channel,p3InternalSeperatePipes,fuelCooled,Selection,1,1,,
-Fuel Cooled ECU,PCU Reset Switch,PCU Reset Switch Installed,pcuReset,fuelCooled,Option,0,1,,
-Engine Power,Power Demand,Power Demand Idle to Max Selection,plaIdleMax,fuelCooled,Selection,1,1,,
-Monitoring,Static Pressure,Aircraft Voted Signal Selection,psAircraftVotedSel,fuelCooled,Selection,1,1,,
-Monitoring,Oil Pressure Sensor Type,Single Transducer Pressure Sensor; Single Channel Inputs,pSnsrSingleXDCRSingleChanIn,fuelCooled,Selection,1,1,,
-Engine Shutdown,Shutdown Mode,Confirmed Shutdown Command initiates Shutdown Mode,shutdnModeCnfrmSD,fuelCooled,Selection,1,1,,
-Fuel Cooled ECU,Low Oil Level Indicator,Available,singleChannelInputLOLAvail,fuelCooled,Selection,0,1,,
-Electrical Power,Generator Idle Schedule,Identical Idle Setpoint,singleDualGeneratorIdle,fuelCooled,Selection,1,1,,
-Electrical Power,Generator Idle Schedule,Single Generator Operating Idle Schedule,singleGeneratorWFP3,fuelCooled,Selection,1,1,,
-Engine Speed,Lower Right Hand Corner Derate,Lower Right Hand Corner Derate,superSonicBarnstormingProtection,fuelCooled,Selection,1,1,,
-Monitoring,TT2 Signal Selection,Aircraft Voted Signal Selection,tt2AircraftVotedSel,fuelCooled,Selection,1,1,,
-Monitoring,Fuel Filter Bypass Indication,Closed Circuit Indicates Bypass,wfFiltBypClsdIsBypass,fuelCooled,Selection,1,1,,
-Aircraft Interfaces,Shutdown Command MIO Signal Designation,Shutdown CMD MIO Signal Instance B,shutdownCmdInstB,fuelCooled;shutdownSW,Selection,1,1,,
-Fuel Cooled ECU,Arbitration Type,Arbitration FC Platform,arbitrationB,fuelCooled;turboFan,Selection,1,1,,
-Fuel Cooled ECU,Auto Reset Type,Auto Reset FC Platform,autoResetB,fuelCooled;turboFan,Selection,1,1,,
-Channel Health,Level 4 Channel Health Type,Level 4 Channel Health Version B,channelHealthCalc04b,fuelCooled;turboFan,Selection,1,1,,
-Channel Health,Level 5 Channel Health Type,Level 5 Channel Health Version B,channelHealthCalc05b,fuelCooled;turboFan,Selection,1,1,,
-Channel Health,Level 6 Channel Health Type,Level 6 Channel Health Version B,channelHealthCalc06b,fuelCooled;turboFan,Selection,1,1,,
-Channel Health,Level 7 Channel Health Type,Level 7 Channel Health Version B,channelHealthCalc07b,fuelCooled;turboFan,Selection,1,1,,
-Fuel Cooled ECU,Degrade Mode Type,Degrade Mode FC Platform,degradeModeB,fuelCooled;turboFan,Selection,1,1,,
-Fuel Cooled ECU,ECU BIT,Fuel Cooled ECU BIT,ecuBitB,fuelCooled;turboFan,Selection,1,1,,
-Fuel Cooled ECU,PBIT Driver Commands,PBIT Driver Instance B Command Functions,ecuPbitB,fuelCooled;turboFan,Selection,1,1,,
-Fuel Cooled ECU,Master Kill Type,Master Kill FC Platform,masterKillB,fuelCooled;turboFan,Selection,1,1,,
-Fuel Cooled ECU,Warm Boot,Fuel Cooled Warm Boot,warmBootB,fuelCooled;turboFan,Selection,1,1,,
-Channel Health,Level 1 Channel Health Type,Level 1 Channel Health Version B,channelHealthCalc01b,fuelCooled;turboFan;atsPermit;dualACPwr;ecuBitB;ignRelay;loadInhibit;modeTransfer;overspeedDeenergize;overspeedReset,Selection,1,1,,
-Channel Health,Level 2 Channel Health Type,Level 2 Channel Health Version B,channelHealthCalc02b,fuelCooled;turboFan;atsPermit;ignRelay;loadInhibit;Mil1553;modeTransfer,Selection,1,1,,
-Channel Health,Level 10 Channel Health Type,Level 10 Channel Health Version B,channelHealthCalc10b,fuelCooled;turboFan;cgvLVDT;cgvTMLocalChannelOnlyCommandTracking;masterKillB;modeTransfer;mvTMLocalChannelOnlyCommandTracking,Selection,1,1,,
-Channel Health,Level 3 Channel Health Type,Level 3 Channel Health Version B,channelHealthCalc03b,fuelCooled;turboFan;chipDetectSingleChInput;engDis1ChanInputElectInt;pcuReset,Selection,1,1,,
-Channel Health,Level 9 Channel Health Type,Level 9 Channel Health Version B,channelHealthCalc09b,fuelCooled;turboFan;degradeModeB;n1SingleSource;n2SingleSource,Selection,1,1,,
-Channel Health,Level 8 Channel Health Type,Level 8 Channel Health Version B,channelHealthCalc08b,fuelCooled;turboFan;p3InternalSeperatePipes,Selection,1,1,,
-Air Cooled ECU,Temperature Reading,Rate Limited & Filtered Final Value,rtdRateLimFilteredSel,fuelTempSensorAvail,Selection,1,1,,
-Aircraft Interfaces,Ground Idle Switch,Independent Engine Wiring GI,groundIdleSingleEngineWiring,groundIdleSW;indepEngineWiring;,Selection,1,1,,
-Aircraft Interfaces,Ground Idle Switch,Shared Engine Wiring GI,groundIdleDualEngineWiring,groundIdleSW;sharedEngineWiring,Selection,1,1,,
-Communications,Ethernet,Ethernet data dump capability,gseEthernetDataDump,gseEthernet,Selection,1,2,,
-Communications,Ethernet,Ethernet data streaming capability,gseEthernetDataStream,gseEthernet,Selection,1,2,,
-Drivers/Torque Motors,High Side Drivers Installed,High Side Drivers Installed,highSideDriver,HSIgniter,Selection,1,1,,
-Drivers/Torque Motors,Driver and Torque Motor Signal Selection,Output Driver Selection for Dual Channel,ODSDualChannel,HSIgniter,Selection,1,1,,
-Aircraft Interfaces,Ignition Switch,Independent Engine Wiring Ign,ignitSingleEngineWiring,ignitionSW;indepEngineWiring;,Selection,1,1,,
-Aircraft Interfaces,Ignition Switch,Shared Engine Wiring Ign,ignitDualEngineWiring,ignitionSW;sharedEngineWiring,Selection,1,1,,
-Drivers/Torque Motors,High Side and Low Side (combined) Drivers,High Side and Low Side (combined) Drivers,hslsDriver,ignRelay,Selection,1,1,,
-Installation,ECU Enclosure Type,Air Cooled,airCooled,Installation - Air Cooled,Selection,1,1,,
-Installation,Engine Count,Dual Engines,dualEngine,Installation - Dual Engine,Selection,1,1,,
-Installation,ECU Enclosure Type,Fuel Cooled,fuelCooled,Installation - Fuel Cooled,Selection,1,1,,
-Installation,Engine Count,Single Engine,singleEngine,Installation - Single Engine,Selection,1,1,,
-Installation,Engine Type,Turbo Fan,turboFan,Installation - Turbo Fan,Selection,1,1,,
-Installation,Engine Type,Turbo Prop,turboProp,Installation - Turbo Prop,Selection,1,1,,
-Drivers/Torque Motors,High Side and Low Side (combined) Drivers,High Side and Low Side (combined) Drivers,hslsDriver,loadInhibit,Selection,1,1,,
-Drivers/Torque Motors,Low Side Drivers Installed,Low Side Drivers installed,lowSideDriver,lowSideDriverConditionallyPowered,Selection,1,1,,
-Communications,MIL-STD-1553 Input Message,Input Message 2,m1553NumRxSubaddress2,m1553NumRxSubaddress1,Selection,0,10,,
-Communications,MIL-STD-1553 Output Message,Output Message 2,m1553NumTxSubaddress2,m1553NumTxSubaddress1,Selection,0,10,,
-Communications,MIL-STD-1553 Output Message,Output Message 3,m1553NumTxSubaddress3,m1553NumTxSubaddress2,Selection,0,10,,
-Aircraft Interfaces,Mach Hold,Independent Engine Wiring Mach Hold,machHoldSingleEngineWiring,machHold;indepEngineWiring;;,Selection,1,1,,
-Aircraft Interfaces,Mach Hold,Shared Engine Wiring Mach Hold,machHoldDualEngineWiring,machHold;sharedEngineWiring,Selection,1,1,,
-Aircraft Interfaces,Maintenance Enabled Switch,Independent Engine Wiring Maint,maintSingleEngineWiring,maintEnableSW;indepEngineWiring;,Selection,1,1,,
-Aircraft Interfaces,Maintenance Enabled Switch,Shared Engine Wiring Maint,maintDualEngineWiring,maintEnableSW;sharedEngineWiring,Selection,1,1,,
-Maintenance,Motoring,Engine Motoring Software Indication,engMotor,n/a - Maintenance,Option,0,1,,
-Fuel Cooled ECU,MIEC Mode Fuel Flow Calculation,No Minimum Airflow Idle Present,miecModeDefIdleCalc,miecMode,Selection,1,1,,
-Fuel Cooled ECU,MIEC Mode Fuel Flow Calculation,Minimum Airflow Idle Present,miecModeMinAirIdleCalc,miecMode;minAirflowIdle;,Selection,1,1,,
-Communications,M1553 Data BC to ECU Pane 2,True Angle of Attack Validity,aoaValBcToEcuM1553,Mil1553,Selection,0,1000,,
-Communications,M1553 Data BC to ECU Pane 1,Armament Fire Switch,armFireSwBcToEcuM1553,Mil1553,Selection,0,1000,,
-Communications,M1553 Data BC to ECU Pane 1,Bus Controller Counter,bcCounterBcToEcuM1553,Mil1553,Selection,0,1000,,
-Communications,M1553 Status Indications,Broadcast Command Received Bit,broadcastComM1553,Mil1553,Selection,0,6,,
-Communications,M1553 Status Indications,Busy Bit,busyBitM1553,Mil1553,Selection,0,6,,
-Communications,M1553 Data BC to ECU Pane 3,Calibrated Air Speed from BC,casBcToEcuM1553,Mil1553,Selection,0,1000,,
-Communications,M1553 Data BC to ECU Pane 2,Calibrated Airspeed Validity,casValBitBcToEcuM1553,Mil1553,Selection,0,1000,,
-Communications,M1553 Data ECU to BC Pane 7,Chip Detector RT to BC,chipDetEcuToBcM1553,Mil1553,Selection,0,1000,,
-Communications,M1553 Data Set,M1553 Data Set with Cross-Engine Communication,dataSetCrossCommM1553,Mil1553,Option,0,1,,
-Communications,M1553 Data BC to ECU Pane 4,Day of Year from BC,dayOfYearBcToEcuM1553,Mil1553,Selection,0,1000,,
-Communications,Mode Codes Pane 1,Dynamic Bus Control,dynamicBusCtrlM1553,Mil1553,Selection,0,11,,
-Communications,M1553 Data ECU to BC Pane 10,PCU Ign ON RT to BC,ecuAIgnOnEcuToBcM1553,Mil1553,Selection,0,1000,,
-Communications,M1553 Data ECU to BC Pane 11,ACU Ign ON RT to BC,ecuBIgnOnEcuToBcM1553,Mil1553,Selection,0,1000,,
-Communications,M1553 Data ECU to BC Pane 14,ECU CGV Command RT to BC,ecuCgvcmdEcuToBcM1553,Mil1553,Selection,0,1000,,
-Communications,M1553 Data ECU to BC Pane 14,ECU CGV Feedback RT to BC,ecuCgvfbEcuToBcM1553,Mil1553,Selection,0,1000,,
-Communications,M1553 Data ECU to BC Pane 12,ECU LP Rotor Speed RT to BC,ecuN1EcuToBcM1553,Mil1553,Selection,0,1000,,
-Communications,M1553 Data ECU to BC Pane 12,ECU LP Rotor Speed RT to BC,ecuN1rEcuToBcM1553,Mil1553,Selection,0,1000,,
-Communications,M1553 Data ECU to BC Pane 13,ECU LP Rotor Speed Set Point RT to BC,ecuN1rSetEcuToBcM1553,Mil1553,Selection,0,1000,,
-Communications,M1553 Data ECU to BC Pane 13,ECU HP Rotor Speed RT to BC,ecuN2EcuToBcM1553,Mil1553,Selection,0,1000,,
-Communications,M1553 Data ECU to BC Pane 13,ECU HP Rotor Speed Referred to Compressor Inlet Temp (T22) RT to BC,ecuN2r22EcuToBcM1553,Mil1553,Selection,0,1000,,
-Communications,M1553 Data ECU to BC Pane 13,ECU Referred HP Rotor Speed RT to BC,ecuN2rEcuToBcM1553,Mil1553,Selection,0,1000,,
-Communications,M1553 Data ECU to BC Pane 12,ECU Inlet Total Pressure RT to BC,ecuP2EcuToBcM1553,Mil1553,Selection,0,1000,,
-Communications,M1553 Data ECU to BC Pane 13,ECU Combustor Static Pressure RT to BC,ecuP3EcuToBcM1553,Mil1553,Selection,0,1000,,
-Communications,M1553 Data ECU to BC Pane 11,ECU Power Lever Angle RT to BC,ecuPlaEcuToBcM1553,Mil1553,Selection,0,1000,,
-Communications,M1553 Data ECU to BC Pane 12,ECU Inlet Static Pressure RT to BC,ecuPs2EcuToBcM1553,Mil1553,Selection,0,1000,,
-Communications,M1553 Data ECU to BC Pane 12,ECU Compensated T2 RT to BC,ecuT2EcuToBcM1553,Mil1553,Selection,0,1000,,
-Communications,M1553 Data ECU to BC Pane 14,ECU Exhaust Temperature RT to BC,ecuT5EcuToBcM1553,Mil1553,Selection,0,1000,,
-Communications,M1553 Data ECU to BC Pane 14,ECU Fuel Flow Command RT to BC,ecuWfcmdEcuToBcM1553,Mil1553,Selection,0,1000,,
-Communications,M1553 Data ECU to BC Pane 14,ECU Fuel Flow Feedback RT to BC,ecuWffbEcuToBcM1553,Mil1553,Selection,0,1000,,
-Communications,M1553 Data ECU to BC Pane 14,ECU Fuel Ratio Command RT to BC,ecuWfr3rEcuToBcM1553,Mil1553,Selection,0,1000,,
-Communications,M1553 Data ECU to BC Pane 6,Exhaust Gas Temperature RT to BC,egtEcuToBcM1553,Mil1553,Selection,0,1000,,
-Communications,M1553 Data ECU to BC Pane 11,EGT (T5) Redline Value RT to BC,egtLimitEcuToBcM1553,Mil1553,Selection,0,1000,,
-Communications,M1553 Data ECU to BC Pane 5,EGT Limit Validity RT to BC,egtLimValEcuToBcM1553,Mil1553,Selection,0,1000,,
-Communications,M1553 Data ECU to BC Pane 5,EGT Validity RT to BC,egtValEcuToBcM1553,Mil1553,Selection,0,1000,,
-Communications,M1553 Data ECU to BC Pane 10,EMS Buffers Full RT to BC,emsBuffersFullEcuToBcM1553,Mil1553,Selection,0,1000,,
-Communications,M1553 Data ECU to BC Pane 10,Engine Event Recorded RT to BC,engEventEcuToBcM1553,Mil1553,Selection,0,1000,,
-Communications,M1553 Data ECU to BC Pane 9,Engine Idle RT to BC,engIdleEcuToBcM1553,Mil1553,Selection,0,1000,,
-Communications,M1553 Data ECU to BC Pane 8,Engine ON RT to BC,engOnEcuToBcM1553,Mil1553,Selection,0,1000,,
-Communications,M1553 Data ECU to BC Pane 9,FADEC O/T RT to BC,fadecOTEcuToBcM1553,Mil1553,Selection,0,1000,,
-Communications,M1553 Data BC to ECU Pane 1,FCC BIT In Progress,fccBitBcToEcuM1553,Mil1553,Selection,0,1000,,
-Communications,M1553 Data ECU to BC Pane 8,Flameout RT to BC,flameoutEcuToBcM1553,Mil1553,Selection,0,1000,,
-Communications,M1553 Data BC to ECU Pane 1,Landing Gear Handle Down,geardnBcToEcuM1553,Mil1553,Selection,0,1000,,
-Communications,M1553 Data ECU to BC Pane 9,IGN Fail RT to BC,ignFailEcuToBcM1553,Mil1553,Selection,0,1000,,
-Communications,M1553 Data ECU to BC Pane 8,Impending Fuel Bypass RT to BC,impFuelBypEcuToBcM1553,Mil1553,Selection,0,1000,,
-Communications,M1553 Data ECU to BC Pane 8,Impending Lube Bypass RT to BC,impLubeBypEcuToBcM1553,Mil1553,Selection,0,1000,,
-Communications,Mode Codes Pane 1,Inhibit Terminal Flag Bit,inhibitTerminalM1553,Mil1553,Selection,0,11,,
-Communications,M1553 Status Indications,Instrumentation Bit,instrumentationBitM1553,Mil1553,Selection,0,6,,
-Communications,M1553 Data BC to ECU Pane 4,Acceleration in the Sideways Direction from BC,latAccelBcToEcuM1553,Mil1553,Selection,0,1000,,
-Communications,M1553 Data ECU to BC Pane 7,Low Lube Level Indication RT to BC,lubeLevelLowEcuToBcM1553,Mil1553,Selection,0,1000,,
-Communications,MIL-STD-1553 Input Message,Input Message 1,m1553NumRxSubaddress1,Mil1553,Selection,0,10,,
-Communications,MIL-STD-1553 Output Message,Output Message 1,m1553NumTxSubaddress1,Mil1553,Selection,0,10,,
-Communications,M1553 Data BC to ECU Pane 2,Mach Number Validity,machValBcToEcuM1553,Mil1553,Selection,0,1000,,
-Communications,M1553 Data ECU to BC Pane 7,Maintenance Indication RT to BC,maintIndEcuToBcM1553,Mil1553,Selection,0,1000,,
-Communications,M1553 Data ECU to BC Pane 9,Minimum Flow RT to BC,minFlowEcuToBcM1553,Mil1553,Selection,0,1000,,
-Communications,M1553 Data ECU to BC Pane 6,Low Pressure Rotor Speed RT to BC,N1EcuToBcM1553,Mil1553,Selection,0,1000,,
-Communications,M1553 Data ECU to BC Pane 5,N1 Validity RT to BC,n1ValEcuToBcM1553,Mil1553,Selection,0,1000,,
-Communications,M1553 Data ECU to BC Pane 6,High Pressure Rotor Speed RT to BC,N2EcuToBcM1553,Mil1553,Selection,0,1000,,
-Communications,M1553 Data ECU to BC Pane 5,N2 Validity RT to BC,n2ValEcuToBcM1553,Mil1553,Selection,0,1000,,
-Communications,M1553 Data BC to ECU Pane 4,Acceleration in the Vertical Direction from BC,normAccelBcToEcuM1553,Mil1553,Selection,0,1000,,
-Communications,M1553 Data ECU to BC Pane 7,Overspeed Event RT to BC,osEventEcuToBcM1553,Mil1553,Selection,0,1000,,
-Communications,M1553 Data ECU to BC Pane 7,Overtemp Event RT to BC,otEventEcuToBcM1553,Mil1553,Selection,0,1000,,
-Communications,M1553 Data ECU to BC Pane 10,Over G RT to BC,overGEcuToBcM1553,Mil1553,Selection,0,1000,,
-Communications,Mode Codes Pane 1,Override Inhibit Terminal Flag Bit,overrideInhibitTerminalM1553,Mil1553,Selection,0,11,,
-Communications,Mode Codes Pane 2,Override Selected Transmitter Shutdown,overrideSelectShutdownM1553,Mil1553,Selection,0,11,,
-Communications,M1553 Data ECU to BC Pane 6,Compressor Exit Static Pressure RT to BC,p3EcuToBcM1553,Mil1553,Selection,0,1000,,
-Communications,M1553 Data BC to ECU Pane 3,Pressure Altitude from BC,pAltBcToEcuM1553,Mil1553,Selection,0,1000,,
-Communications,M1553 Data BC to ECU Pane 3,Pressure Altitude Validity,pAltValBcToEcuM1553,Mil1553,Selection,0,1000,,
-Communications,M1553 Data BC to ECU Pane 4,Aircraft Pitch Angle from BC,pitchBcToEcuM1553,Mil1553,Selection,0,1000,,
-Communications,M1553 Data ECU to BC Pane 6,Power Lever Angle RT to BC,plaEcuToBcM1553,Mil1553,Selection,0,1000,,
-Communications,M1553 Data ECU to BC Pane 10,PLA Fail RT to BC,plaFailEcuToBcM1553,Mil1553,Selection,0,1000,,
-Communications,M1553 Data ECU to BC Pane 5,PLA Validity RT to BC,plaValEcuToBcM1553,Mil1553,Selection,0,1000,,
-Communications,M1553 Data ECU to BC Pane 11,Engine Oil Pressure RT to BC,pOilEcuToBcM1553,Mil1553,Selection,0,1000,,
-Communications,M1553 Data ECU to BC Pane 8,Low Oil Pressure RT to BC,pOilLowEcuToBcM1553,Mil1553,Selection,0,1000,,
-Communications,M1553 Data BC to ECU Pane 3,Selected Static Pressure Validity,psValBcToEcuM1553,Mil1553,Selection,0,1000,,
-Communications,M1553 Data BC to ECU Pane 4,Aircraft Roll Angle from BC,rollBcToEcuM1553,Mil1553,Selection,0,1000,,
-Communications,Mode Codes Pane 2,Selected Transmitter Shutdown,selectShutdownM1553,Mil1553,Selection,0,11,,
-Communications,Mode Codes Pane 1,Initiated Self Test,selfTestM1553,Mil1553,Selection,0,11,,
-Communications,M1553 Bus Configuration,ECU A and ECU B on Separate M1553 Buses,separateEcuABBusM1553,Mil1553,Option,0,1,,
-Communications,M1553 Status Indications,Service Request Bit,serviceReqM1553,Mil1553,Selection,0,6,,
-Communications,M1553 Status Indications,Subsystem Flag Bit,subsystemFlagM1553,Mil1553,Selection,0,6,,
-Communications,M1553 Data ECU to BC Pane 9,Surge RT to BC,surgeEcuToBcM1553,Mil1553,Selection,0,1000,,
-Communications,Mode Codes Pane 2,Synchronize (with data word),synchronizeDatM1553,Mil1553,Selection,0,11,,
-Communications,Mode Codes Pane 1,Synchronize,synchronizeM1553,Mil1553,Selection,0,11,,
-Communications,M1553 Data BC to ECU Pane 2,Total Air Temperature Validity,tatValBcToEcuM1553,Mil1553,Selection,0,1000,,
-Communications,M1553 Status Indications,Terminal Flag Bit,terminalFlagM1553,Mil1553,Selection,0,6,,
-Communications,Mode Codes Pane 2,Transmit BIT Word,transmitBITM1553,Mil1553,Selection,0,11,,
-Communications,Mode Codes Pane 2,Transmit Last Word,transmitLastM1553,Mil1553,Selection,0,11,,
-Communications,Mode Codes Pane 2,Transmit Vector Word,transmitVectorM1553,Mil1553,Selection,0,11,,
-Communications,M1553 Data BC to ECU Pane 3,UTC Time Validity,utcTimeValBcToEcuM1553,Mil1553,Selection,0,1000,,
-Communications,M1553 Data ECU to BC Pane 11,Fuel Flow Feedback RT to BC,wffbEcuToBcM1553,Mil1553,Selection,0,1000,,
-Communications,M1553 Data BC to ECU Pane 1,Weight on Wheels,wowBcToEcuM1553,Mil1553,Selection,0,1000,,
-Drivers/Torque Motors,High Side and Low Side (combined) Drivers,High Side and Low Side (combined) Drivers,hslsDriver,modeTransfer,Selection,1,1,,
-Monitoring,Chip Detector Connection,Shared Channel,chipDetectDualChSharedInput,n/a - Monitoring,Selection,1,1,,
-Monitoring,Chip Detector Connection,Single Channel Input,chipDetectSingleChInput,n/a - Monitoring,Selection,1,1,,
-Monitoring,Filter Type Available,Low-Pass Filter,filterLowPass,n/a - Monitoring,Selection,0,2,,
-Monitoring,Filter Inlet Static Pressure Selection,Raw Static Pressure Filtered,psFiltered,n/a - Monitoring,Selection,1,1,,
-Monitoring,Inlet Static Pressure Location,Inlet Static Pressure is measured at a plumbed location,psPlumbed,n/a - Monitoring,Selection,1,1,,
-Monitoring,Filter Inlet Static Pressure Selection,Raw Static Pressure Unfiltered,psUnfiltered,n/a - Monitoring,Selection,1,1,,
-Monitoring,Inlet Static Pressure Location,Inlet Static Pressure is measured internally in ECU,psUnplumbed,n/a - Monitoring,Selection,1,1,,
-Monitoring,EGT Derivative,Deadzone filtered derivative,t5DotDeadzoneFilter,n/a - Monitoring,Selection,1,1,,
-Monitoring,TT2 Heater,TT2 Heater,tt2Heater,n/a - Monitoring,Option,0,1,,
-Monitoring,Vibration Output for GSE,Vibration Output for GSE interface installed,vibrationOutput,n/a - Monitoring,Option,0,1,,
-Drivers/Torque Motors,Low Side Drivers (Conditionally Powered) Installed,Low Side Drivers (Conditionally Powered) Installed,lowSideDriverConditionallyPowered,motiveFlowLockoutCoil,Selection,1,1,,
-Drivers/Torque Motors,Driver and Torque Motor Signal Selection,Output Driver Selection for Dual Channel,ODSDualChannel,motiveFlowLockoutCoil,Selection,1,1,,
-Drivers/Torque Motors,Torque Motor Command Tracking Dual Non Shared,Torque Motor Command Tracking Dual Non Shared,tmDualNonSharedCommandTracking,mvTMCommandTracking,Selection,1,1,,
-Drivers/Torque Motors,Driver and Torque Motor Signal Selection,Output Driver Selection for Dual Channel,ODSDualChannel,mvTMCrossChannelBorrowing,Selection,1,1,,
-Drivers/Torque Motors,Single Non-Shared Torque Motor,Single Non-Shared Torque Motor,tmSingleNonShared,mvTMCrossChannelBorrowing,Selection,1,1,,
-Drivers/Torque Motors,Dual Non-Shared Torque Motor,Dual Non-Shared Torque Motor,tmDualNonShared,mvTMLocalChannelOnly,Selection,1,1,,
-Drivers/Torque Motors,Dual Non-Shared Metering Valve Torque Motor Command Tracking,Dual Non-Shared Metering Valve Torque Motor Command Tracking,mvTMLocalChannelOnlyCommandTracking,mvTMLocalChannelOnly;mvTMCommandTracking,Selection,1,1,,
-Engine Speed,N1 Derivative,N1 percent rate of change,n1DotPercent,n1Common,Selection,1,1,,
-Engine Speed,N1 Derivative,N1 RPM rate of change,n1DotRPM,n1Common,Selection,1,1,,
-Engine Speed,N1 RPM,N1 RPM is rate limited and filtered,n1RPMRateLimitFilter,n1Common,Selection,1,1,,
-Engine Speed,N1,Has N1,n1SingleSource,n1Common,Selection,1,1,,
-Engine Speed,N1 Processing Group,N1 Processing Group,n1DOTRPMRateLimitFilter,n1DotRPM;n1RPMRateLimitFilter,Selection,1,1,,
-Engine Speed,N2 Processing Group,N2 Processing Group,n2DOTRPMRateLimitFilter,n2DotRPM;n2RPMRateLimitFilter,Selection,1,1,,
-Air Cooled ECU,Temperature Reading,Rate Limited & Filtered Final Value,rtdRateLimFilteredSel,oilTempSensorAvail,Selection,1,1,,
-Engine Speed,Overspeed Fuel Cutoff,Energizes OS Solenoid for cutoff,overspeedEnergize,overspeedCoil,Selection,1,1,,
-Drivers/Torque Motors,High Side Drivers,Run Coil Installed,runCoil,overspeedCoil,Option,0,10,,
-Engine Speed,Overspeed Fuel Cutoff,De-energizes OS Solenoid for cutoff,overspeedDeenergize,overspeedSolenoid,Selection,1,1,,
-Engine Power,PLA Dual Fault Signal Selection,PLA Dual Fault Fail to Default Value,plaBothFaultedDV,plaDiffChooseHigh,Selection,1,1,,
-Engine Power,PLA Single Fault Signal Selection,PLA Single Fault choose remaining Healthy,plaChooseHealthy,plaDiffChooseHigh,Selection,1,1,,
-Engine Power,PLA Dual Fault Signal Selection,PLA Dual Fault set Degrade Mode 2,plaBothFaultedDG2,plaDiffFailedIdle,Selection,1,1,,
-Engine Power,PLA Single Fault Signal Selection,PLA Single Fault choose remaining Healthy plus Offset,plaOffsetHealthy,plaDiffFailedIdle,Selection,1,1,,
-Drivers/Torque Motors,Driver and Torque Motor Signal Selection,Output Driver Selection for Dual Channel,ODSDualChannel,propGovernor,Selection,1,1,,
-Drivers/Torque Motors,Torque Motors 2,Propellor Oil Control Torque Motor,pocTM,propGovernor,Selection,1,1,,
-Drivers/Torque Motors,Single Non-Shared Torque Motor,Single Non-Shared Torque Motor,tmSingleNonShared,propGovernor,Selection,1,1,,
-Drivers/Torque Motors,Driver and Torque Motor Signal Selection,Output Driver Selection for Dual Channel,ODSDualChannel,propPitchController,Selection,1,1,,
-Drivers/Torque Motors,Single Non-Shared Torque Motor,Single Non-Shared Torque Motor,tmSingleNonShared,propPitchController,Selection,1,1,,
-Monitoring,Filter Type Available,Self-Adjusting Time Constant Filter for analog inputs,filterSelfAdjusting,psFiltered,Selection,1,1,,
-Monitoring,Filter Type Available,Self-Adjusting Time Constant Filter for analog inputs,filterSelfAdjusting,psUnfiltered,Selection,1,1,,
-Reliability,Compliance,Code of Federal Regulations Compliant,sfrCFR,n/a - Reliability,Option,0,1,,
-Reliability,Compliance,MIL-STD-882 Compliant,sfrM882,n/a - Reliability,Option,0,1,,
-Reliability,Thrust Reverse,Thrust Reverse,sfrThrustRev,revRqstSW,Selection,1,1,,
-Aircraft Interfaces,Reverse Request Switch,Independent Engine Wiring RR,revRqstSingleEngineWiring,revRqstSW;indepEngineWiring;,Selection,1,1,,
-Aircraft Interfaces,Reverse Request Switch,Shared Engine Wiring RR,revRqstDualEngineWiring,revRqstSW;sharedEngineWiring,Selection,1,1,,
-Drivers/Torque Motors,High Side Drivers Installed,High Side Drivers Installed,highSideDriver,runCoil,Selection,1,1,,
-Drivers/Torque Motors,Driver and Torque Motor Signal Selection,Output Driver Selection for Dual Channel,ODSDualChannel,runCoil,Selection,1,1,,
-Drivers/Torque Motors,Low Side Drivers (Conditionally Powered) Installed,Low Side Drivers (Conditionally Powered) Installed,lowSideDriverConditionallyPowered,scavengeDeOilCoil,Selection,1,1,,
-Drivers/Torque Motors,Driver and Torque Motor Signal Selection,Output Driver Selection for Dual Channel,ODSDualChannel,scavengeDeOilCoil,Selection,1,1,,
-Reliability,Turbo Fan / Turbo Prop,Turbo Fan for Commercial,sfrTurboFanCFR,sfrCFR;turboFan,Selection,1,1,,
-Reliability,Turbo Fan / Turbo Prop,Turbo Prop for Commercial,sfrTurboPropCFR,sfrCFR;turboProp,Selection,1,1,,
-Aircraft Interfaces,Shutdown Switch,Independent Engine Wiring Shutdown,shutdownSingleEngineWiring,shutdownSW;indepEngineWiring;,Selection,1,1,,
-Aircraft Interfaces,Shutdown Switch,Shared Engine Wiring Shutdown,shutdownDualEngineWiring,shutdownSW;sharedEngineWiring,Selection,1,1,,
-Engine Start,Start Mode,PLA in cut-off indicates no start allowed,startModePLACutoff,startCmdPLA,Selection,1,1,,
-Engine Start,Start Command Switch,Independent Engine Wiring Start,startCmdSingleEngineWiring,startCmdSW;indepEngineWiring,Selection,1,1,,
-Engine Start,Start Command Switch,Shared Engine Wiring Start,startCmdDualEngineWiring,startCmdSW;sharedEngineWiring,Selection,1,1,,
-Drivers/Torque Motors,Low Side Drivers (Conditionally Powered) Installed,Low Side Drivers (Conditionally Powered) Installed,lowSideDriverConditionallyPowered,starterRelay,Selection,1,1,,
-Drivers/Torque Motors,Driver and Torque Motor Signal Selection,Output Driver Selection for Dual Channel,ODSDualChannel,starterRelay,Selection,1,1,,
-Drivers/Torque Motors,Low Side Drivers (Conditionally Powered) Installed,Low Side Drivers (Conditionally Powered) Installed,lowSideDriverConditionallyPowered,supplyDeOilCoil,Selection,1,1,,
-Drivers/Torque Motors,Driver and Torque Motor Signal Selection,Output Driver Selection for Dual Channel,ODSDualChannel,supplyDeOilCoil,Selection,1,1,,
-Drivers/Torque Motors,Torque Motor Command Tracking BIT,Torque Motor Command Tracking BIT,commandTracking,tmDualNonSharedCommandTracking,Selection,1,1,,
-Monitoring,Airflow Calculation,Corrected Airflow Calculation,airflowCalcCorrected,tt2Heater,Selection,1,1,,
-Turbo Fan,Engine Speed Analog Output,N1 Speed Analog Output,n1SpeedOutput,n/a - Turbo Fan,Option,0,1,,
-Turbo Prop,Engine Speed Analog Output,N2 Speed Analog Output,n2SpeedOutput,n/a - Turbo Prop,Option,0,1,,
-Turbo Fan,Compressor Guide Vanes (CGV) LVDT,CGV LVDT,cgvLVDT,turboFan,Selection,1,1,,
-Drivers/Torque Motors,Torque Motors,Compressor Guide Vane Torque Motor,cgvTM,turboFan,Option,0,10,,
-Monitoring,Exhaust Gas Temperature,EGT 3 Thermocouple,egt3TC,turboFan,Selection,1,1,,
-Engine Speed,Overspeed N1 Monitoring,Monitors N1 Monopole,overspeedN1,turboFan,Selection,1,1,,
-Monitoring,TT2 Temperature,2 Wire TT2,tt2TwoWire,turboFan,Selection,1,1,,
-Turbo Fan,Synchrophasing,TurboFan Syncrophasing,fanSyncrophase,turboFan;dualEngine,Option,0,1,,
-Fuel Cooled ECU,CGV Control,CGV Control Biased,cgvControlBiased,turboFan;fuelCooled,Selection,1,1,,
-Fuel Cooled ECU,Control Mode,Fuel Ratio Schedule,controlModeWFP3,turboFan;fuelCooled,Selection,1,1,,
-Engine Start,Engine Start Control,Engine Start Control,engStartCtrlAuto,turboFan;fuelCooled;filterLowPass,Selection,1,1,,
-Turbo Prop,Beta Pressure Sensor,Available,betaPressSensor,turboProp,Option,0,1,,
-Turbo Prop,Condition Lever,Condition Lever Installed,conditionLever,turboProp,Selection,1,1,,
-Monitoring,Exhaust Gas Temperature,EGT 4 Thermocouple,egt4TC,turboProp,Selection,1,1,,
-Drivers/Torque Motors,High Side Drivers,Feather Coil Installed,featherCoil,turboProp,Option,0,10,,
-Engine Speed,Speed,N2 Single Spool,n2Single,turboProp,Selection,1,2,,
-Turbo Prop,NTS Oil Pressure Sensor,Available,ntsOilPressSensor,turboProp,Option,0,1,,
-Turbo Prop,Propeller Pitch Control,PPC RVDT Installation,ppcVDT,turboProp,Selection,1,1,,
-Drivers/Torque Motors,Torque Motors,Propeller Governor Torque Motor Installed,propGovernor,turboProp,Option,0,10,,
-Drivers/Torque Motors,Torque Motors,Propeller Pitch Controller Installed,propPitchController,turboProp,Option,0,10,,
-Drivers/Torque Motors,Low Side Drivers,Scavenge De-Oil Coil Installed,scavengeDeOilCoil,turboProp,Option,0,10,,
-Engine Shutdown,Shutdown Mode,Shutdown Command Switch (w/o Dry Motor) initiates Shutdown Mode,shutdnModeMotorSDCmd,turboProp,Selection,1,1,,
-Turbo Prop,Turboprop Spare,Spare accounted for in Turboprop application,spareTurboProp,turboProp,Selection,1,1,,
-Drivers/Torque Motors,Low Side Drivers,Supply De-Oil Coil Installed,supplyDeOilCoil,turboProp,Option,0,10,,
-Turbo Prop,Torque Sensor,Available,torqueSensor,turboProp,Option,0,1,,
-Monitoring,TT2 Temperature,3 Wire TT2,tt2ThreeWire,turboProp,Selection,1,1,,
-Drivers/Torque Motors,Low Side Drivers,Unfeather Pump Installed,unfeatherPump,turboProp,Option,0,10,,
-Turbo Prop,Synchrophasing,TurboProp Syncrophasing,propSyncrophase,turboProp;dualEngine,Option,0,1,,
-Drivers/Torque Motors,Low Side Drivers (Conditionally Powered) Installed,Low Side Drivers (Conditionally Powered) Installed,lowSideDriverConditionallyPowered,unfeatherPump,Selection,1,1,,
-Drivers/Torque Motors,Driver and Torque Motor Signal Selection,Output Driver Selection for Dual Channel,ODSDualChannel,unfeatherPump,Selection,1,1,,
-Aircraft Interfaces,Weight-on-wheels Switch,Independent Engine Wiring WOW,wowSingleEngineWiring,wowSW;indepEngineWiring;,Selection,1,1,,
-Aircraft Interfaces,Weight-on-wheels Switch,Shared Engine Wiring WOW,wowDualEngineWiring,wowSW;sharedEngineWiring,Selection,1,1,,
-Reliability,Dual Engine,Automatic Power Reserve,autoPwrReserve,xEngDataLink;sfrCFR,Option,0,1,,
-Engine Speed,Dual Engine,N1 Sync,n1Sync,xEngDataLink;sfrCFR,Option,0,1,,
-Engine Speed,Dual Engine,N2 Sync,n2Sync,xEngDataLink;sfrCFR,Option,0,1,,
+GUI Tab,Function,Feature,Keyword,Dependency,Type,Min,Max,Description
+Air Cooled ECU,Arbitration Type,Arbitration AC Platform,arbitrationA,airCooled;turboProp,Selection,1,1,Arbitration scheme TPR Platform.
+Air Cooled ECU,Auto Reset Type,Auto Reset AC Platform,autoResetA,airCooled;turboProp,Selection,1,1,Auto reset function for AC platform.
+Air Cooled ECU,Degrade Mode Type,Degrade Mode AC Platform,degradeModeA,airCooled;turboProp,Selection,1,1,Degrade Mode calculation AC Platform.
+Air Cooled ECU,ECU BIT,Air Cooled ECU BIT,ecuBitA,airCooled;turboProp,Selection,1,1,ECU BIT for Air Cooled platform
+Air Cooled ECU,Engine Discrete Electrical Interface,Shared Channel,engDisSharedElectInt,airCooled,Selection,1,1,Electrical interface specifications for shared architecture
+Air Cooled ECU,Fuel Temperature Sensor,Installed,fuelTempSensorAvail,airCooled,Selection,1,1,"Fuel Temperature Sensor is available.  Non-shared, dual-wound, 2-wire RTD mounted in the FFM."
+Air Cooled ECU,Manual Power Reserve,Manual Power Reserve Discrete (MPR) option,powerRatingMPRDiscrete,airCooled,Option,0,1,MPR aircraft switch installed to enable MPR power rating
+Air Cooled ECU,Manual Power Reserve,Manual Power Reserve Throttle Lever (MPR) option,powerRatingMPRPushThrough,airCooled,Option,0,1,MPR push through installed on the throttle to enable MPR power rating
+Air Cooled ECU,Master Kill Type,Master Kill AC Platform,masterKillA,airCooled;turboProp,Selection,1,1,Master Kill function for AC Platform.
+Air Cooled ECU,Muted Recovery Degraded Mode ,Has muted recovery for degraded mode,ccdlDegradeLatch,airCooled,Selection,1,1,In degraded mode there is muted bus recovery
+Air Cooled ECU,Oil Temperature Sensor,Installed,oilTempSensorAvail,airCooled,Selection,1,1,Oil Temperature Sensor is available
+Air Cooled ECU,Temperature Reading,Rate Limited & Filtered Final Value,rtdRateLimFilteredSel,fuelTempSensorAvail,Selection,1,1,RTD selected signals are rate limited and filtered
+Air Cooled ECU,Temperature Reading,Rate Limited & Filtered Final Value,rtdRateLimFilteredSel,oilTempSensorAvail,Selection,1,1,RTD selected signals are rate limited and filtered
+Air Cooled ECU,Vibration Sensor,Installed,vibrationSense,airCooled,Option,0,1,"Vibration Sensor is installed, shared 2-wire moving magnet sensor.  Provides direct hardwired interface to ground support equipment interface."
+Air Cooled ECU,Warm Boot,Air Cooled Warm Boot,warmBootA,airCooled;turboProp,Selection,1,1,Warm Boot for Air Cooled platform
+Aircraft Interfaces,Anti-Ice Command Switch,Anti-Ice Command SW Installed,aiCmdSW,Common,Option,0,1,Anti-Ice Command switch installed
+Aircraft Interfaces,Anti-Ice Command Switch,Independent Engine Wiring A/I Command,aiCmdSingleEngineWiring,aiCmdSW;indepEngineWiring,Selection,1,1,Independent Engine wiring for anti-ice command
+Aircraft Interfaces,Anti-Ice Command Switch,Shared Engine Wiring A/I Command,aiCmdDualEngineWiring,aiCmdSW;sharedEngineWiring,Selection,1,1,Shared Engine wiring for anti-ice command
+Aircraft Interfaces,Engine Wiring Configuration,Independent Engine Wiring,indepEngineWiring,Common,Selection,1,1,Independent Engine Wiring configuration
+Aircraft Interfaces,Engine Wiring Configuration,Shared Engine Wiring,sharedEngineWiring,dualEngine,Selection,1,1,Shared Engine Wiring configuration
+Aircraft Interfaces,Flight Idle Switch,Flight Idle SW Installed,flightIdleSW,Common,Option,0,1,Flight Idle switch installed
+Aircraft Interfaces,Flight Idle Switch,Independent Engine Wiring FI,flightIdleSingleEngineWiring,flightIdleSW;indepEngineWiring,Selection,1,1,Independent Engine wiring for FI switch
+Aircraft Interfaces,Flight Idle Switch,Shared Engine Wiring FI,flightIdleDualEngineWiring,flightIdleSW;sharedEngineWiring,Selection,1,1,Shared Engine wiring for FI switch
+Aircraft Interfaces,Ground Idle Switch,Ground Idle SW Installed,groundIdleSW,Common,Option,0,1,Ground Idle switch installed
+Aircraft Interfaces,Ground Idle Switch,Independent Engine Wiring GI,groundIdleSingleEngineWiring,groundIdleSW;indepEngineWiring,Selection,1,1,Independent Engine wiring for GI switch
+Aircraft Interfaces,Ground Idle Switch,Shared Engine Wiring GI,groundIdleDualEngineWiring,groundIdleSW;sharedEngineWiring,Selection,1,1,Shared Engine wiring for GI switch
+Aircraft Interfaces,Ignition Switch,Ignition SW Installed,ignitionSW,Common,Option,0,1,Ignition switch installed
+Aircraft Interfaces,Ignition Switch,Independent Engine Wiring Ign,ignitSingleEngineWiring,ignitionSW;indepEngineWiring,Selection,1,1,Independent Engine wiring for Ignition switch
+Aircraft Interfaces,Ignition Switch,Shared Engine Wiring Ign,ignitDualEngineWiring,ignitionSW;sharedEngineWiring,Selection,1,1,Shared Engine wiring for Ignition switch
+Aircraft Interfaces,Mach Hold,Independent Engine Wiring Mach Hold,machHoldSingleEngineWiring,machHold;indepEngineWiring,Selection,1,1,Independent Engine wiring for Mach Hold installations
+Aircraft Interfaces,Mach Hold,Mach Hold Mode Enabled,machHold,Common,Option,0,1,Mach hold mode enable
+Aircraft Interfaces,Mach Hold,Shared Engine Wiring Mach Hold,machHoldDualEngineWiring,machHold;sharedEngineWiring,Selection,1,1,Shared Engine wiring for Mach Hold installations
+Aircraft Interfaces,Maintenance Enabled Switch,Independent Engine Wiring Maint,maintSingleEngineWiring,maintEnableSW;indepEngineWiring,Selection,1,1,Independent Engine wiring for Maintenance Enabled switch
+Aircraft Interfaces,Maintenance Enabled Switch,Maintenance Enabled SW Installed,maintEnableSW,Common,Option,0,1,Maintenance switch installed
+Aircraft Interfaces,Maintenance Enabled Switch,Shared Engine Wiring Maint,maintDualEngineWiring,maintEnableSW;sharedEngineWiring,Selection,1,1,Shared Engine wiring for Maintenance Enabled switch
+Aircraft Interfaces,Reverse Request Switch,Independent Engine Wiring RR,revRqstSingleEngineWiring,revRqstSW;indepEngineWiring,Selection,1,1,Independent Engine wiring for RR ;switch
+Aircraft Interfaces,Reverse Request Switch,Reverse Request SW Installed,revRqstSW,Common,Option,0,1,Reverse request switch installed
+Aircraft Interfaces,Reverse Request Switch,Shared Engine Wiring RR,revRqstDualEngineWiring,revRqstSW;sharedEngineWiring,Selection,1,1,Shared Engine wiring for RR switch
+Aircraft Interfaces,Shutdown Command MIO Signal Mapping Designation,Shutdown CMD MIO Signal Mapping A,shutdownCmdInstA,airCooled,Selection,1,1,"Shutdown Command MIO Signal Mapping Bit Designation, option A"
+Aircraft Interfaces,Shutdown Command MIO Signal Mapping Designation,Shutdown CMD MIO Signal Mapping B,shutdownCmdInstB,fuelCooled,Selection,1,1,"Shutdown Command MIO Signal Mapping Bit Designation, option B"
+Aircraft Interfaces,Shutdown Switch,Independent Engine Wiring Shutdown,shutdownSingleEngineWiring,shutdownSW;indepEngineWiring,Selection,1,1,Independent Engine wiring for Shutdown switch
+Aircraft Interfaces,Shutdown Switch,Shared Engine Wiring Shutdown,shutdownDualEngineWiring,shutdownSW;sharedEngineWiring,Selection,1,1,Shared Engine wiring for Shutdown switch
+Aircraft Interfaces,Shutdown Switch,Shutdown SW Installed,shutdownSW,Common,Option,0,1,Shutdown switch installed
+Aircraft Interfaces,Weight-on-wheels Switch,Independent Engine Wiring WOW,wowSingleEngineWiring,wowSW;indepEngineWiring,Selection,1,1,Independent Engine wiring for WOW switch
+Aircraft Interfaces,Weight-on-wheels Switch,Shared Engine Wiring WOW,wowDualEngineWiring,wowSW;sharedEngineWiring,Selection,1,1,Shared Engine wiring for WOW switch
+Aircraft Interfaces,Weight-on-wheels Switch,WOW SW Installed,wowSW,Common,Option,0,1,WOW switch installed
+Channel Health,Channel Health Execution,Channel Health Execution Version A,channelHealthCalcA,channelHealthCalc01a;channelHealthCalc02a;channelHealthCalc03a;channelHealthCalc04a;channelHealthCalc05a;channelHealthCalc06a;channelHealthCalc07a;channelHealthCalc08a;channelHealthCalc09a;channelHealthCalc10a,Selection,1,1,Channel Health Version A Execution Order
+Channel Health,Channel Health Execution,Channel Health Execution Version B,channelHealthCalcB,channelHealthCalc01b;channelHealthCalc02b;channelHealthCalc03b;channelHealthCalc04b;channelHealthCalc05b;channelHealthCalc06b;channelHealthCalc07b;channelHealthCalc08b;channelHealthCalc09b;channelHealthCalc10b,Selection,1,1,Channel Health Version B Execution Order
+Channel Health,Level 1 Channel Health Type,Level 1 Channel Health Version A,channelHealthCalc01a,airCooled;turboProp;HSIgniter,Selection,1,1,"The level 1 Channel Health calculation, version A."
+Channel Health,Level 1 Channel Health Type,Level 1 Channel Health Version B,channelHealthCalc01b,fuelCooled;turboFan;atsPermit;dualACPwr;ecuBitB;ignRelay;loadInhibit;modeTransfer;overspeedDeenergize;overspeedReset,Selection,1,1,"The level 1 Channel Health calculation, version B.  Provides different dependencies from version A."
+Channel Health,Level 10 Channel Health Type,Level 10 Channel Health Version A,channelHealthCalc10a,airCooled;turboProp;n2SingleSource;scavengeDeOilCoil;supplyDeOilCoil;mvTMCrossChannelBorrowing,Selection,1,1,"The level 10 Channel Health calculation, version A."
+Channel Health,Level 10 Channel Health Type,Level 10 Channel Health Version B,channelHealthCalc10b,fuelCooled;turboFan;cgvLVDT;cgvTMLocalChannelOnlyCommandTracking;masterKillB;modeTransfer;mvTMLocalChannelOnlyCommandTracking,Selection,1,1,"The level 10 Channel Health calculation, version B.  Provides different dependencies from version A."
+Channel Health,Level 2 Channel Health Type,Level 2 Channel Health Version A,channelHealthCalc02a,airCooled;turboProp;n2SecondarySource;HSIgniter,Selection,1,1,"The level 2 Channel Health calculation, version A."
+Channel Health,Level 2 Channel Health Type,Level 2 Channel Health Version B,channelHealthCalc02b,fuelCooled;turboFan;atsPermit;ignRelay;loadInhibit;Mil1553;modeTransfer,Selection,1,1,"The level 2 Channel Health calculation, version B.  Provides different dependencies from version A."
+Channel Health,Level 3 Channel Health Type,Level 3 Channel Health Version A,channelHealthCalc03a,airCooled;turboProp;vibrationSense;wfFiltBypOpenIsBypass,Selection,1,1,"The level 3 Channel Health calculation, version A."
+Channel Health,Level 3 Channel Health Type,Level 3 Channel Health Version B,channelHealthCalc03b,fuelCooled;turboFan;chipDetectSingleChInput;engDis1ChanInputElectInt;pcuReset,Selection,1,1,"The level 3 Channel Health calculation, version B.  Provides different dependencies from version A."
+Channel Health,Level 4 Channel Health Type,Level 4 Channel Health Version A,channelHealthCalc04a,airCooled;turboProp;motiveFlowLockoutCoil;scavengeDeOilCoil;supplyDeOilCoil,Selection,1,1,"The level 4 Channel Health calculation, version A."
+Channel Health,Level 4 Channel Health Type,Level 4 Channel Health Version B,channelHealthCalc04b,fuelCooled;turboFan,Selection,1,1,"The level 4 Channel Health calculation, version B.  Provides different dependencies from version A."
+Channel Health,Level 5 Channel Health Type,Level 5 Channel Health Version A,channelHealthCalc05a,airCooled;turboProp;antiIceCoil;betaPressSensor;chipDetectDualChSharedInput;ignitionSW;machHold;maintEnableSW;motiveFlowLockoutCoil;oilFiltBypOpenIsBypass;runCoil,Selection,1,1,"The level 5 Channel Health calculation, version A."
+Channel Health,Level 5 Channel Health Type,Level 5 Channel Health Version B,channelHealthCalc05b,fuelCooled;turboFan,Selection,1,1,"The level 5 Channel Health calculation, version B.  Provides different dependencies from version A."
+Channel Health,Level 6 Channel Health Type,Level 6 Channel Health Version A,channelHealthCalc06a,airCooled;turboProp;aiCmdSW;antiIceCoil;Arinc;conditionLever;ecoMode;featherCoil;HSIgniter;ntsOilPressSensor;oilTempSensorAvail;overspeedCoil;pmaPower;runCoil;scavengeDeOilCoil;startCmdSW;starterRelay;supplyDeOilCoil;unfeatherPump,Selection,1,1,"The level 6 Channel Health calculation, version A."
+Channel Health,Level 6 Channel Health Type,Level 6 Channel Health Version B,channelHealthCalc06b,fuelCooled;turboFan,Selection,1,1,"The level 6 Channel Health calculation, version B.  Provides different dependencies from version A."
+Channel Health,Level 7 Channel Health Type,Level 7 Channel Health Version A,channelHealthCalc07a,airCooled;turboProp;propGovernor;revRqstSW;wowSW,Selection,1,1,"The level 7 Channel Health calculation, version A."
+Channel Health,Level 7 Channel Health Type,Level 7 Channel Health Version B,channelHealthCalc07b,fuelCooled;turboFan,Selection,1,1,"The level 7 Channel Health calculation, version B.  Provides different dependencies from version A."
+Channel Health,Level 8 Channel Health Type,Level 8 Channel Health Version A,channelHealthCalc08a,airCooled;turboProp;propPitchController;torqueSensor,Selection,1,1,"The level 8 Channel Health calculation, version A."
+Channel Health,Level 8 Channel Health Type,Level 8 Channel Health Version B,channelHealthCalc08b,fuelCooled;turboFan;p3InternalSeperatePipes,Selection,1,1,"The level 8 Channel Health calculation, version B.  Provides different dependencies from version A."
+Channel Health,Level 9 Channel Health Type,Level 9 Channel Health Version A,channelHealthCalc09a,airCooled;turboProp;propGovernor,Selection,1,1,"The level 9 Channel Health calculation, version A."
+Channel Health,Level 9 Channel Health Type,Level 9 Channel Health Version B,channelHealthCalc09b,fuelCooled;turboFan;degradeModeB;n1SingleSource;n2SingleSource,Selection,1,1,"The level 9 Channel Health calculation, version B.  Provides different dependencies from version A."
+Common Function,Common Features,Common,Common,0_Common,Selection,1,1,Common Functions
+Communications,ARINC-429 Configuration,Dual ARINC-429,dualArinc,Arinc,Selection,1,1,ECU transmits and receives data over ARINC-429 using the Dual ARINC configuration
+Communications,ARINC-429 Configuration,Quad ARINC-429,quadArinc,Arinc,Selection,1,1,ECU transmits and receives data over ARINC-429 using the Quad ARINC configuration
+Communications,ARINC-429 Configuration PH,Dual ARINC-429,dualArinc429,Arinc429,Selection,1,1,"ECU transmits and receives data over ARINC-429 using the Dual ARINC configuration, two receivers"
+Communications,ARINC-429 Configuration PH,Single ARINC-249,singleArinc429,Arinc429,Selection,1,1,"ECU transmits and receives data over ARINC-429 using the SingleARINC configuration, one receiver"
+Communications,Avionics Data Bus,ARINC-429,Arinc,8_ARINC-429,Selection,1,1,ECU transmits and receives data over ARINC-429
+Communications,Avionics Data Bus,MIL-STD-1553,Mil1553,7_MIL-STD-1553,Selection,1,1,ECU transmits and receives data over MIL-STD-1553
+Communications,Avionics Data Bus PH,ARINC-429,Arinc429,Arinc,Selection,1,1,ECU transmits and receives data over ARINC-429 (PH)
+Communications,Cross Engine Data Link,Cross Engine Data Link,xEngDataLink,dualEngine,Option,0,1,Cross Engine Data Link
+Communications,Ethernet,Ethernet data dump capability,gseEthernetDataDump,gseEthernet,Selection,1,2,Data dump function available via Ethernet interface.
+Communications,Ethernet,Ethernet data streaming capability,gseEthernetDataStream,gseEthernet,Selection,1,2,Data streaming function available via Ethernet interface.
+Communications,GSE Interface,Has Ethernet transmit capability,gseEthernet,Common,Selection,1,1,Ethernet interface installed to transmit data in addition to RS-422
+Communications,GSE Interface,RS-422 Only,gseRS422Only,Common,Selection,1,1,Only RS-422 interface installed to transmit data
+Communications,GSE Interface Upload Request,Upload Request open/closed discrete,closedContactUploadRequest,airCooled,Selection,0,1,When contacts are closed the Upload Request is commanded.
+Communications,GSE Interface Upload Request,Upload Request open/ground discrete,groundedContactUploadRequest,fuelCooled,Selection,0,1,When contacts are grounded the Upload Request is commanded.
+Communications,M1553 Bus Configuration,ECU A and ECU B on Separate M1553 Buses,separateEcuABBusM1553,Mil1553,Option,0,1,ECU A and ECU B are on different MIL-STD-1553 Buses
+Communications,M1553 Cross Communication Data BC to ECU Pane 1,Generator Status,genStatusBcToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,Generator Status from BC to ECU
+Communications,M1553 Cross Communication Data BC to ECU Pane 1,Lateral Acceleration Validity,latAccelValBcToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,Lateral Acceleration Validity sent from BC to ECU
+Communications,M1553 Cross Communication Data BC to ECU Pane 1,Normal Acceleration Validity,normAccelValBcToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,Normal Acceleration Validity sent from BC to ECU
+Communications,M1553 Cross Communication Data BC to ECU Pane 1,Selected Impact Pressure Validity,piValBcToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,Selected Impact Pressure Validity sent from BC to ECU
+Communications,M1553 Cross Communication Data BC to ECU Pane 1,True Freestream Air Temperature Validity,tfatValBcToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,True Freestream Air Temperature Validity sent from BC to ECU
+Communications,M1553 Cross Communication Data BC to ECU Pane 2,Angle of Attack from BC,aoaBcToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,Angle of Attack sent from BC to ECU
+Communications,M1553 Cross Communication Data BC to ECU Pane 2,Mach Number from BC,machBcToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,Mach Number sent from BC to ECU
+Communications,M1553 Cross Communication Data BC to ECU Pane 2,Pitch Angle Validity,pitchValBcToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,Pitch Angle Validity sent from BC to ECU
+Communications,M1553 Cross Communication Data BC to ECU Pane 2,Roll Angle Validity,rollValBcToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,Roll Angle Validity sent from BC to ECU
+Communications,M1553 Cross Communication Data BC to ECU Pane 2,True Freestream Air Temperature from BC,tfatBcToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,True Freestream Air Temperature sent from BC to ECU
+Communications,M1553 Cross Communication Data BC to ECU Pane 3,Impact Pressure from BC,piBcToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,Impact Pressure sent from BC to ECU
+Communications,M1553 Cross Communication Data BC to ECU Pane 3,Seconds in Day from BC,secOfDayBcToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,Seconds in Day sent from BC to ECU
+Communications,M1553 Cross Communication Data BC to ECU Pane 3,Static Pressure from BC,psBcToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,Static Pressure sent from BC to ECU
+Communications,M1553 Cross Communication Data BC to ECU Pane 3,Total Air Temperature from BC,tatBcToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,Total Air Temperature sent from BC to ECU
+Communications,M1553 Cross Communication Data BC to ECU Pane 3,Year from BC,twoDigitYearBcToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,Year sent from BC to ECU
+Communications,M1553 Cross Communication Data ECU to BC Pane 1,ECU Counter RT to BC,ecuCounterEcuToBcM1553,dataSetCrossCommM1553,Selection,0,1000,ECU Counter sent from ECU to BC
+Communications,M1553 Cross Communication Data ECU to BC Pane 1,Fuel Flow Feedback Validity RT to BC,wffbValEcuToBcM1553,dataSetCrossCommM1553,Selection,0,1000,Fuel Flow Feedback Validity sent from ECU to BC
+Communications,M1553 Cross Communication Data ECU to BC Pane 1,P3 Validity RT to BC,p3ValEcuToBcM1553,dataSetCrossCommM1553,Selection,0,1000,P3 Validity sent from ECU to BC
+Communications,M1553 Cross Communication Data ECU to BC Pane 1,PT2 Validity RT to BC,pt2ValEcuToBcM1553,dataSetCrossCommM1553,Selection,0,1000,PT2 Validity sent from ECU to BC
+Communications,M1553 Cross Communication Data ECU to BC Pane 1,TT2 Validity RT to BC,tt2ValEcuToBcM1553,dataSetCrossCommM1553,Selection,0,1000,TT2 Validity sent from ECU to BC
+Communications,M1553 Cross Communication Data ECU to BC Pane 2,CGVCMD Validity RT to BC,cgvcmdValEcuToBcM1553,dataSetCrossCommM1553,Selection,0,1000,CGVCMD Validity sent from ECU to BC
+Communications,M1553 Cross Communication Data ECU to BC Pane 2,CGVFB Validity RT to BC,cgvfbValEcuToBcM1553,dataSetCrossCommM1553,Selection,0,1000,CGVFB Validity sent from ECU to BC
+Communications,M1553 Cross Communication Data ECU to BC Pane 2,Engine Oil Pressure Validity RT to BC,pOilValEcuToBcM1553,dataSetCrossCommM1553,Selection,0,1000,Engine Oil Pressure Validity sent from ECU to BC
+Communications,M1553 Cross Communication Data ECU to BC Pane 2,FADEC OT Validity RT to BC,fadecOTValEcuToBcM1553,dataSetCrossCommM1553,Selection,0,1000,FADEC OT Validity sent from ECU to BC
+Communications,M1553 Cross Communication Data ECU to BC Pane 2,WFCMD Validity RT to BC,wfcmdValEcuToBcM1553,dataSetCrossCommM1553,Selection,0,1000,WFCMD Validity sent from ECU to BC
+Communications,M1553 Cross Communication Data ECU to BC Pane 3,ATS Fail RT to BC,atsFailEcuToBcM1553,dataSetCrossCommM1553,Selection,0,1000,ATS Fail sent from ECU to BC
+Communications,M1553 Cross Communication Data ECU to BC Pane 3,Inlet Total Pressure RT to BC,pt2EcuToBcM1553,dataSetCrossCommM1553,Selection,0,1000,Inlet Total Pressure sent from ECU to BC
+Communications,M1553 Cross Communication Data ECU to BC Pane 3,Inlet Total Temperature RT to BC,tt2EcuToBcM1553,dataSetCrossCommM1553,Selection,0,1000,Inlet Total Temperature sent from ECU to BC
+Communications,M1553 Cross Communication Data ECU to BC Pane 3,MN Fail RT to BC,machFailEcuToBcM1553,dataSetCrossCommM1553,Selection,0,1000,MN Fail sent from ECU to BC
+Communications,M1553 Cross Communication Data ECU to BC Pane 3,Other Control Validity RT to BC,otherCtrlValidityEcuToBcM1553,dataSetCrossCommM1553,Selection,0,1000,Other Control Validity sent from ECU to BC
+Communications,M1553 Cross Communication Data ECU to BC Pane 4,Engine Cutoff RT to BC,engCutoffEcuToBcM1553,dataSetCrossCommM1553,Selection,0,1000,Engine Cutoff sent from ECU to BC
+Communications,M1553 Cross Communication Data ECU to BC Pane 4,PCU Degraded RT to BC,ecuADegEcuToBcM1553,dataSetCrossCommM1553,Selection,0,1000,PCU Degraded sent from ECU to BC
+Communications,M1553 Cross Communication Data ECU to BC Pane 4,PCU Fail RT to BC,ecuAFailEcuToBcM1553,dataSetCrossCommM1553,Selection,0,1000,PCU Fail sent from ECU to BC
+Communications,M1553 Cross Communication Data ECU to BC Pane 4,PCU In Control RT to BC,ecuAInCtrlEcuToBcM1553,dataSetCrossCommM1553,Selection,0,1000,PCU In Control sent from ECU to BC
+Communications,M1553 Cross Communication Data ECU to BC Pane 4,PCU Operational RT to BC,ecuAOpEcuToBcM1553,dataSetCrossCommM1553,Selection,0,1000,PCU Operational sent from ECU to BC
+Communications,M1553 Cross Communication Data ECU to BC Pane 5,ACU Degraded RT to BC,ecuBDegEcuToBcM1553,dataSetCrossCommM1553,Selection,0,1000,ACU Degraded sent from ECU to BC
+Communications,M1553 Cross Communication Data ECU to BC Pane 5,ACU Fail RT to BC,ecuBFailEcuToBcM1553,dataSetCrossCommM1553,Selection,0,1000,ACU Fail sent from ECU to BC
+Communications,M1553 Cross Communication Data ECU to BC Pane 5,ACU In Control RT to BC,ecuBInCtrlEcuToBcM1553,dataSetCrossCommM1553,Selection,0,1000,ACU In Control sent from ECU to BC
+Communications,M1553 Cross Communication Data ECU to BC Pane 5,ACU Operational RT to BC,ecuBOpEcuToBcM1553,dataSetCrossCommM1553,Selection,0,1000,ACU Operational sent from ECU to BC
+Communications,M1553 Cross Communication Data ECU to BC Pane 5,PCU Load Inhibit ON RT to BC,ecuALoadInhOnEcuToBcM1553,dataSetCrossCommM1553,Selection,0,1000,PCU Load Inhibit ON sent from ECU to BC
+Communications,M1553 Cross Communication Data ECU to BC Pane 6,ACU ATS Permit ON RT to BC,ecuBATSPermitOnEcuToBcM1553,dataSetCrossCommM1553,Selection,0,1000,ACU ATS Permit ON sent from ECU to BC
+Communications,M1553 Cross Communication Data ECU to BC Pane 6,ACU Load Inhibit ON RT to BC,ecuBLoadInhOnEcuToBcM1553,dataSetCrossCommM1553,Selection,0,1000,ACU Load Inhibit ON sent from ECU to BC
+Communications,M1553 Cross Communication Data ECU to BC Pane 6,CGV Command RT to BC,cgvcmdEcuToBcM1553,dataSetCrossCommM1553,Selection,0,1000,CGV Command sent from ECU to BC
+Communications,M1553 Cross Communication Data ECU to BC Pane 6,Fuel Flow Command RT to BC,wfcmdEcuToBcM1553,dataSetCrossCommM1553,Selection,0,1000,Fuel Flow Command sent from ECU to BC
+Communications,M1553 Cross Communication Data ECU to BC Pane 6,PCU ATS Permit ON RT to BC,ecuAATSPermitOnEcuToBcM1553,dataSetCrossCommM1553,Selection,0,1000,PCU ATS Permit ON sent from ECU to BC
+Communications,M1553 Cross Communication Data ECU to BC Pane 7,CGV Feedback RT to BC,cgvfbEcuToBcM1553,dataSetCrossCommM1553,Selection,0,1000,CGV Feedback sent from ECU to BC
+Communications,M1553 Cross Communication Data ECU to BC Pane 7,ECU Inlet Temperature Lane RT to BC,ecuT2rawEcuToBcM1553,dataSetCrossCommM1553,Selection,0,1000,ECU Inlet Temperature Lane sent from ECU to BC
+Communications,M1553 Cross Communication Data ECU to BC Pane 7,ECU Reserved FT Parameter RT to BC 1,ecuDaq1EcuToBcM1553,dataSetCrossCommM1553,Selection,0,1000,ECU Reserved FT Parameter 1 sent from ECU to BC
+Communications,M1553 Cross Communication Data ECU to BC Pane 7,ECU Reserved FT Parameter RT to BC 2,ecuDaq2EcuToBcM1553,dataSetCrossCommM1553,Selection,0,1000,ECU Reserved FT Parameter 2 sent from ECU to BC
+Communications,M1553 Cross Communication Data ECU to BC Pane 7,ECU Reserved FT Parameter RT to BC 3,ecuDaq3EcuToBcM1553,dataSetCrossCommM1553,Selection,0,1000,ECU Reserved FT Parameter 3 sent from ECU to BC
+Communications,M1553 Cross Communication Data ECU to BC Pane 8,ECU Reserved FT Parameter RT to BC 4,ecuDaq4EcuToBcM1553,dataSetCrossCommM1553,Selection,0,1000,ECU Reserved FT Parameter 4 sent from ECU to BC
+Communications,M1553 Cross Communication Data ECU to BC Pane 8,ECU Reserved FT Parameter RT to BC 5,ecuDaq5EcuToBcM1553,dataSetCrossCommM1553,Selection,0,1000,ECU Reserved FT Parameter 5 sent from ECU to BC
+Communications,M1553 Cross Communication Data ECU to BC Pane 8,ECU Reserved FT Parameter RT to BC 6,ecuDaq6EcuToBcM1553,dataSetCrossCommM1553,Selection,0,1000,ECU Reserved FT Parameter 6 sent from ECU to BC
+Communications,M1553 Cross Communication Data ECU to BC Pane 8,ECU Reserved FT Parameter RT to BC 7,ecuDaq7EcuToBcM1553,dataSetCrossCommM1553,Selection,0,1000,ECU Reserved FT Parameter 7 sent from ECU to BC
+Communications,M1553 Cross Communication Data ECU to BC Pane 8,ECU Reserved FT Parameter RT to BC 8,ecuDaq8EcuToBcM1553,dataSetCrossCommM1553,Selection,0,1000,ECU Reserved FT Parameter 8 sent from ECU to BC
+Communications,M1553 Cross Communication Data ECU to BC Pane 9,ECU Reserved FT Parameter RT to BC 10,ecuDaq10EcuToBcM1553,dataSetCrossCommM1553,Selection,0,1000,ECU Reserved FT Parameter 10 sent from ECU to BC
+Communications,M1553 Cross Communication Data ECU to BC Pane 9,ECU Reserved FT Parameter RT to BC 11,ecuDaq11EcuToBcM1553,dataSetCrossCommM1553,Selection,0,1000,ECU Reserved FT Parameter 11 sent from ECU to BC
+Communications,M1553 Cross Communication Data ECU to BC Pane 9,ECU Reserved FT Parameter RT to BC 12,ecuDaq12EcuToBcM1553,dataSetCrossCommM1553,Selection,0,1000,ECU Reserved FT Parameter 12 sent from ECU to BC
+Communications,M1553 Cross Communication Data ECU to BC Pane 9,ECU Reserved FT Parameter RT to BC 13,ecuDaq13EcuToBcM1553,dataSetCrossCommM1553,Selection,0,1000,ECU Reserved FT Parameter 13 sent from ECU to BC
+Communications,M1553 Cross Communication Data ECU to BC Pane 9,ECU Reserved FT Parameter RT to BC 14,ecuDaq14EcuToBcM1553,dataSetCrossCommM1553,Selection,0,1000,ECU Reserved FT Parameter 14 sent from ECU to BC
+Communications,M1553 Cross Communication Data ECU to BC Pane 9,ECU Reserved FT Parameter RT to BC 9,ecuDaq9EcuToBcM1553,dataSetCrossCommM1553,Selection,0,1000,ECU Reserved FT Parameter 9 sent from ECU to BC
+Communications,M1553 Cross Communication Data ECU to ECU Pane 10,Engine ON RT to RT,engOnEcuToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,Engine ON sent from ECU to ECU
+Communications,M1553 Cross Communication Data ECU to ECU Pane 10,FADEC O/T RT to RT,fadecOTEcuToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,FADEC O/T sent from ECU to ECU
+Communications,M1553 Cross Communication Data ECU to ECU Pane 10,Flameout RT to RT,flameoutEcuToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,Flameout sent from ECU to ECU
+Communications,M1553 Cross Communication Data ECU to ECU Pane 10,IGN Fail RT to RT,ignFailEcuToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,IGN Fail sent from ECU to ECU
+Communications,M1553 Cross Communication Data ECU to ECU Pane 10,Other Control Validity RT to RT,otherCtrlValidityEcuToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,Other Control Validity sent from ECU to ECU
+Communications,M1553 Cross Communication Data ECU to ECU Pane 11,ATS Fail RT to RT,atsFailEcuToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,ATS Fail sent from ECU to ECU
+Communications,M1553 Cross Communication Data ECU to ECU Pane 11,Engine Cutoff RT to RT,engCutoffEcuToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,Engine Cutoff sent from ECU to ECU
+Communications,M1553 Cross Communication Data ECU to ECU Pane 11,Minimum Flow RT to RT,minFlowEcuToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,Minimum Flow sent from ECU to ECU
+Communications,M1553 Cross Communication Data ECU to ECU Pane 11,MN Fail RT to RT,machFailEcuToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,MN Fail sent from ECU to ECU
+Communications,M1553 Cross Communication Data ECU to ECU Pane 11,Surge RT to RT,surgeEcuToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,Surge sent from ECU to ECU
+Communications,M1553 Cross Communication Data ECU to ECU Pane 12,EMS Buffers Full RT to RT,emsBuffersFullEcuToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,EMS Buffers Full sent from ECU to ECU
+Communications,M1553 Cross Communication Data ECU to ECU Pane 12,Engine Event Recorded RT to RT,engEventEcuToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,Engine Event Recorded sent from ECU to ECU
+Communications,M1553 Cross Communication Data ECU to ECU Pane 12,Engine Idle RT to RT,engIdleEcuToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,Engine Idle sent from ECU to ECU
+Communications,M1553 Cross Communication Data ECU to ECU Pane 12,Over G RT to RT,overGEcuToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,Over G sent from ECU to ECU
+Communications,M1553 Cross Communication Data ECU to ECU Pane 12,PLA Fail RT to RT,plaFailEcuToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,PLA Fail sent from ECU to ECU
+Communications,M1553 Cross Communication Data ECU to ECU Pane 13,ACU In Control RT to RT,ecuBInCtrlEcuToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,ACU In Control sent from ECU to ECU
+Communications,M1553 Cross Communication Data ECU to ECU Pane 13,PCU Degraded RT to RT,ecuADegEcuToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,PCU Degraded sent from ECU to ECU
+Communications,M1553 Cross Communication Data ECU to ECU Pane 13,PCU Fail RT to RT,ecuAFailEcuToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,PCU Fail sent from ECU to ECU
+Communications,M1553 Cross Communication Data ECU to ECU Pane 13,PCU In Control RT to RT,ecuAInCtrlEcuToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,PCU In Control sent from ECU to ECU
+Communications,M1553 Cross Communication Data ECU to ECU Pane 13,PCU Operational RT to RT,ecuAOpEcuToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,PCU Operational sent from ECU to ECU
+Communications,M1553 Cross Communication Data ECU to ECU Pane 14,ACU Degraded RT to RT,ecuBDegEcuToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,ACU Degraded sent from ECU to ECU
+Communications,M1553 Cross Communication Data ECU to ECU Pane 14,ACU Fail RT to RT,ecuBFailEcuToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,ACU Fail sent from ECU to ECU
+Communications,M1553 Cross Communication Data ECU to ECU Pane 14,ACU Operational RT to RT,ecuBOpEcuToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,ACU Operational sent from ECU to ECU
+Communications,M1553 Cross Communication Data ECU to ECU Pane 14,PCU Ign ON RT to RT,ecuAIgnOnEcuToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,PCU Ign ON sent from ECU to ECU
+Communications,M1553 Cross Communication Data ECU to ECU Pane 14,PCU Load Inhibit ON RT to RT,ecuALoadInhOnEcuToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,PCU Load Inhibit ON sent from ECU to ECU
+Communications,M1553 Cross Communication Data ECU to ECU Pane 15,ACU ATS Permit ON RT to RT,ecuBATSPermitOnEcuToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,ACU ATS Permit ON sent from ECU to ECU
+Communications,M1553 Cross Communication Data ECU to ECU Pane 15,ACU Ign ON RT to RT,ecuBIgnOnEcuToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,ACU Ign ON sent from ECU to ECU
+Communications,M1553 Cross Communication Data ECU to ECU Pane 15,ACU Load Inhibit ON RT to RT,ecuBLoadInhOnEcuToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,ACU Load Inhibit ON sent from ECU to ECU
+Communications,M1553 Cross Communication Data ECU to ECU Pane 15,PCU ATS Permit ON RT to RT,ecuAATSPermitOnEcuToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,PCU ATS Permit ON sent from ECU to ECU
+Communications,M1553 Cross Communication Data ECU to ECU Pane 4,ECU Counter RT to RT,ecuCounterEcuToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,ECU Counter sent from ECU to ECU
+Communications,M1553 Cross Communication Data ECU to ECU Pane 4,EGT Validity RT to RT,egtValEcuToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,EGT Validity sent from ECU to ECU
+Communications,M1553 Cross Communication Data ECU to ECU Pane 4,N1 Validity RT to RT,n1ValEcuToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,N1 Validity sent from ECU to ECU
+Communications,M1553 Cross Communication Data ECU to ECU Pane 4,N2 Validity RT to RT,n2ValEcuToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,N2 Validity sent from ECU to ECU
+Communications,M1553 Cross Communication Data ECU to ECU Pane 4,PLA Validity RT to RT,plaValEcuToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,PLA Validity sent from ECU to ECU
+Communications,M1553 Cross Communication Data ECU to ECU Pane 5,EGT Limit Validity RT to RT,egtLimValEcuToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,EGT Limit Validity sent from ECU to ECU
+Communications,M1553 Cross Communication Data ECU to ECU Pane 5,Fuel Flow Feedback Validity RT to RT,wffbValEcuToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,Fuel Flow Feedback Validity sent from ECU to ECU
+Communications,M1553 Cross Communication Data ECU to ECU Pane 5,P3 Validity RT to RT,p3ValEcuToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,P3 Validity sent from ECU to ECU
+Communications,M1553 Cross Communication Data ECU to ECU Pane 5,PT2 Validity RT to RT,pt2ValEcuToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,PT2 Validity sent from ECU to ECU
+Communications,M1553 Cross Communication Data ECU to ECU Pane 5,TT2 Validity RT to RT,tt2ValEcuToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,TT2 Validity sent from ECU to ECU
+Communications,M1553 Cross Communication Data ECU to ECU Pane 6,CGVCMD Validity RT to RT,cgvcmdValEcuToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,CGVCMD Validity sent from ECU to ECU
+Communications,M1553 Cross Communication Data ECU to ECU Pane 6,CGVFB Validity RT to RT,cgvfbValEcuToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,CGVFB Validity sent from ECU to ECU
+Communications,M1553 Cross Communication Data ECU to ECU Pane 6,Engine Oil Pressure Validity RT to RT,pOilValEcuToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,Engine Oil Pressure Validity sent from ECU to ECU
+Communications,M1553 Cross Communication Data ECU to ECU Pane 6,FADEC OT Validity RT to RT,fadecOTValEcuToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,FADEC OT Validity sent from ECU to ECU
+Communications,M1553 Cross Communication Data ECU to ECU Pane 6,WFCMD Validity RT to RT,wfcmdValEcuToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,WFCMD Validity sent from ECU to ECU
+Communications,M1553 Cross Communication Data ECU to ECU Pane 7,Compressor Exit Static Pressure RT to RT,p3EcuToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,Compressor Exit Static Pressure sent from ECU to ECU
+Communications,M1553 Cross Communication Data ECU to ECU Pane 7,Exhaust Gas Temperature RT to RT,egtEcuToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,Exhaust Gas Temperature sent from ECU to ECU
+Communications,M1553 Cross Communication Data ECU to ECU Pane 7,High Pressure Rotor Speed RT to RT,N2EcuToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,High Pressure Rotor Speed sent from ECU to ECU
+Communications,M1553 Cross Communication Data ECU to ECU Pane 7,Low Pressure Rotor Speed RT to RT,N1EcuToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,Low Pressure Rotor Speed sent from ECU to ECU
+Communications,M1553 Cross Communication Data ECU to ECU Pane 7,Power Lever Angle RT to RT,plaEcuToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,Power Lever Angle sent from ECU to ECU
+Communications,M1553 Cross Communication Data ECU to ECU Pane 8,Chip Detector RT to RT,chipDetEcuToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,Chip Detector sent from ECU to ECU
+Communications,M1553 Cross Communication Data ECU to ECU Pane 8,Inlet Total Pressure RT to RT,pt2EcuToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,Inlet Total Pressure sent from ECU to ECU
+Communications,M1553 Cross Communication Data ECU to ECU Pane 8,Inlet Total Temperature RT to RT,tt2EcuToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,Inlet Total Temperature sent from ECU to ECU
+Communications,M1553 Cross Communication Data ECU to ECU Pane 8,Maintenance Indication RT to RT,maintIndEcuToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,Maintenance Indication sent from ECU to ECU
+Communications,M1553 Cross Communication Data ECU to ECU Pane 8,Overspeed Event RT to RT,osEventEcuToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,Overspeed Event sent from ECU to ECU
+Communications,M1553 Cross Communication Data ECU to ECU Pane 9,Impending Fuel Bypass RT to RT,impFuelBypEcuToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,Impending Fuel Bypass sent from ECU to ECU
+Communications,M1553 Cross Communication Data ECU to ECU Pane 9,Impending Lube Bypass RT to RT,impLubeBypEcuToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,Impending Lube Bypass sent from ECU to ECU
+Communications,M1553 Cross Communication Data ECU to ECU Pane 9,Low Lube Level Indication RT to RT,lubeLevelLowEcuToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,Low Lube Level Indication sent from ECU to ECU
+Communications,M1553 Cross Communication Data ECU to ECU Pane 9,Low Oil Pressure RT to RT,pOilLowEcuToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,Low Oil Pressure sent from ECU to ECU
+Communications,M1553 Cross Communication Data ECU to ECU Pane 9,Overtemp Event RT to RT,otEventEcuToEcuM1553,dataSetCrossCommM1553,Selection,0,1000,Overtemp Event sent from ECU to ECU
+Communications,M1553 Data BC to ECU Pane 1,Armament Fire Switch,armFireSwBcToEcuM1553,Mil1553,Selection,0,1000,Armament Fire Switch from BC to ECU
+Communications,M1553 Data BC to ECU Pane 1,Bus Controller Counter,bcCounterBcToEcuM1553,Mil1553,Selection,0,1000,Bus Controller Counter sent from BC to ECU
+Communications,M1553 Data BC to ECU Pane 1,FCC BIT In Progress,fccBitBcToEcuM1553,Mil1553,Selection,0,1000,FCC BIT from BC to ECU
+Communications,M1553 Data BC to ECU Pane 1,Landing Gear Handle Down,geardnBcToEcuM1553,Mil1553,Selection,0,1000,Gear Handle Down from BC to ECU
+Communications,M1553 Data BC to ECU Pane 1,Weight on Wheels,wowBcToEcuM1553,Mil1553,Selection,0,1000,Weight On Wheels from BC to ECU
+Communications,M1553 Data BC to ECU Pane 2,Calibrated Airspeed Validity,casValBitBcToEcuM1553,Mil1553,Selection,0,1000,Calibrated Airspeed Validity sent from BC to ECU
+Communications,M1553 Data BC to ECU Pane 2,Mach Number Validity,machValBcToEcuM1553,Mil1553,Selection,0,1000,Mach Number Validity sent from BC to ECU
+Communications,M1553 Data BC to ECU Pane 2,Total Air Temperature Validity,tatValBcToEcuM1553,Mil1553,Selection,0,1000,Total Air Temperature Validity sent from BC to ECU
+Communications,M1553 Data BC to ECU Pane 2,True Angle of Attack Validity,aoaValBcToEcuM1553,Mil1553,Selection,0,1000,True Angle of Attack Validity sent from BC to ECU
+Communications,M1553 Data BC to ECU Pane 3,Calibrated Air Speed from BC,casBcToEcuM1553,Mil1553,Selection,0,1000,Calibrated Air Speed sent from BC to ECU
+Communications,M1553 Data BC to ECU Pane 3,Pressure Altitude from BC,pAltBcToEcuM1553,Mil1553,Selection,0,1000,Pressure Altitude sent from BC to ECU
+Communications,M1553 Data BC to ECU Pane 3,Pressure Altitude Validity,pAltValBcToEcuM1553,Mil1553,Selection,0,1000,Pressure Altitude Validity sent from BC to ECU
+Communications,M1553 Data BC to ECU Pane 3,Selected Static Pressure Validity,psValBcToEcuM1553,Mil1553,Selection,0,1000,Selected Static Pressure Validity sent from BC to ECU
+Communications,M1553 Data BC to ECU Pane 3,UTC Time Validity,utcTimeValBcToEcuM1553,Mil1553,Selection,0,1000,UTC Time Validity sent from BC to ECU
+Communications,M1553 Data BC to ECU Pane 4,Acceleration in the Sideways Direction from BC,latAccelBcToEcuM1553,Mil1553,Selection,0,1000,Acceleration in the Sideways Direction sent from BC to ECU
+Communications,M1553 Data BC to ECU Pane 4,Acceleration in the Vertical Direction from BC,normAccelBcToEcuM1553,Mil1553,Selection,0,1000,Acceleration in the Vertical Direction sent from BC to ECU
+Communications,M1553 Data BC to ECU Pane 4,Aircraft Pitch Angle from BC,pitchBcToEcuM1553,Mil1553,Selection,0,1000,Aircraft Pitch Angle sent from BC to ECU
+Communications,M1553 Data BC to ECU Pane 4,Aircraft Roll Angle from BC,rollBcToEcuM1553,Mil1553,Selection,0,1000,Aircraft Roll Angle sent from BC to ECU
+Communications,M1553 Data BC to ECU Pane 4,Day of Year from BC,dayOfYearBcToEcuM1553,Mil1553,Selection,0,1000,Day of Year sent from BC to ECU
+Communications,M1553 Data ECU to BC Pane 10,EMS Buffers Full RT to BC,emsBuffersFullEcuToBcM1553,Mil1553,Selection,0,1000,EMS Buffers Full sent from ECU to BC
+Communications,M1553 Data ECU to BC Pane 10,Engine Event Recorded RT to BC,engEventEcuToBcM1553,Mil1553,Selection,0,1000,Engine Event Recorded sent from ECU to BC
+Communications,M1553 Data ECU to BC Pane 10,Over G RT to BC,overGEcuToBcM1553,Mil1553,Selection,0,1000,Over G sent from ECU to BC
+Communications,M1553 Data ECU to BC Pane 10,PCU Ign ON RT to BC,ecuAIgnOnEcuToBcM1553,Mil1553,Selection,0,1000,PCU Ign ON sent from ECU to BC
+Communications,M1553 Data ECU to BC Pane 10,PLA Fail RT to BC,plaFailEcuToBcM1553,Mil1553,Selection,0,1000,PLA Fail sent from ECU to BC
+Communications,M1553 Data ECU to BC Pane 11,ACU Ign ON RT to BC,ecuBIgnOnEcuToBcM1553,Mil1553,Selection,0,1000,ACU Ign ON sent from ECU to BC
+Communications,M1553 Data ECU to BC Pane 11,ECU Power Lever Angle RT to BC,ecuPlaEcuToBcM1553,Mil1553,Selection,0,1000,ECU Power Lever Angle  sent from ECU to BC
+Communications,M1553 Data ECU to BC Pane 11,EGT (T5) Redline Value RT to BC,egtLimitEcuToBcM1553,Mil1553,Selection,0,1000,EGT (T5) Redline Value sent from ECU to BC
+Communications,M1553 Data ECU to BC Pane 11,Engine Oil Pressure RT to BC,pOilEcuToBcM1553,Mil1553,Selection,0,1000,Engine Oil Pressure sent from ECU to BC
+Communications,M1553 Data ECU to BC Pane 11,Fuel Flow Feedback RT to BC,wffbEcuToBcM1553,Mil1553,Selection,0,1000,Fuel Flow Feedback sent from ECU to BC
+Communications,M1553 Data ECU to BC Pane 12,ECU Compensated T2 RT to BC,ecuT2EcuToBcM1553,Mil1553,Selection,0,1000,ECU Compensated T2 sent from ECU to BC
+Communications,M1553 Data ECU to BC Pane 12,ECU Inlet Static Pressure RT to BC,ecuPs2EcuToBcM1553,Mil1553,Selection,0,1000,ECU Inlet Static Pressure sent from ECU to BC
+Communications,M1553 Data ECU to BC Pane 12,ECU Inlet Total Pressure RT to BC,ecuP2EcuToBcM1553,Mil1553,Selection,0,1000,ECU Inlet Total Pressure sent from ECU to BC
+Communications,M1553 Data ECU to BC Pane 12,ECU LP Rotor Speed RT to BC,ecuN1EcuToBcM1553,Mil1553,Selection,0,1000,ECU LP Rotor Speed sent from ECU to BC
+Communications,M1553 Data ECU to BC Pane 12,ECU LP Rotor Speed RT to BC,ecuN1rEcuToBcM1553,Mil1553,Selection,0,1000,ECU LP Rotor Speed sent from ECU to BC
+Communications,M1553 Data ECU to BC Pane 13,ECU Combustor Static Pressure RT to BC,ecuP3EcuToBcM1553,Mil1553,Selection,0,1000,ECU Combustor Static Pressure sent from ECU to BC
+Communications,M1553 Data ECU to BC Pane 13,ECU HP Rotor Speed Referred to Compressor Inlet Temp (T22) RT to BC,ecuN2r22EcuToBcM1553,Mil1553,Selection,0,1000,ECU HP Rotor Speed Referred to Compressor Inlet Temp (T22) sent from ECU to BC
+Communications,M1553 Data ECU to BC Pane 13,ECU HP Rotor Speed RT to BC,ecuN2EcuToBcM1553,Mil1553,Selection,0,1000,ECU HP Rotor Speed sent from ECU to BC
+Communications,M1553 Data ECU to BC Pane 13,ECU LP Rotor Speed Set Point RT to BC,ecuN1rSetEcuToBcM1553,Mil1553,Selection,0,1000,ECU LP Rotor Speed Set Point sent from ECU to BC
+Communications,M1553 Data ECU to BC Pane 13,ECU Referred HP Rotor Speed RT to BC,ecuN2rEcuToBcM1553,Mil1553,Selection,0,1000,ECU Referred HP Rotor Speed sent from ECU to BC
+Communications,M1553 Data ECU to BC Pane 14,ECU CGV Command RT to BC,ecuCgvcmdEcuToBcM1553,Mil1553,Selection,0,1000,ECU CGV Command sent from ECU to BC
+Communications,M1553 Data ECU to BC Pane 14,ECU CGV Feedback RT to BC,ecuCgvfbEcuToBcM1553,Mil1553,Selection,0,1000,ECU CGV Feedback sent from ECU to BC
+Communications,M1553 Data ECU to BC Pane 14,ECU Exhaust Temperature RT to BC,ecuT5EcuToBcM1553,Mil1553,Selection,0,1000,ECU Exhaust Temperature sent from ECU to BC
+Communications,M1553 Data ECU to BC Pane 14,ECU Fuel Flow Command RT to BC,ecuWfcmdEcuToBcM1553,Mil1553,Selection,0,1000,ECU Fuel Flow Command sent from ECU to BC
+Communications,M1553 Data ECU to BC Pane 14,ECU Fuel Flow Feedback RT to BC,ecuWffbEcuToBcM1553,Mil1553,Selection,0,1000,ECU Fuel Flow Feedback sent from ECU to BC
+Communications,M1553 Data ECU to BC Pane 14,ECU Fuel Ratio Command RT to BC,ecuWfr3rEcuToBcM1553,Mil1553,Selection,0,1000,ECU Fuel Ratio Command sent from ECU to BC
+Communications,M1553 Data ECU to BC Pane 5,EGT Limit Validity RT to BC,egtLimValEcuToBcM1553,Mil1553,Selection,0,1000,EGT Limit Validity sent from ECU to BC
+Communications,M1553 Data ECU to BC Pane 5,EGT Validity RT to BC,egtValEcuToBcM1553,Mil1553,Selection,0,1000,EGT Validity sent from ECU to BC
+Communications,M1553 Data ECU to BC Pane 5,N1 Validity RT to BC,n1ValEcuToBcM1553,Mil1553,Selection,0,1000,N1 Validity sent from ECU to BC
+Communications,M1553 Data ECU to BC Pane 5,N2 Validity RT to BC,n2ValEcuToBcM1553,Mil1553,Selection,0,1000,N2 Validity sent from ECU to BC
+Communications,M1553 Data ECU to BC Pane 5,PLA Validity RT to BC,plaValEcuToBcM1553,Mil1553,Selection,0,1000,PLA Validity sent from ECU to BC
+Communications,M1553 Data ECU to BC Pane 6,Compressor Exit Static Pressure RT to BC,p3EcuToBcM1553,Mil1553,Selection,0,1000,Compressor Exit Static Pressure sent from ECU to BC
+Communications,M1553 Data ECU to BC Pane 6,Exhaust Gas Temperature RT to BC,egtEcuToBcM1553,Mil1553,Selection,0,1000,Exhaust Gas Temperature sent from ECU to BC
+Communications,M1553 Data ECU to BC Pane 6,High Pressure Rotor Speed RT to BC,N2EcuToBcM1553,Mil1553,Selection,0,1000,High Pressure Rotor Speed sent from ECU to BC
+Communications,M1553 Data ECU to BC Pane 6,Low Pressure Rotor Speed RT to BC,N1EcuToBcM1553,Mil1553,Selection,0,1000,Low Pressure Rotor Speed sent from ECU to BC
+Communications,M1553 Data ECU to BC Pane 6,Power Lever Angle RT to BC,plaEcuToBcM1553,Mil1553,Selection,0,1000,Power Lever Angle sent from ECU to BC
+Communications,M1553 Data ECU to BC Pane 7,Chip Detector RT to BC,chipDetEcuToBcM1553,Mil1553,Selection,0,1000,Chip Detector sent from ECU to BC
+Communications,M1553 Data ECU to BC Pane 7,Low Lube Level Indication RT to BC,lubeLevelLowEcuToBcM1553,Mil1553,Selection,0,1000,Low Lube Level Indication sent from ECU to BC
+Communications,M1553 Data ECU to BC Pane 7,Maintenance Indication RT to BC,maintIndEcuToBcM1553,Mil1553,Selection,0,1000,Maintenance Indication sent from ECU to BC
+Communications,M1553 Data ECU to BC Pane 7,Overspeed Event RT to BC,osEventEcuToBcM1553,Mil1553,Selection,0,1000,Overspeed Event sent from ECU to BC
+Communications,M1553 Data ECU to BC Pane 7,Overtemp Event RT to BC,otEventEcuToBcM1553,Mil1553,Selection,0,1000,Overtemp Event sent from ECU to BC
+Communications,M1553 Data ECU to BC Pane 8,Engine ON RT to BC,engOnEcuToBcM1553,Mil1553,Selection,0,1000,Engine ON sent from ECU to BC
+Communications,M1553 Data ECU to BC Pane 8,Flameout RT to BC,flameoutEcuToBcM1553,Mil1553,Selection,0,1000,Flameout sent from ECU to BC
+Communications,M1553 Data ECU to BC Pane 8,Impending Fuel Bypass RT to BC,impFuelBypEcuToBcM1553,Mil1553,Selection,0,1000,Impending Fuel Bypass sent from ECU to BC
+Communications,M1553 Data ECU to BC Pane 8,Impending Lube Bypass RT to BC,impLubeBypEcuToBcM1553,Mil1553,Selection,0,1000,Impending Lube Bypass sent from ECU to BC
+Communications,M1553 Data ECU to BC Pane 8,Low Oil Pressure RT to BC,pOilLowEcuToBcM1553,Mil1553,Selection,0,1000,Low Oil Pressure sent from ECU to BC
+Communications,M1553 Data ECU to BC Pane 9,Engine Idle RT to BC,engIdleEcuToBcM1553,Mil1553,Selection,0,1000,Engine Idle sent from ECU to BC
+Communications,M1553 Data ECU to BC Pane 9,FADEC O/T RT to BC,fadecOTEcuToBcM1553,Mil1553,Selection,0,1000,FADEC O/T sent from ECU to BC
+Communications,M1553 Data ECU to BC Pane 9,IGN Fail RT to BC,ignFailEcuToBcM1553,Mil1553,Selection,0,1000,IGN Fail sent from ECU to BC
+Communications,M1553 Data ECU to BC Pane 9,Minimum Flow RT to BC,minFlowEcuToBcM1553,Mil1553,Selection,0,1000,Minimum Flow sent from ECU to BC
+Communications,M1553 Data ECU to BC Pane 9,Surge RT to BC,surgeEcuToBcM1553,Mil1553,Selection,0,1000,Surge sent from ECU to BC
+Communications,M1553 Data Set,M1553 Data Set with Cross-Engine Communication,dataSetCrossCommM1553,Mil1553,Option,0,1,Data Set that includes cross-engine communication over MIL-STD-1553
+Communications,M1553 Status Indications,Broadcast Command Received Bit,broadcastComM1553,Mil1553,Selection,0,6,Indicates whether or not the preceding valid command word was a broadcast command.
+Communications,M1553 Status Indications,Busy Bit,busyBitM1553,Mil1553,Selection,0,6,Indicates that the remote terminal or subsystem is unable to move data to or from the subsystem in compliance with the bus controller's command.
+Communications,M1553 Status Indications,Instrumentation Bit,instrumentationBitM1553,Mil1553,Selection,0,6,Status word bit reserved for the instrumentation bit (and must be a logic 0).
+Communications,M1553 Status Indications,Service Request Bit,serviceReqM1553,Mil1553,Selection,0,6,Indicates the need for the bus controller to take specific predefined actions relative to either the remote terminal or associated subsystem.
+Communications,M1553 Status Indications,Subsystem Flag Bit,subsystemFlagM1553,Mil1553,Selection,0,6,Indicates a subsystem fault condition and alerts the bus controller to potentially invalid data.
+Communications,M1553 Status Indications,Terminal Flag Bit,terminalFlagM1553,Mil1553,Selection,0,6,Indicates a remote terminal fault condition.
+Communications,MIL-STD-1553 Input Message,Input Message 1,m1553NumRxSubaddress1,Mil1553,Selection,0,10,Selection indicates that there is one MIL-STD-1553 input message.
+Communications,MIL-STD-1553 Input Message,Input Message 2,m1553NumRxSubaddress2,m1553NumRxSubaddress1,Selection,0,10,Selection indicates that there are two MIL-STD-1553 input messages.
+Communications,MIL-STD-1553 Output Message,Output Message 1,m1553NumTxSubaddress1,Mil1553,Selection,0,10,Selection indicates that there is one MIL-STD-1553 output message.
+Communications,MIL-STD-1553 Output Message,Output Message 2,m1553NumTxSubaddress2,m1553NumTxSubaddress1,Selection,0,10,Selection indicates that there are two MIL-STD-1553 output messages.
+Communications,MIL-STD-1553 Output Message,Output Message 3,m1553NumTxSubaddress3,m1553NumTxSubaddress2,Selection,0,10,Selection indicates that there are three MIL-STD-1553 output messages.
+Communications,Mode Codes Pane 1,Dynamic Bus Control,dynamicBusCtrlM1553,Mil1553,Selection,0,11,Bus controller requests to transfer control of the data bus to target remote terminal.
+Communications,Mode Codes Pane 1,Inhibit Terminal Flag Bit,inhibitTerminalM1553,Mil1553,Selection,0,11,Commands remote terminal to set Transmit/Receive bit to 0 until otherwise commanded.
+Communications,Mode Codes Pane 1,Initiated Self Test,selfTestM1553,Mil1553,Selection,0,11,Commands remote terminal to initiate self test.
+Communications,Mode Codes Pane 1,Override Inhibit Terminal Flag Bit,overrideInhibitTerminalM1553,Mil1553,Selection,0,11,Commands remote terminal to no longer set Transmit/Receive bit to 0 until otherwise commanded.
+Communications,Mode Codes Pane 1,Synchronize,synchronizeM1553,Mil1553,Selection,0,11,"Commands remote terminal to synchronize (for example reset internal timer, start a sequence, etc.)."
+Communications,Mode Codes Pane 2,Override Selected Transmitter Shutdown,overrideSelectShutdownM1553,Mil1553,Selection,0,11,Requires sending this command word followed by a data word; Commands remote terminal to enable its transmitter on the other (redundant) data bus identified in the data word.
+Communications,Mode Codes Pane 2,Selected Transmitter Shutdown,selectShutdownM1553,Mil1553,Selection,0,11,Requires sending this command word followed by a data word; Commands remote terminal to disable its transmitter on the other (redundant) data bus identified in the data word.
+Communications,Mode Codes Pane 2,Synchronize (with data word),synchronizeDatM1553,Mil1553,Selection,0,11,Requires sending this command word followed by a data word; commands remote terminal to synchronize using the synchronization information in the data word.
+Communications,Mode Codes Pane 2,Transmit BIT Word,transmitBITM1553,Mil1553,Selection,0,11,Commands remote terminal to transmit its status word followed by a single data word containing the remote termainal BIT data.
+Communications,Mode Codes Pane 2,Transmit Last Word,transmitLastM1553,Mil1553,Selection,0,11,"Commands remote terminal to transmit its status word followed by a single data word containing bits 4 through 19 of the last command word, excluding a transmit last command word mode code received by the remote terminal."
+Communications,Mode Codes Pane 2,Transmit Vector Word,transmitVectorM1553,Mil1553,Selection,0,11,Commands remote terminal to transmit status word and data word containing service request information.
+Communications,Software Upload Interlock Capability,Multiple SW Upload Accesses Allowed,gseSWInterlockMultiPW,airCooled,Selection,1,1, Multiple Software upload accesses are allowed / denied based on software upload interlock states
+Communications,Software Upload Interlock Capability,Single SW Upload Access Allowed,gseSWInterlockSnglPW,fuelCooled,Selection,1,1, Single Software upload access is allowed / denied based on software upload interlock state
+Communications,Weight on Wheels Selection,WOW Transmitted via 1553,M1553WOW,Mil1553;startCmdPLA,Selection,1,1,Weight on Wheels signals are transmitted over 1553 to select the final WOW value
+Drivers/Torque Motors,CGV Conversions,CGV Signal Units Conversions,cgvConversions,cgvLVDT,Option,0,1,CGV signals are converted so that both the setpoint and feedback are available in units of degrees and as a unitless ratio.
+Drivers/Torque Motors,CGV TM Local Channel Only,CGV TM Local Channel Only,cgvTMLocalChannelOnly,cgvTM,Selection,1,1,Compressor Guide Vane (CGV) Torque Motor (TM) uses the Local Channel Only
+Drivers/Torque Motors,CGV TM Local Channel Only Command Tracking,CGV TM Local Channel Only Command Tracking,cgvTMLocalChannelOnlyCommandTracking,cgvTMLocalChannelOnly;cgvTMCommandTracking,Selection,1,1,Compressor Guide Vane (CGV) Torque Motor (TM) uses Command Tracking BIT and the Local Channel Only
+Drivers/Torque Motors,Command Tracking,CGV TM Command Tracking,cgvTMCommandTracking,cgvTM,Option,0,10,"Fault detection method used to track CGV TM position response and compare it to the command. If the response goes outside of the threshold, a fault is detected. Uses integration over time in tracking model and Command Tracking BIT."
+Drivers/Torque Motors,Command Tracking,MV TM Command Tracking,mvTMCommandTracking,Common,Option,0,10,"Fault detection method used to track MV TM position response and compare it to the command. If the response goes outside of the threshold, a fault is detected. Uses integration over time in tracking model and Command Tracking BIT."
+Drivers/Torque Motors,Driver and Torque Motor Signal Selection,Output Driver Selection for Dual Channel,ODSDualChannel,antiIceCoil,Selection,1,1,"Output Driver Selection strategy between the channel in control output driver and the channel not in control output driver, for Dual Channel"
+Drivers/Torque Motors,Driver and Torque Motor Signal Selection,Output Driver Selection for Dual Channel,ODSDualChannel,featherCoil,Selection,1,1,"Output Driver Selection strategy between the channel in control output driver and the channel not in control output driver, for Dual Channel"
+Drivers/Torque Motors,Driver and Torque Motor Signal Selection,Output Driver Selection for Dual Channel,ODSDualChannel,HSIgniter,Selection,1,1,"Output Driver Selection strategy between the channel in control output driver and the channel not in control output driver, for Dual Channel"
+Drivers/Torque Motors,Driver and Torque Motor Signal Selection,Output Driver Selection for Dual Channel,ODSDualChannel,motiveFlowLockoutCoil,Selection,1,1,"Output Driver Selection strategy between the channel in control output driver and the channel not in control output driver, for Dual Channel"
+Drivers/Torque Motors,Driver and Torque Motor Signal Selection,Output Driver Selection for Dual Channel,ODSDualChannel,mvTMCrossChannelBorrowing,Selection,1,1,"Output Driver Selection strategy between the channel in control output driver and the channel not in control output driver, for Dual Channel"
+Drivers/Torque Motors,Driver and Torque Motor Signal Selection,Output Driver Selection for Dual Channel,ODSDualChannel,propGovernor,Selection,1,1,"Output Driver Selection strategy between the channel in control output driver and the channel not in control output driver, for Dual Channel"
+Drivers/Torque Motors,Driver and Torque Motor Signal Selection,Output Driver Selection for Dual Channel,ODSDualChannel,propPitchController,Selection,1,1,"Output Driver Selection strategy between the channel in control output driver and the channel not in control output driver, for Dual Channel"
+Drivers/Torque Motors,Driver and Torque Motor Signal Selection,Output Driver Selection for Dual Channel,ODSDualChannel,runCoil,Selection,1,1,"Output Driver Selection strategy between the channel in control output driver and the channel not in control output driver, for Dual Channel"
+Drivers/Torque Motors,Driver and Torque Motor Signal Selection,Output Driver Selection for Dual Channel,ODSDualChannel,scavengeDeOilCoil,Selection,1,1,"Output Driver Selection strategy between the channel in control output driver and the channel not in control output driver, for Dual Channel"
+Drivers/Torque Motors,Driver and Torque Motor Signal Selection,Output Driver Selection for Dual Channel,ODSDualChannel,starterRelay,Selection,1,1,"Output Driver Selection strategy between the channel in control output driver and the channel not in control output driver, for Dual Channel"
+Drivers/Torque Motors,Driver and Torque Motor Signal Selection,Output Driver Selection for Dual Channel,ODSDualChannel,supplyDeOilCoil,Selection,1,1,"Output Driver Selection strategy between the channel in control output driver and the channel not in control output driver, for Dual Channel"
+Drivers/Torque Motors,Driver and Torque Motor Signal Selection,Output Driver Selection for Dual Channel,ODSDualChannel,unfeatherPump,Selection,1,1,"Output Driver Selection strategy between the channel in control output driver and the channel not in control output driver, for Dual Channel"
+Drivers/Torque Motors,Drivers and Torque Motor Wiring,Drivers and Torque Motor Wiring for Air Cooled Application,DTMWiringAC,airCooled;antiIceCoil,Selection,1,1,Drivers and Torque Motor Wiring for Air Cooled Application
+Drivers/Torque Motors,Drivers and Torque Motor Wiring,Drivers and Torque Motor Wiring for Air Cooled Application,DTMWiringAC,airCooled;featherCoil,Selection,1,1,Drivers and Torque Motor Wiring for Air Cooled Application
+Drivers/Torque Motors,Drivers and Torque Motor Wiring,Drivers and Torque Motor Wiring for Air Cooled Application,DTMWiringAC,airCooled;HSIgniter,Selection,1,1,Drivers and Torque Motor Wiring for Air Cooled Application
+Drivers/Torque Motors,Drivers and Torque Motor Wiring,Drivers and Torque Motor Wiring for Air Cooled Application,DTMWiringAC,airCooled;motiveFlowLockoutCoil,Selection,1,1,Drivers and Torque Motor Wiring for Air Cooled Application
+Drivers/Torque Motors,Drivers and Torque Motor Wiring,Drivers and Torque Motor Wiring for Air Cooled Application,DTMWiringAC,airCooled;runCoil,Selection,1,1,Drivers and Torque Motor Wiring for Air Cooled Application
+Drivers/Torque Motors,Drivers and Torque Motor Wiring,Drivers and Torque Motor Wiring for Air Cooled Application,DTMWiringAC,airCooled;scavengeDeOilCoil,Selection,1,1,Drivers and Torque Motor Wiring for Air Cooled Application
+Drivers/Torque Motors,Drivers and Torque Motor Wiring,Drivers and Torque Motor Wiring for Air Cooled Application,DTMWiringAC,airCooled;starterRelay,Selection,1,1,Drivers and Torque Motor Wiring for Air Cooled Application
+Drivers/Torque Motors,Drivers and Torque Motor Wiring,Drivers and Torque Motor Wiring for Air Cooled Application,DTMWiringAC,airCooled;supplyDeOilCoil,Selection,1,1,Drivers and Torque Motor Wiring for Air Cooled Application
+Drivers/Torque Motors,Drivers and Torque Motor Wiring,Drivers and Torque Motor Wiring for Air Cooled Application,DTMWiringAC,airCooled;unfeatherPump,Selection,1,1,Drivers and Torque Motor Wiring for Air Cooled Application
+Drivers/Torque Motors,Dual Non-Shared Metering Valve Torque Motor Command Tracking,Dual Non-Shared Metering Valve Torque Motor Command Tracking,mvTMLocalChannelOnlyCommandTracking,mvTMLocalChannelOnly;mvTMCommandTracking,Selection,1,1,Dual Non-Shared Metering Valve Torque Motor Command Tracking
+Drivers/Torque Motors,Dual Non-Shared Torque Motor,Dual Non-Shared Torque Motor,tmDualNonShared,cgvTMLocalChannelOnly,Selection,1,1,Dual Non-Shared Torque Motor
+Drivers/Torque Motors,Dual Non-Shared Torque Motor,Dual Non-Shared Torque Motor,tmDualNonShared,mvTMLocalChannelOnly,Selection,1,1,Dual Non-Shared Torque Motor
+Drivers/Torque Motors,HGI Auto Ignition,HGI Auto Ignition,HGIIgnRelay,HGIOperation;ignRelay,Selection,1,1,Applies ignition command during operation under hot gas ingestion
+Drivers/Torque Motors,High Side and Low Side (combined) Drivers,High Side and Low Side (combined) Drivers,hslsDriver,atsPermit,Selection,1,1,Combined High Side and Low Side Drivers
+Drivers/Torque Motors,High Side and Low Side (combined) Drivers,High Side and Low Side (combined) Drivers,hslsDriver,ignRelay,Selection,1,1,Combined High Side and Low Side Drivers
+Drivers/Torque Motors,High Side and Low Side (combined) Drivers,High Side and Low Side (combined) Drivers,hslsDriver,loadInhibit,Selection,1,1,Combined High Side and Low Side Drivers
+Drivers/Torque Motors,High Side and Low Side (combined) Drivers,High Side and Low Side (combined) Drivers,hslsDriver,modeTransfer,Selection,1,1,Combined High Side and Low Side Drivers
+Drivers/Torque Motors,High Side and Low Side Drivers (combined),Air Turbine Starter Permit Relay Installed,atsPermit,fuelCooled,Option,0,10,Air Turbine Stater Permit Relay Installed
+Drivers/Torque Motors,High Side and Low Side Drivers (combined),Ignition Relay Installed,ignRelay,fuelCooled,Option,0,10,Ignition Relay Installed
+Drivers/Torque Motors,High Side and Low Side Drivers (combined),Load Inhibit Relay Installed,loadInhibit,fuelCooled,Option,0,10,Load Inhibit Relay Installed
+Drivers/Torque Motors,High Side and Low Side Drivers (combined),Mode Transfer Solenoid Installed,modeTransfer,fuelCooled,Option,0,10,Mode Transfer Solenoid Installed
+Drivers/Torque Motors,High Side Drivers,Feather Coil Installed,featherCoil,turboProp,Option,0,10,Feather Coil Installed.
+Drivers/Torque Motors,High Side Drivers,Igniter A and B High Side Driver Installed,HSIgniter,airCooled,Option,0,10,Igniter A and B High Side Driver Installed.
+Drivers/Torque Motors,High Side Drivers,Run Coil Installed,runCoil,overspeedCoil,Option,0,10,Run Coil solenoid that can be overpowered by the overspeed solenoid
+Drivers/Torque Motors,High Side Drivers Installed,High Side Drivers Installed,highSideDriver,featherCoil,Selection,1,1,High side drivers are installed
+Drivers/Torque Motors,High Side Drivers Installed,High Side Drivers Installed,highSideDriver,HSIgniter,Selection,1,1,High side drivers are installed
+Drivers/Torque Motors,High Side Drivers Installed,High Side Drivers Installed,highSideDriver,runCoil,Selection,1,1,High side drivers are installed
+Drivers/Torque Motors,Low Side Drivers,Anti-Ice Coil Installed,antiIceCoil,airCooled,Option,0,10,Anti-Ice Coil Installed
+Drivers/Torque Motors,Low Side Drivers,Motive Flow Lockout Coil Installed,motiveFlowLockoutCoil,airCooled,Option,0,10,Motive Flow Lockout Coil Installed
+Drivers/Torque Motors,Low Side Drivers,Scavenge De-Oil Coil Installed,scavengeDeOilCoil,turboProp,Option,0,10,Scavenge De-Oil Coil Installed
+Drivers/Torque Motors,Low Side Drivers,Starter Relay Installed,starterRelay,airCooled,Option,0,10,Starter Relay Installed
+Drivers/Torque Motors,Low Side Drivers,Supply De-Oil Coil Installed,supplyDeOilCoil,turboProp,Option,0,10,Supply De-Oil Coil Installed
+Drivers/Torque Motors,Low Side Drivers,Unfeather Pump Installed,unfeatherPump,turboProp,Option,0,10,Unfeather Pump Installed
+Drivers/Torque Motors,Low Side Drivers (Conditionally Powered) Installed,Low Side Drivers (Conditionally Powered) Installed,lowSideDriverConditionallyPowered,motiveFlowLockoutCoil,Selection,1,1,Low Side Drivers (LSD) that are not powered all the time
+Drivers/Torque Motors,Low Side Drivers (Conditionally Powered) Installed,Low Side Drivers (Conditionally Powered) Installed,lowSideDriverConditionallyPowered,scavengeDeOilCoil,Selection,1,1,Low Side Drivers (LSD) that are not powered all the time
+Drivers/Torque Motors,Low Side Drivers (Conditionally Powered) Installed,Low Side Drivers (Conditionally Powered) Installed,lowSideDriverConditionallyPowered,starterRelay,Selection,1,1,Low Side Drivers (LSD) that are not powered all the time
+Drivers/Torque Motors,Low Side Drivers (Conditionally Powered) Installed,Low Side Drivers (Conditionally Powered) Installed,lowSideDriverConditionallyPowered,supplyDeOilCoil,Selection,1,1,Low Side Drivers (LSD) that are not powered all the time
+Drivers/Torque Motors,Low Side Drivers (Conditionally Powered) Installed,Low Side Drivers (Conditionally Powered) Installed,lowSideDriverConditionallyPowered,unfeatherPump,Selection,1,1,Low Side Drivers (LSD) that are not powered all the time
+Drivers/Torque Motors,Low Side Drivers Installed,Low Side Drivers installed,lowSideDriver,antiIceCoil,Selection,1,1,Low side drivers are installed
+Drivers/Torque Motors,Low Side Drivers Installed,Low Side Drivers installed,lowSideDriver,lowSideDriverConditionallyPowered,Selection,1,1,Low side drivers are installed
+Drivers/Torque Motors,Metering Valve TM BIT MIO Signal Mapping Designation,MVTM MIO Signal Mapping A,mvTMInputInstA,airCooled,Selection,1,1,"Metering Valve TM BIT MIO Signal Mapping Bit Designation, option A"
+Drivers/Torque Motors,Metering Valve TM BIT MIO Signal Mapping Designation,MVTM MIO Signal Mapping B,mvTMInputInstB,fuelCooled,Selection,1,1,"Metering Valve TM BIT MIO Signal Mapping Bit Designation, option B"
+Drivers/Torque Motors,Metering Valve Torque Motor,Dual Non-Shared Metering Valve Torque Motor,mvTMLocalChannelOnly,Common,Selection,1,1,MV TM Uses Command Tracking BIT and uses the local channel only
+Drivers/Torque Motors,Metering Valve Torque Motor,Single Non-Shared Metering Valve Torque Motor,mvTMCrossChannelBorrowing,Common,Selection,1,1,Single Non-Shared Metering Valve Torque Motor
+Drivers/Torque Motors,MMV Conversions,MMV Signal Units Conversions,mmvConversions,Common,Option,0,1,"MMV signals are converted so that both the setpoint and fuel flow feedback are available in units of lb/hr, units of kg/min, and as a unitless ratio."
+Drivers/Torque Motors,Overspeed Solenoid,Overspeed Coil Installed,overspeedCoil,Common,Selection,1,1,"Overspeed Coil Installed, is energized to cut off fuel flow to the engine"
+Drivers/Torque Motors,Overspeed Solenoid,Overspeed Solenoid Installed,overspeedSolenoid,Common,Selection,1,1,"Overspeed Solenoid Installed, is de-energized to cut off fuel flow to the engine"
+Drivers/Torque Motors,Single Non-Shared Torque Motor,Single Non-Shared Torque Motor,tmSingleNonShared,mvTMCrossChannelBorrowing,Selection,1,1,Single Non-Shared Torque Motor
+Drivers/Torque Motors,Single Non-Shared Torque Motor,Single Non-Shared Torque Motor,tmSingleNonShared,propGovernor,Selection,1,1,Single Non-Shared Torque Motor
+Drivers/Torque Motors,Single Non-Shared Torque Motor,Single Non-Shared Torque Motor,tmSingleNonShared,propPitchController,Selection,1,1,Single Non-Shared Torque Motor
+Drivers/Torque Motors,Torque Motor Command Tracking BIT,Torque Motor Command Tracking BIT,commandTracking,tmDualNonSharedCommandTracking,Selection,1,1,Torque Motor uses Command Tracking BIT
+Drivers/Torque Motors,Torque Motor Command Tracking Dual Non Shared,Torque Motor Command Tracking Dual Non Shared,tmDualNonSharedCommandTracking,cgvTMCommandTracking,Selection,1,1,Dual Non Shared Torque Motors use command tracking BIT
+Drivers/Torque Motors,Torque Motor Command Tracking Dual Non Shared,Torque Motor Command Tracking Dual Non Shared,tmDualNonSharedCommandTracking,mvTMCommandTracking,Selection,1,1,Dual Non Shared Torque Motors use command tracking BIT
+Drivers/Torque Motors,Torque Motors,Compressor Guide Vane Torque Motor,cgvTM,turboFan,Option,0,10,Compressor Guide Vane (CGV) Torque Motor (TM) installed
+Drivers/Torque Motors,Torque Motors,Propeller Governor Torque Motor Installed,propGovernor,turboProp,Option,0,10,Propeller Governor Torque Motor Installed
+Drivers/Torque Motors,Torque Motors,Propeller Pitch Controller Installed,propPitchController,turboProp,Option,0,10,Propeller Pitch Controller Installed
+Drivers/Torque Motors,Torque Motors 2,Propellor Oil Control Torque Motor,pocTM,propGovernor,Selection,1,1,Propellor Oil Control Torque Motor Installed
+Electrical Power,Aircraft Power,Dual Aircraft Power Source,dualACPwr,Common,Selection,1,1,Two independent sources of aircraft power available to the ECU
+Electrical Power,Aircraft Power,Single Aircraft Power Source,singleACPwr,Common,Selection,1,1,One source of aircraft power available to the ECU
+Electrical Power,Electrical Grounding,Common-Ground System,commonGnd,airCooled,Selection,1,1,"Power ground, signal ground, and chassis are connected together internal to the ECU, generally used on commercial applications"
+Electrical Power,Electrical Grounding,Isolated-Ground System,isolatedGnd,fuelCooled,Selection,1,1,"Power ground and signal ground are connected together internal to the ECU, but these are isolated from the ECU chassis"
+Electrical Power,Engine ID Inputs,11 Discrete Inputs,11EID,airCooled,Selection,1,1,11 Discrete Inputs provided to be used for the Engine ID
+Electrical Power,Engine ID Inputs,4 Discrete Inputs,4EID,fuelCooled,Selection,1,1,4 Discrete Inputs provided to be used for the Engine ID
+Electrical Power,Generator,Dual Generators Installed,dualGenerators,fuelCooled,Selection,1,1,Two electrical generators are installed and can be utilized at the same time.
+Electrical Power,Generator Idle Schedule,Identical Idle Setpoint,singleDualGeneratorIdle,fuelCooled,Selection,1,1,During single generator operation the idle setpoint is identical to the dual generator setpoint.
+Electrical Power,Generator Idle Schedule,Single Generator Operating Idle Schedule,singleGeneratorWFP3,fuelCooled,Selection,1,1,During single generator operation an idle increase is required
+Electrical Power,PMA Power,PMA Power Source,pmaPower,Common,Option,0,1,PMA installed that powers ECU when engine speed is sufficiently high
+Engine Power,Dual Engine Reliability,Dual Engine for Commercial,sfrDualEngCFR,dualEngine;sfrCFR,Selection,1,1,Dual Engines installed on commercial application
+Engine Power,ECO Mode,ECO Mode,ecoMode,Common,Option,0,1,"Economical, or fuel-efficient, engine operating mode available"
+Engine Power,Engine Idle Switch,Engine Idle Switch installed,engineIdleDiscrete,Common,Option,0,1,Engine Idle Switch installed to override PLA input
+Engine Power,Final PLA,PLA is not rate limited or filtered,plaNoRateLimitFilter,Common,Selection,1,1,The final selected PLA signal is not rate limited or filtered
+Engine Power,Final PLA,PLA is rate limited and filtered,plaRateLimitFilter,Common,Selection,1,1,The final selected PLA signal is rate limited and filtered
+Engine Power,Final PLA Adjustment,Final PLA,plaFinalAdjusted,Common,Selection,1,1,Final PLA
+Engine Power,Final PLA Adjustment,Final PLA adjusted with Autothrottle trim,plaFinalAdjustedAutoThrottle,autoThrottle,Selection,1,1,Final PLA adjusted with Autothrottle trim
+Engine Power,Flameout Detection,Flameout Detection,flameoutDetection,Common,Option,0,1,Detects if a flameout occured
+Engine Power,Flameout Recovery,Flameout Recovery,flameoutRecovery,Common,Option,0,1,Flameout Recovery detects and responds to engine flameouts
+Engine Power,HGI Ramped Bias to Surge Protection,HGI Ramped Bias to Surge Protection,HGIRampSurgeProtection,HGIOperation;surgeProtection;upDownRampFunction,Selection,1,1,Applies ramped bias to surge protection control during operation under hot gas ingestion
+Engine Power,PLA Difference Fault Signal Selection,PLA Difference Fault choose High between LC & XC PLA,plaDiffChooseHigh,Common,Selection,1,1,Difference fault will choose the highest value between PLA LC and XC
+Engine Power,PLA Difference Fault Signal Selection,PLA Difference Fault Fail to Idle,plaDiffFailedIdle,Common,Selection,1,1,Difference fault will fail PLA to idle or hold PLA value depending on last good value when the fault is confirmed
+Engine Power,PLA Dual Fault Signal Selection,PLA Dual Fault Fail to Default Value,plaBothFaultedDV,plaDiffChooseHigh,Selection,1,1,"During a dual channel fault, the ECU will set the PLA to a specified default value."
+Engine Power,PLA Dual Fault Signal Selection,PLA Dual Fault set Degrade Mode 2,plaBothFaultedDG2,plaDiffFailedIdle,Selection,1,1,"During a dual channel fault, the ECU will set Degraded Mode 2."
+Engine Power,PLA Input,PLA via Analog,thrustViaDiscrete,Common,Selection,1,1,Power rating for thrust is set through Discret Input
+Engine Power,PLA Input,PLA via Arinc,thrustViaArinc,Common,Selection,1,1,Power rating for thrust is set through ARINC input
+Engine Power,PLA Region,PLA Regions used to open/close switch contacts,plaRegion,Common,Option,0,1,PLA regions are used to open or close switch contacts
+Engine Power,PLA Selection,PLA selection can be overridden by the Idle Discrete Switch,plaPrimSelectIdleSW,engineIdleDiscrete,Selection,1,1,PLA selection can be overridden by the Idle Discrete Switch
+Engine Power,PLA Selection,PLA selection standard ,plaPrimSelectStandard,Common,Selection,1,1,Standard selection strategy for PLA
+Engine Power,PLA Single Fault Signal Selection,PLA Single Fault choose remaining Healthy,plaChooseHealthy,plaDiffChooseHigh,Selection,1,1,"During a single channel fault, the ECU will choose the healthy channel"
+Engine Power,PLA Single Fault Signal Selection,PLA Single Fault choose remaining Healthy plus Offset,plaOffsetHealthy,plaDiffFailedIdle,Selection,1,1,"During a single channel fault, the ECU will choose the healthy channel plus the offset from the last good average"
+Engine Power,PLA Takeoff Limitation,Engine Power Rating Limited by Altitude,plaTakeoffLimitation,Common,Selection,1,1,Takeoff engine power rating is limited to below a certain altitude when the PLA is in TO power
+Engine Power,PLA Takeoff Limitation,Engine Power Rating not Limited by Altitude,plaTakeoffUnrestricted,Common,Selection,1,1,Takeoff engine power rating is not limited by altitude when the PLA is in TO power
+Engine Power,Power Demand,Power Demand Idle to Max Selection,plaIdleMax,fuelCooled,Selection,1,1,Power Demand Idle to Max Selection
+Engine Power,Power Demand,Power Demand Reverse to MPR Selection,plaRevMpr,airCooled,Selection,1,1,Power Demand Reverse to MPR Selection
+Engine Power,Surge Detection,Surge Detection,surgeDetection,Common,Option,0,1,Detects loss of engine control/power
+Engine Power,Surge Protection,Surge Protection,surgeProtection,Common,Option,0,1,Surge Protection prevents/protects against surges
+Engine Power,Throttle Control,Autothrottle Installed,autoThrottle,Common,Option,0,1,Autothrottle installed on aircraft
+Engine Shutdown,Indpendent Shutdown,Run Cutoff solenoid for independent fuel shutoff,runCutoffSolenoid,Common,Option,0,1,A/C controlled solenoid to shut off fuel flow independent of software or begin fuel flow through signal to control system
+Engine Shutdown,Shutdown Mode,Confirmed Shutdown Command initiates Shutdown Mode,shutdnModeCnfrmSD,fuelCooled,Selection,1,1,Shutdown Mode initiated by confirmed shutdown command
+Engine Shutdown,Shutdown Mode,Shutdown Command Switch (w/o Dry Motor) initiates Shutdown Mode,shutdnModeMotorSDCmd,turboProp,Selection,1,1,Shutdown Mode for engines that have overspeed shutoff and the ability to dry motor with Shutdown Command
+Engine Speed,Dual Engine N1 Sync,N1 Sync,n1Sync,xEngDataLink;sfrCFR,Option,0,1,N1 Sync installed on commercial
+Engine Speed,Dual Engine N2 Sync,N2 Sync,n2Sync,xEngDataLink;sfrCFR,Option,0,1,N2 Sync installed on commercial
+Engine Speed,Engine Speed Analog Output,N1 Speed Analog Output,n1SpeedOutput,Common,Option,0,2,N1 Speed Analog Output for use by trim balancing
+Engine Speed,Engine Speed Analog Output,N2 Speed Analog Output,n2SpeedOutput,Common,Option,0,2,N2 Speed Analog Output for use by trim balancing
+Engine Speed,Lower Right Hand Corner Derate,Lower Right Hand Corner Derate,superSonicBarnstormingProtection,fuelCooled,Selection,1,1,Lower Right Hand Corner Derate selected
+Engine Speed,Lower Right Hand Corner Derate,No Lower Right Hand Corner Derate,nominalMaxPwrWFP3,fuelCooled,Selection,1,1,Lower Right Hand Corner Derate not present
+Engine Speed,Minimum Airflow Idle,Minimum Airflow Idle Selected,minAirflowIdle,fuelCooled,Selection,1,1,Minimum airflow requirement for idle conditions (higher idle speed)
+Engine Speed,Minimum Airflow Idle,No Minimum Airflow Idle,finalIdleSelectionWFP3,fuelCooled,Selection,1,1,Idle selection dicated solely on N1 Speed
+Engine Speed,N1,Secondary Source N1,n1SecondarySource,Common,Selection,1,1,Has a secondary source for detecting N1 Speed
+Engine Speed,N1,Single Source N1,n1SingleSource,n1Common,Selection,1,1,Single source Dual monopole for detecting N1 Speed
+Engine Speed,N1 Common Functionality,Has N1 shaft,n1Common,Common,Selection,0,1,"Has an N1 shaft, and will sense N1 Primary speed using a dual coil monopole, generating one signal to each ECU"
+Engine Speed,N1 Derivative,N1 percent rate of change,n1DotPercent,n1Common,Selection,1,1,N1 derivative calculation is based off of N1 percent
+Engine Speed,N1 Derivative,N1 RPM rate of change,n1DotRPM,n1Common,Selection,1,1,N1 derivative calculation is based off of N1 RPM
+Engine Speed,N1 Processing Group,N1 Processing Group,n1DOTRPMRateLimitFilter,n1DotRPM;n1RPMRateLimitFilter,Selection,1,1,Combined N1 Processing execution group selection
+Engine Speed,N1 RPM,N1 RPM is rate limited and filtered,n1RPMRateLimitFilter,n1Common,Selection,1,1,The N1 RPM signal is rate limited and filtered
+Engine Speed,N2 Derivative,N2 percent rate of change,n2DotPercent,Common,Selection,1,1,N2 derivative calculation is based off of N2 percent
+Engine Speed,N2 Derivative,N2 RPM rate of change,n2DotRPM,Common,Selection,1,1,N2 derivative calculation is based off of N2 RPM
+Engine Speed,N2 Processing Group,N2 Processing Group,n2DOTRPMRateLimitFilter,n2DotRPM;n2RPMRateLimitFilter,Selection,1,1,Combined N2 Processing execution group selection
+Engine Speed,N2 RPM,N2 RPM is rate limited and filtered,n2RPMRateLimitFilter,Common,Selection,1,1,The N2 RPM signal is rate limited and filtered
+Engine Speed,Overspeed Fuel Cutoff,De-energizes OS Solenoid for cutoff,overspeedDeenergize,overspeedSolenoid,Selection,1,1,Overspeed protection system de-energizes the overspeed solenoid when an overspeed is detected to cut off fuel flow to the engine
+Engine Speed,Overspeed Fuel Cutoff,Energizes OS Solenoid for cutoff,overspeedEnergize,overspeedCoil,Selection,1,1,Overspeed protection system energizes the overspeed solenoid when an overspeed is detected to cut off fuel flow to the engine
+Engine Speed,Overspeed Monitoring,Monitors N2 Monopole and PMA,overspeedPMA,Common,Selection,1,1,Overspeed protection system monitors N2 monopole and PMA
+Engine Speed,Overspeed Monitoring,Monitors N2 Monopole with reset,overspeedReset,Common,Selection,1,1,Overspeed protection system monitors N2 monopole with reset
+Engine Speed,Overspeed N1 Monitoring,Monitors N1 Monopole,overspeedN1,turboFan,Selection,1,1,Overspeed protection system monitors N1 monopole
+Engine Speed,Overspeed Protection System,De-Energizes OS Solenoid to cut off Fuel Flow,overspeedCoilDeenergize,overspeedDeenergize,Selection,1,1,Overspeed protection system de-energizes the overspeed solenoid when an overspeed is detected to cut off fuel flow to the engine
+Engine Speed,Overspeed Protection System,Energizes OS Solenoid to cut off Fuel Flow,overspeedCoilEnergize,overspeedEnergize,Selection,1,1,Ovespeed protection system energizes the overspeed solenoid when an overspeed is detected to cut off fuel flow to the engine
+Engine Speed,Secondary N2,Has Secondary N2,n2SecondarySource,Common,Selection,1,1,Has a secondary source of analog N2 signal
+Engine Speed,Secondary N2,No Secondary N2,n2SingleSource,Common,Selection,1,1,Has no secondary source of analog N2 signal
+Engine Speed,Speed,N2 Single Spool,n2Single,turboProp,Selection,1,2,Single shaft capability that connects the compressor and turbine to drive them at the same speed
+Engine Speed,Speed,N2 Twin Spool,n2Twin,Common,Selection,1,2,Dual shaft capability that connects the low pressure compressor and turbine together and the high pressure compressor and turbine together to drive each at their respective speeds
+Engine Start,Engine Start Control,Engine Start Control Automatic,engStartCtrlAuto,turboFan;fuelCooled;filterLowPass,Selection,1,1,Automatic Engine Start Control Logic
+Engine Start,Engine Start Control,Engine Start Control Fuel Enrichment,engStartCtrlwfFlowEnrich,turboProp;airCooled,Selection,1,1,Starting fuel flow enrichment determined as a function of N2 and EGT.  The difference between EGT setpoint and predicted temperature determines amount of fuel encrichment needed. Includes nominal starting fuel flow calculated as an output of the acceleration schedule and P3 as a function of N2.
+Engine Start,Start Abort,Start Abort Determined by Software,startAbort,Common,Option,0,1,Start Abort Determined by Software
+Engine Start,Start Command,Start Command Initiated by PLA,startCmdPLA,Common,Selection,1,1,Start Command Initiated by PLA
+Engine Start,Start Command,Start Command SW Installed,startCmdSW,Common,Selection,1,1,Start Command switch installed
+Engine Start,Start Command Switch,Independent Engine Wiring Start,startCmdSingleEngineWiring,startCmdSW;indepEngineWiring,Selection,1,1,Independent Engine wiring for start command
+Engine Start,Start Command Switch,Shared Engine Wiring Start,startCmdDualEngineWiring,startCmdSW;sharedEngineWiring,Selection,1,1,Shared Engine wiring for start command
+Engine Start,Start Mode,PLA in cut-off indicates no start allowed,startModePLACutoff,startCmdPLA,Selection,1,1,PLA in cut-off indicates no start allowed
+Engine Start,Start Mode,Shutdown Command indicates no start allowed,startModeShutdnCmd,Common,Selection,1,1,Shutdown Command indicates no start allowed
+Environmental,Audio Frequency Conducted Susceptibility,DO-160 Audio Frequency Conducted Susceptibility Requirements,do160AFCS,Common,Selection,1,1,ECU complies with audio frequency conducted susceptibility requirements of DO-160
+Environmental,Audio Frequency Conducted Susceptibility,MIL-STD-461 Audio Frequency Conducted Susceptibility Requirements,mil461AFCS,Common,Selection,1,1,ECU complies with audio frequency conducted susceptibility requirements of MIL-STD-461
+Environmental,Radio Frequency Conducted Emissions,DO-160 Radio Frequency Conducted Emissions Requirements,do160RFCE,Common,Selection,1,1,ECU complies with radio frequency conducted emissions requirements of DO-160
+Environmental,Radio Frequency Conducted Emissions,MIL-STD-461 Radio Frequency Conducted Emissions Requirements,mil461RFCE,Common,Selection,1,1,ECU complies with radio frequency conducted emissions requirements of MIL-STD-461
+Environmental,Radio Frequency Conducted Susceptibility,DO-160 Radio Frequency Conducted Susceptibility Requirements,do160RFCS,Common,Selection,1,1,ECU complies with radio frequency conducted susceptibility requirements of DO-160
+Environmental,Radio Frequency Conducted Susceptibility,MIL-STD-461 Radio Frequency Conducted Susceptibility Requirements,mil461RFCS,Common,Selection,1,1,ECU complies with radio frequency conducted susceptibility requirements of MIL-STD-461
+Fuel Cooled ECU,Arbitration Type,Arbitration FC Platform,arbitrationB,fuelCooled;turboFan,Selection,1,1,Arbitration scheme for FC Platform.
+Fuel Cooled ECU,Auto Reset Type,Auto Reset FC Platform,autoResetB,fuelCooled;turboFan,Selection,1,1,Auto reset function for FC platform.
+Fuel Cooled ECU,CGV Control,CGV Control Biased,cgvControlBiased,turboFan;fuelCooled,Selection,1,1,CGV Logic to control airflow preswirl to optimize compressor efficiency during low and high power operation
+Fuel Cooled ECU,Closed Loop Steady State Control Schedule Selection,Steady State Control Schedule Selection,steadyStateOpsControlSched,controlModeWFP3,Selection,1,1,"Steady state control schedule selection, dependent upon using a closed loop system, to be coupled with controlModeWFP3"
+Fuel Cooled ECU,Control Mode,Fuel Ratio Schedule,controlModeWFP3,turboFan;fuelCooled,Selection,1,1,Control Mode fuel flow ratio schedule schemes
+Fuel Cooled ECU,Degrade Mode Type,Degrade Mode FC Platform,degradeModeB,fuelCooled;turboFan,Selection,1,1,Degrade Mode calculation for FC Platform.
+Fuel Cooled ECU,ECU BIT,Fuel Cooled ECU BIT,ecuBitB,fuelCooled;turboFan,Selection,1,1,ECU BIT for Fuel Cooled platform
+Fuel Cooled ECU,Engine Cutoff Indication,Engine Cutoff Indication Input,engineCutoffind,fuelCooled,Option,0,1,Engine Cutoff Indication sent to both ECU channels when fuel is cut
+Fuel Cooled ECU,Engine Discrete Electrical Interface,Single Channel Input,engDis1ChanInputElectInt,fuelCooled,Selection,1,1,Electrical interface specifications for single input channel architecture
+Fuel Cooled ECU,Flameout Risk Reduction N1 Governor,Corrected Fuel Ratio Limiter for Flameout,transientOpsDecel,controlModeWFP3,Selection,1,1,"Corrected fuel ratio limiter intended to reduce the risk of flameout on the N1 Speed Governor, to be coupled with controlModeWFP3"
+Fuel Cooled ECU,Fuel Command Transition,MIEC Mode Fuel Command Transfer,transientOpsMIEC,controlModeWFP3,Selection,1,1,"Linear transition between fuel command and MIEC mode fuel command schedule during a transfer to or from MIEC mode, to be coupled with controlModeWFP3"
+Fuel Cooled ECU,HGI Ramp Bias to CGV Control,HGI Ramp Bias to CGV Control,HGIRampCgvControlBiased,HGIOperation;cgvControlBiased;upDownRampFunction,Selection,1,1,Applies ramped bias to CGV control during operation under hot gas ingestion
+Fuel Cooled ECU,HGI Ramp Bias to Fuel Ratio Schedule,HGI Ramp Bias to Fuel Ratio Schedule,HGIRampControlModeWFP3,HGIOperation;controlModeWFP3;upDownRampFunction,Selection,1,1,Applies ramped bias to the fuel ratio schedule during operation under hot gas ingestion
+Fuel Cooled ECU,Hot Gas Ingestion Operation,Hot Gas Ingestion Operation,HGIOperation,fuelCooled,Option,0,1,Adjusts engine controls during operation under hot gas ingestion
+Fuel Cooled ECU,Low Oil Level Indicator,Available,singleChannelInputLOLAvail,fuelCooled,Selection,0,1,Low Oil Level Indication Available
+Fuel Cooled ECU,Master Kill Type,Master Kill FC Platform,masterKillB,fuelCooled;turboFan,Selection,1,1,Master Kill function for FC Platform.
+Fuel Cooled ECU,MIEC Mode Fuel Flow,MIEC Mode Fuel Flow Overrides N1C Setpoint,miecMode,fuelCooled,Option,0,1,"When in MIEC mode, the engine setpoint is ignored and the MIEC fuel flow is used as the commanded wf."
+Fuel Cooled ECU,MIEC Mode Fuel Flow Calculation,Minimum Airflow Idle Present,miecModeMinAirIdleCalc,miecMode;minAirflowIdle,Selection,1,1,MIEC mode fuel flow calculation with the minimum airflow idle component
+Fuel Cooled ECU,MIEC Mode Fuel Flow Calculation,No Minimum Airflow Idle Present,miecModeDefIdleCalc,miecMode,Selection,1,1,Default idle fuel flow calculation for an application with MIEC mode. This calculation does not include the minimum airflow idle component.
+Fuel Cooled ECU,Minimum Fuel Flow Software Command,Minimum Fuel Flow Software Command,minFuelFlowCmd,controlModeWFP3,Selection,1,1,"Control mode intended to command the minimum fuel flow, to be coupled with controlModeWFP3"
+Fuel Cooled ECU,N1 Governor above EGT Limit Risk Reduction,N1 Setpoint Limiter,opLimitersEgtLimit,controlModeWFP3,Selection,1,1,"Limiter intended to adjust the corrected N1 setpoint to reduce the risk of governing N1 above the EGT limit, to be coupled with controlModeWFP3"
+Fuel Cooled ECU,N1 Speed Governor,N1 Speed Governor,n1SpeedGovernor,controlModeWFP3,Selection,1,1,"Governor utilized to control thrust throughout the transient of large scale and small scale N1 setpoint step changes, to be coupled with controlModeWFP3"
+Fuel Cooled ECU,N1 Speed Limiter,N1 Speed Limiter,opLimitersN1spdLimit,controlModeWFP3,Selection,1,1,"Limiter to limit physical N1 Speed, to be coupled with controlModeWFP3"
+Fuel Cooled ECU,N2 Speed Limiter,N2 Speed Limiter,opLimitersN2spdLimit,controlModeWFP3,Selection,1,1,"Limiter to limit physical N2 Speed, to be coupled with controlModeWFP3"
+Fuel Cooled ECU,Oil Temperature Sensor,Not Installed,oilTempSensorNotAvail,fuelCooled,Selection,1,1,Oil Temperature Sensor is not available
+Fuel Cooled ECU,PBIT Driver Commands,PBIT Driver Command Functions Instance B,ecuPbitB,fuelCooled;turboFan,Selection,1,1,PBIT Driver Command Functions Instance B
+Fuel Cooled ECU,PCU Reset Switch,PCU Reset Switch Installed,pcuReset,fuelCooled,Option,0,1,PCU Reset Switch installed to reset PCU
+Fuel Cooled ECU,Reset Degraded Mode ,Has reset enable for degraded mode,ccdlDegradeBypass,fuelCooled,Selection,1,1,Will reset enable flag if in degraded mode 
+Fuel Cooled ECU,Steady State Fuel Flow Calculation,Steady State Ops,steadyStateOps,controlModeWFP3,Selection,1,1,"Steady state calculation required to run correct fuel ratios, to be coupled with controlModeWFP3"
+Fuel Cooled ECU,Surge Prevention N1 Governor,Corrected Fuel Ratio Limiter for Surge Prevention,transientOpsSurgePrevAccel,controlModeWFP3,Selection,1,1,"Corrected fuel ratio limiter intended to reduce the risk of surge on the N1 Speed Governor, to be coupled with controlModeWFP3"
+Fuel Cooled ECU,Total Bias Limit Calculation,CGV Control Total Bias Combined Calculation,cgvControlTotBiasCombined,cgvControlBiased,Selection,1,1,"Total Bias Limit Calculation utilizing total immediate bias or HGI CGV Offset, combined with either the compressor blade resonance bias or the total of accumulative bias and low inlet pressure surge bias"
+Fuel Cooled ECU,Total Bias Limit Calculation,CGV Control Total Bias Default Calculation,cgvControlTotBiasDefault,cgvControlBiased,Selection,1,1,"Total Bias Limit Calculation utilizing total immediate bias, and the greater of either: compressor blade resonance bias or the sum of the total accumulative bias and low inlet pressure surge bias"
+Fuel Cooled ECU,Total Bias Limit Calculation,CGV Control Total Bias Greater Calculation,cgvControlTotBiasGreater,cgvControlBiased,Selection,1,1,"Total Bias Limit Calculation utilizing total immediate bias, HGI CGV Offset, and the greater of compressor blade resonance bias, or the total accumulative bias and low inlet pressure surge bias"
+Fuel Cooled ECU,Transient Temperature Limit,Limit Transient Temps on N1 Speed Governor,transientOpsTempLimitAccel,controlModeWFP3,Selection,1,1,"Corrected fuel ratio to limit transient temperatures on the N1 Speed Governor, to be coupled with controlModeWFP3"
+Fuel Cooled ECU,Warm Boot,Fuel Cooled Warm Boot,warmBootB,fuelCooled;turboFan,Selection,1,1,Warm Boot for Fuel Cooled platform
+Fuel Filter Monitoring,Fuel Filter Bypass Connection,Shared Channel,wfFiltBypSharedElectInt,engDisSharedElectInt,Selection,1,1,Fuel filter bypass signal is connected to both EEC channels
+Fuel Filter Monitoring,Fuel Filter Bypass Connection,Single Channel Input,singleChannelInputWfFiltByp,engDis1ChanInputElectInt,Selection,1,1,Fuel filter bypass signal is connected directly to PCU
+Fuel Filter Monitoring,Fuel Filter Bypass Indication,Closed Circuit Indicates Bypass,wfFiltBypClsdIsBypass,fuelCooled,Selection,1,1,Fuel filter bypass signal with a closed circuit indicating bypass
+Fuel Filter Monitoring,Fuel Filter Bypass Indication,Open Circuit Indicates Bypass,wfFiltBypOpenIsBypass,airCooled,Selection,1,1,Fuel filter bypass signal with an open circuit indicating bypass
+General,Up Down Ramp Function,Up Down Ramp Function,upDownRampFunction,Common,Option,0,1,"Generates a ramped output.  The output is ramped up at a specified ramp-up rate when trigger input is true, and then washed out at a specified ramp-down rate when it becomes false."
+Installation,ECU Enclosure Type,Air Cooled,airCooled,5_Air_Cooled,Selection,1,1,ECU enclosure type (air cooled)
+Installation,ECU Enclosure Type,Fuel Cooled,fuelCooled,6_Fuel_Cooled,Selection,1,1,ECU enclosure type (fan cooled)
+Installation,Engine Count,Dual Engines,dualEngine,4_Dual_Engines,Selection,1,1,Dual engines installed on aircraft
+Installation,Engine Count,Single Engine,singleEngine,3_Single_Engine,Selection,1,1,Single engine installed on aircraft
+Installation,Engine ID,Right Engine ID Valid Configuration,rightEngID,dualEngine,Option,0,1,Right engine ID is a valid identification configuration.
+Installation,Engine Type,Turbo Fan,turboFan,1_Turbo_Fan,Selection,1,1,Engine type is turbofan
+Installation,Engine Type,Turbo Prop,turboProp,2_Turbo_Prop,Selection,1,1,Engine type is turboprop
+Maintenance,Motoring,Engine Motoring Software Indication,engMotor,Common,Option,0,1,Engine Motoring Software Indication for Dry/Wet Motoring
+Monitoring,Airflow Calculation,Corrected Airflow Calculation,airflowCalcCorrected,tt2Heater,Selection,1,1,Used to calculate airflow and corrected airflow
+Monitoring,Chip Detector Connection,Shared Channel,chipDetectDualChSharedInput,Common,Selection,1,1,Chip Detector is wired to both ECU channels.
+Monitoring,Chip Detector Connection,Single Channel Input,chipDetectSingleChInput,Common,Selection,1,1,Chip Detector is wired to PCU only.
+Monitoring,EGT Derivative,Deadzone filtered derivative,t5DotDeadzoneFilter,Common,Selection,1,1,The EGT derivative calculation includes a deadzone filter
+Monitoring,Exhaust Gas Temperature,EGT 3 Thermocouple,egt3TC,turboFan,Selection,1,1,"Exhaust Gas Temperature Sensing, 3 wire thermocouple"
+Monitoring,Exhaust Gas Temperature,EGT 4 Thermocouple,egt4TC,turboProp,Selection,1,1,"Exhaust Gas Temperature Sensing, 4 wire thermocouple"
+Monitoring,Filter Inlet Static Pressure Selection,Raw Static Pressure Filtered,psFiltered,Common,Selection,1,1,"Each ECU channel filters, using an available filter, the raw inlet static pressure"
+Monitoring,Filter Inlet Static Pressure Selection,Raw Static Pressure Unfiltered,psUnfiltered,Common,Selection,1,1,ECU does not filter the raw inlet static pressure
+Monitoring,Filter Inlet Static Pressure Type,Filter using Self-Adjusting Time Constant Filter,psSelfAdjustingFiltered,filterSelfAdjusting;psFiltered,Selection,1,1,"Each ECU channel filters, via a self-adjusting time constant filter, the raw inlet static pressure"
+Monitoring,Filter Type Available,Low-Pass Filter,filterLowPass,Common,Selection,0,2,Low-Pass Filter
+Monitoring,Filter Type Available,Self-Adjusting Time Constant Filter for analog inputs,filterSelfAdjusting,psFiltered,Selection,1,1,Self-adjusting time constant filter is available to filter analog inputs.
+Monitoring,Filter Type Available,Self-Adjusting Time Constant Filter for analog inputs,filterSelfAdjusting,psUnfiltered,Selection,1,1,Self-adjusting time constant filter is available to filter analog inputs.
+Monitoring,HGI Ramp Bias to Aircraft Voted TT2,HGI Ramp Bias to Aircraft Voted TT2,HGIRampTT2AircraftVotedSel,HGIOperation;tt2AircraftVotedSel;upDownRampFunction,Selection,1,1,Applies ramped bias to TT2 during operation under hot gas ingestion
+Monitoring,Inlet Static Pressure Location,Inlet Static Pressure is measured at a plumbed location,psPlumbed,Common,Selection,1,1,Inlet Static Pressure is measured at a plumbed location external to the ECU
+Monitoring,Inlet Static Pressure Location,Inlet Static Pressure is measured internally in ECU,psUnplumbed,Common,Selection,1,1,Inlet Static Pressure is measured internally in ECU
+Monitoring,Oil Pressure Sensor Type,Dual Transducer Pressure Sensor; Single Channel Inputs,pSnsrDualXDCRSingleChanIn,airCooled,Selection,1,1,Pressure sensor contains two transducers which are wired to both ECUs individually.
+Monitoring,Oil Pressure Sensor Type,Single Transducer Pressure Sensor; Single Channel Inputs,pSnsrSingleXDCRSingleChanIn,fuelCooled,Selection,1,1,Pressure Sensor has one transducer and is only wired to PCU.
+Monitoring,P3 Sensor Installation,ECU Internal P3 sensors each plumbed to a single ECU Channel,p3InternalSeperatePipes,fuelCooled,Selection,1,1,"Has two internal ECU P3 sensors, each plumbed to a single ECU Channel. The plumbing between P3 sensors is isolated/separate."
+Monitoring,P3 Sensor Installation,External P3 sensors each plumbed to a single ECU Channel,p3ExternalSeparatePipes,airCooled,Selection,1,1,"Has two external P3 sensors, each plumbed to a single ECU Channel. The plumbing between P3 sensors is isolated/separate."
+Monitoring,Resistive Temperature Device (RTD) Difference Check,"TT2, Oil Temp, and Fuel Temp Difference Check",rtdDiffResetStopCheck,airCooled,Selection,1,1,Common RTD difference fault may not be reset unless stop check bit is active 
+Monitoring,Static Pressure,Aircraft Voted Signal Selection,psAircraftVotedSel,fuelCooled,Selection,1,1,Aircraft data is used to vote on the selected engine Ps when there is a difference fault
+Monitoring,Static Pressure,Aircraft Weighted Signal Selection,psWeightedSel,airCooled,Selection,1,1,Aircraft data is used to weight the final selected Ps value
+Monitoring,TT2 Heater,TT2 Heater,tt2Heater,Common,Option,0,1,Engine TT2 sensor has an electric heater to de-ice the probe
+Monitoring,TT2 Signal Selection,Aircraft Voted Signal Selection,tt2AircraftVotedSel,fuelCooled,Selection,1,1,"Inlet total temperature will be determined from engine TT2 sensor signals, aircraft signals, and a default value for the final selected inlet total temperature signal. The engine will use a selection method in which the averaged sensor signals are used when the local channel and cross channel signals agree and the aircraft signals will be used to vote on the more reliable signal when the local and cross channel signals disagree"
+Monitoring,TT2 Signal Selection,Aircraft Weighted Signal Selection,tt2WeightedSel,airCooled,Selection,1,1,"Inlet total temperature will be determined from engine TT2 sensor signals, aircraft signals, and a default value for the final selected inlet temperature signal. The engine will use a weighted selection method in which weighting factors are used to bias the final selected value of inlet total temperature closer to the aircraft value."
+Monitoring,TT2 Temperature,2 Wire TT2,tt2TwoWire,turboFan,Selection,1,1,"TT2 Temperature Sensor, non-shared, single-wound, two-wire RTD"
+Monitoring,TT2 Temperature,3 Wire TT2,tt2ThreeWire,turboProp,Selection,1,1,"TT2 Temperature Sensor, non-shared, dual-wound, three-wire RTD"
+Monitoring,Vibration Output for GSE,Vibration Output for GSE interface installed,vibrationOutput,Common,Option,0,1,Vibration Output for GSE interface installed
+Oil Filter Monitoring,Oil Filter Bypass Connection,Shared Channel,oilFiltBypSharedElectInt,engDisSharedElectInt,Selection,1,1,Oil filter bypass signal is connected to both EEC channels
+Oil Filter Monitoring,Oil Filter Bypass Connection,Single Channel Input,singleChannelInputOilFiltByp,engDis1ChanInputElectInt,Selection,1,1,Oil filter bypass signal is connected directly to PCU
+Oil Filter Monitoring,Oil Filter Bypass Indication,Closed Circuit Indicates Bypass,oilFiltBypClsdIsBypass,fuelCooled,Selection,1,1,Oil filter bypass signal with a closed circuit indicating bypass
+Oil Filter Monitoring,Oil Filter Bypass Indication,Open Circuit Indicates Bypass,oilFiltBypOpenIsBypass,airCooled,Selection,1,1,Oil filter bypass signal with an open circuit indicating bypass
+Reliability,Commercial Compliance,Commercial Turbo Fan Compliance,sfrTurboFanCFR,sfrCFR;turboFan,Selection,1,1,Turbo Fan for Commercial
+Reliability,Commercial Compliance,Commercial Turbo Prop Compliance,sfrTurboPropCFR,sfrCFR;turboProp,Selection,1,1,Turbo Prop for Commercial
+Reliability,Compliance Guidelines,Code of Federal Regulations Compliant,sfrCFR,Common,Option,0,1,Compliant to CFR guidelines
+Reliability,Compliance Guidelines,MIL-STD-882 Compliant,sfrM882,Common,Option,0,1,Compliant to MIL-STD-882 guidelines
+Reliability,Dual Engine Reliability,Automatic Power Reserve,autoPwrReserve,xEngDataLink;sfrCFR,Option,0,1,APR installed on commercial
+Reliability,Dual Engine Reliability,Dual Engine,sfrDualEng,dualEngine,Selection,1,1,Dual Engines installed
+Reliability,Thrust Reverse Reliability,Thrust Reverse,sfrThrustRev,revRqstSW,Selection,1,1,Thrust Reverse installed
+Reliability,Thrust Reverse Reliability,Thrust Reverse/Dual Engine,sfrTrDualEng,dualEngine;sfrThrustRev,Selection,1,1,Thrust Reverse/Dual Engines installed
+Turbo Fan,Compressor Guide Vanes (CGV) LVDT,CGV LVDT,cgvLVDT,turboFan,Selection,1,1,Compressor Guide Vane (CGV) LVDT
+Turbo Fan,Synchrophasing,TurboFan Syncrophasing,fanSyncrophase,turboFan;dualEngine,Option,0,1,Synchrophasing enable (dual engine turbofan)
+Turbo Prop,Beta Pressure Sensor,Available,betaPressSensor,turboProp,Option,0,1,Beta Pressure Sensor is available; turboprop only.
+Turbo Prop,Condition Lever,Condition Lever Installed,conditionLever,turboProp,Selection,1,1,Condition lever installed
+Turbo Prop,NTS Oil Pressure Sensor,Available,ntsOilPressSensor,turboProp,Option,0,1,NTS Oil Pressure Sensor is available; turboprop only.
+Turbo Prop,Propeller Pitch Control,PPC RVDT Installation,ppcVDT,turboProp,Selection,1,1,Propeller Pitch Controller RVDT
+Turbo Prop,Synchrophasing,TurboProp Syncrophasing,propSyncrophase,turboProp;dualEngine,Option,0,1,Synchrophasing enable (dual engine turboprop)
+Turbo Prop,Torque Sensor,Available,torqueSensor,turboProp,Option,0,1,Torque Sensor is available; turboprop only.
+Turbo Prop,Turboprop Spare,Spare accounted for in Turboprop application,spareTurboProp,turboProp,Selection,1,1,Spare accounted for in Turboprop application

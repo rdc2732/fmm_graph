@@ -28,6 +28,7 @@ sqldbfile = 'FMM.db'
 csvfile = 'FMM.csv'
 dotfile = 'FMM.gfz'
 dotfile2 = 'FMM2.gfz'
+outfolder = './temp/'
 
 
 # Set up sqlite database
@@ -60,17 +61,17 @@ def addDependency(parent_id, child_id):
     return
 
 
-def find_all_paths(graph, start, path=[], level=0, skip = 0):
+def find_all_paths(graph, start, path=[], level=0, skip = [0]):
     if not start in graph:
         return []
     path = path + [start]
     paths = [path]
     for node in graph[start]:
         level += 1
-        if node != skip:
+        if node not in skip:
             paths = paths + find_all_paths(graph, node, path, level)
         else:
-            print('skipping node:', skip)
+            print('skipping node:', node)
             # Add a new keyWord to show items skipped
             skipped_name = keyWords[node] + " skipped..."
             keyWords[999] = skipped_name
@@ -141,6 +142,7 @@ sql_query4 = \
         select key_id from keywords where key_id not in (select depto from keydepends) order by keyword;
     """
 
+
 cur.execute(sql_query4)
 top_nodes = []
 gfz_file_number = 0;
@@ -162,7 +164,7 @@ for node in top_nodes:
     node_name = keyWords[node]
     graph_title = '"' + node_name + '"'
 
-    pathlist = find_all_paths(graph, node, [], 0, 113)
+    pathlist = find_all_paths(graph, node, [], 0, [])
 
     for path in pathlist:
         for n in range(len(path) - 1):
